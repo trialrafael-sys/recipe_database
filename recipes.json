@@ -4630,6 +4630,67 @@
       ],
       "method": "Pull a double espresso and set aside to cool slightly. In a tall 350ml glass, combine the dragon fruit purée, osmanthus syrup, and elderflower cordial, then fill the glass with ice and pour in the chilled Oatly Barista Edition, stirring gently to create a soft gradient blush layer. Slowly pour the espresso over the back of a spoon to float it on top, preserving the layered visual. Garnish with a thin dragon fruit half-moon on the rim and a pinch of dried osmanthus flowers scattered over the surface.",
       "notes": "Opens with a delicate, honeyed floral hit from the osmanthus and elderflower — summery and light. The dragon fruit purée brings a subtle tropical sweetness and a vivid magenta blush that bleeds beautifully through the creamy Oatly. As the espresso integrates with each sip, it grounds the drink with a gentle roasty bitterness that balances the floral sweetness without overpowering it. Finish is clean, refreshing, and lingering — perfect for the heat of a Barcelona afternoon."
+    },
+    {
+      "id": "AI20260622213915",
+      "name": "Jardín de Dragón",
+      "source": "AI Generated",
+      "category": "Signature Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "3/5",
+      "status": "approved",
+      "tags": [
+        "floral",
+        "fruity",
+        "summer",
+        "vibrant",
+        "Instagram-worthy"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 160,
+          "unit": "ml"
+        },
+        {
+          "name": "dragon fruit purée",
+          "amount": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "osmanthus syrup",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "elderflower cordial",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "espresso (double shot)",
+          "amount": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "ice",
+          "amount": 200,
+          "unit": "g"
+        },
+        {
+          "name": "dried osmanthus flowers (garnish)",
+          "amount": 1,
+          "unit": "pinch"
+        },
+        {
+          "name": "dehydrated dragon fruit slice (garnish)",
+          "amount": 1,
+          "unit": "pinch"
+        }
+      ],
+      "method": "Pull a double espresso and set aside to cool slightly. In a shaker, combine the dragon fruit purée, osmanthus syrup, and elderflower cordial with a small handful of ice and shake for 8–10 seconds until well integrated and lightly chilled. Fill a 400ml glass with fresh ice, pour the shaken fruit-floral base over the ice, then slowly pour the Oatly Barista Edition down the side of the glass to create a soft layered gradient. Finally, pour the espresso gently over the back of a spoon onto the milk layer to float it on top, garnish with a pinch of dried osmanthus flowers and a dehydrated dragon fruit slice on the rim.",
+      "notes": "Opens with a heady wave of elderflower and delicate osmanthus blossom, giving way to the bright, subtly tropical sweetness of dragon fruit. The creamy, neutral canvas of Oatly Barista lets the floral notes sing without overpowering them, while the espresso lands at the end with a clean, rounded bitterness that anchors the whole drink. Visually striking with a magenta-to-white gradient crowned in dark espresso — equal parts garden party and Barcelona terrace energy."
     }
   ]
 }
