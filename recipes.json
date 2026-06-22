@@ -4289,6 +4289,114 @@
       ],
       "method": "Pull a double espresso and allow to cool for 30 seconds. In a tall glass, combine elderflower syrup and fresh lemon juice over a full glass of ice. Pour Oatly Barista Edition over the ice, then slowly pour the espresso over the back of a spoon to create a gentle layered effect before serving. Optionally garnish with a thin lemon wheel or a few dried elderflowers.",
       "notes": "Opens with a delicate, high-floral elderflower note that lifts immediately on the nose. The lemon juice adds a whisper of citrus brightness that sharpens the sweetness without tipping sour. The creamy, neutral body of Oatly Barista threads through the mid-palate, softening the espresso's bittersweet finish into something clean and almost white-wine-like. Light, aromatic, and effortlessly summery."
+    },
+    {
+      "id": "BATCH202606221047450",
+      "name": "Jardín de Seda",
+      "source": "Batch Ideas",
+      "category": "Iced Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "floral",
+        "aromatic",
+        "elegant"
+      ],
+      "ingredients": [],
+      "method": "A delicate collision of floral osmanthus and perfumed lychee wrapped around a bold double espresso, softened by the creamy neutrality of Oatly Barista. The result is a latte that drinks like a stroll through a silk road garden — aromatic, slightly exotic, and surprisingly balanced.",
+      "notes": "Key combo: osmanthus, lychee | Complexity: Easy"
+    },
+    {
+      "id": "BATCH202606221047451",
+      "name": "Dragón del Mediterráneo",
+      "source": "Batch Ideas",
+      "category": "Refresher",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "shaken",
+        "vibrant",
+        "cold foam"
+      ],
+      "ingredients": [],
+      "method": "A shaken espresso builds a bold base beneath a vivid swirl of dragon fruit and whisper-soft elderflower, topped with a cascade of Oatly Barista cold foam for a dramatic pink-and-white finish. The bittersweet espresso cuts through the fruity floral sweetness in a way that feels Mediterranean and effortlessly cool.",
+      "notes": "Key combo: dragon fruit, elderflower | Complexity: Medium"
+    },
+    {
+      "id": "BATCH202606221047452",
+      "name": "Melón de Noche",
+      "source": "Batch Ideas",
+      "category": "Signature",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Hot",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "unexpected",
+        "warming",
+        "cortado-style"
+      ],
+      "ingredients": [],
+      "method": "A warming cortado-style drink where melon syrup brings an unexpected honeydew sweetness and osmanthus adds a late-evening floral depth, steamed together with velvety Oatly Barista. It sounds unconventional but the gentle fruit note softens the espresso's edge in the same way caramel does — only stranger and more beautiful.",
+      "notes": "Key combo: melon, osmanthus | Complexity: Easy"
+    },
+    {
+      "id": "BATCH202606221047453",
+      "name": "Lichi Eléctrico",
+      "source": "Batch Ideas",
+      "category": "Frozen",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Frozen",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "frozen",
+        "tropical",
+        "bold colour"
+      ],
+      "ingredients": [],
+      "method": "Blended with ice, Oatly Barista, and a double espresso shot, this frozen trio of lychee, dragon fruit, and elderflower creates a jewel-toned slushie that tastes like a tropical thunderstorm in a glass. The espresso hums underneath the fruity florals, giving the drink a caffeinated backbone that stops it from being just a pretty face.",
+      "notes": "Key combo: lychee, dragon fruit, elderflower | Complexity: Medium"
+    },
+    {
+      "id": "BATCH202606221047454",
+      "name": "Novia del Verano",
+      "source": "Batch Ideas",
+      "category": "Iced Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "layered",
+        "summery",
+        "foam topping"
+      ],
+      "ingredients": [],
+      "method": "Elderflower syrup is layered beneath cold Oatly Barista and a double espresso shot, finished with a melon foam cloud that slowly dissolves into the drink as you sip. The pairing channels the feeling of a terrace lunch in late June — light, fragrant, and just sweet enough to feel like a treat.",
+      "notes": "Key combo: elderflower, melon | Complexity: Medium"
+    },
+    {
+      "id": "BATCH202606221047455",
+      "name": "Escama Rosa",
+      "source": "Batch Ideas",
+      "category": "Signature",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "gradient",
+        "three-layer",
+        "show-stopping"
+      ],
+      "ingredients": [],
+      "method": "A built iced espresso drink where melon syrup sits at the base, lychee is stirred through the Oatly Barista pour, and dragon fruit is drizzled over the top for a sunset-gradient effect in the glass. Three fruits that each play a distinct role — sweetness, perfume, and drama — unified by the espresso's roasted depth.",
+      "notes": "Key combo: dragon fruit, lychee, melon | Complexity: Advanced"
     }
   ]
 }
