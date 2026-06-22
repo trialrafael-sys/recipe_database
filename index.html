@@ -1300,24 +1300,24 @@ async function triggerWorkflow(payload) {
   return res.status === 204;
 }
 
-async function waitForRecipe(btnEl, btnTextEl, resetText, pollSeconds = 25) {
-  // Poll recipes.json until new recipe appears (max ~40s)
+async function waitForRecipe(btnEl, btnTextEl, resetText, pollSeconds = 60) {
+  // Poll recipes.json until new recipe appears (max ~90s)
   const before = RECIPES.length;
   let elapsed = 0;
-  while (elapsed < 45) {
-    await new Promise(r => setTimeout(r, 3000));
-    elapsed += 3;
+  while (elapsed < 90) {
+    await new Promise(r => setTimeout(r, 4000));
+    elapsed += 4;
     const countdown = Math.max(0, pollSeconds - elapsed);
     btnTextEl.innerHTML = `⏳ Generating… <span style="opacity:.6;font-size:13px;">${countdown}s</span>`;
     try {
       const r = await fetch(`https://raw.githubusercontent.com/${GH_REPO}/main/recipes.json?t=${Date.now()}`);
       const data = await r.json();
       if (data.recipes.length > before) {
-        return data.recipes; // new recipe(s) added
+        return data.recipes;
       }
     } catch(e) {}
   }
-  return null; // timeout
+  return null;
 }
 
 async function generateRecipe() {
