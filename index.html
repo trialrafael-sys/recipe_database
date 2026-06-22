@@ -1266,84 +1266,101 @@ function goToShopping() {
 }
 
 // ── AI GENERATOR ─────────────────────────────────────────────────────────
+const GH_REPO  = 'trialrafael-sys/recipe_database';
+const GH_API   = 'https://api.github.com';
+
+function getGHToken() {
+  let t = localStorage.getItem('oatly_gh_token');
+  if (!t) {
+    t = prompt('GitHub token para geração de receitas:\n(Settings → Personal Access Tokens → Fine-grained → recipe_database → Contents: R/W + Actions: R/W)');
+    if (t) localStorage.setItem('oatly_gh_token', t.trim());
+  }
+  return t;
+}
+
+async function triggerWorkflow(payload) {
+  const token = getGHToken();
+  if (!token) return false;
+  const res = await fetch(`${GH_API}/repos/${GH_REPO}/actions/workflows/generate_recipe.yml/dispatches`, {
+    method: 'POST',
+    headers: {
+      'Authorization': `token ${token}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      ref: 'main',
+      inputs: { payload: JSON.stringify(payload) }
+    })
+  });
+  if (res.status === 401 || res.status === 403) {
+    localStorage.removeItem('oatly_gh_token');
+    alert('Token inválido ou sem permissão. Vai a Settings no GitHub e cria um novo token com Actions: Read/Write.');
+    return false;
+  }
+  return res.status === 204;
+}
+
+async function waitForRecipe(btnEl, btnTextEl, resetText, pollSeconds = 25) {
+  // Poll recipes.json until new recipe appears (max ~40s)
+  const before = RECIPES.length;
+  let elapsed = 0;
+  while (elapsed < 45) {
+    await new Promise(r => setTimeout(r, 3000));
+    elapsed += 3;
+    const countdown = Math.max(0, pollSeconds - elapsed);
+    btnTextEl.innerHTML = `⏳ Generating… <span style="opacity:.6;font-size:13px;">${countdown}s</span>`;
+    try {
+      const r = await fetch(`https://raw.githubusercontent.com/${GH_REPO}/main/recipes.json?t=${Date.now()}`);
+      const data = await r.json();
+      if (data.recipes.length > before) {
+        return data.recipes; // new recipe(s) added
+      }
+    } catch(e) {}
+  }
+  return null; // timeout
+}
+
 async function generateRecipe() {
-  const product = document.getElementById('gen-product').value;
-  const style = document.getElementById('gen-style').value;
+  const product     = document.getElementById('gen-product').value;
+  const style       = document.getElementById('gen-style').value;
   const ingredients = document.getElementById('gen-ingredients').value;
-  const vibe = document.getElementById('gen-vibe').value;
-  const notes = document.getElementById('gen-notes').value;
+  const vibe        = document.getElementById('gen-vibe').value;
+  const notes       = document.getElementById('gen-notes').value;
 
-  const btn = document.getElementById('gen-btn');
+  const btn     = document.getElementById('gen-btn');
   const btnText = document.getElementById('gen-btn-text');
-  btn.disabled = true;
-  btnText.innerHTML = 'Generating <span class="loading-dots"><span></span><span></span><span></span></span>';
+  btn.disabled  = true;
+  btnText.innerHTML = 'Sending to AI <span class="loading-dots"><span></span><span></span><span></span></span>';
 
-  const apiKey = getApiKey();
-  if (!apiKey) {
+  const ok = await triggerWorkflow({ mode: 'single', product, style, ingredients, vibe, notes });
+  if (!ok) {
+    alert('Could not trigger generation. Check GitHub token.');
     btn.disabled = false;
     btnText.textContent = '✨ Generate Recipe';
     return;
   }
 
-  const existingNames = RECIPES.map(r => r.name).join(', ');
-
-  const prompt = `You are a specialty coffee drink developer working with Oatly plant-based milks for cafés in Barcelona and Madrid.
-
-Create a creative, original, professional drink recipe. Be specific with quantities and techniques.
-
-PARAMETERS:
-- Oatly product: ${product}
-- Drink style: ${style}
-- Available syrups / key ingredients: ${ingredients || 'classic café pantry'}
-- Vibe / season: ${vibe || 'everyday café'}
-- Extra notes: ${notes || 'none'}
-
-EXISTING RECIPES (avoid duplicating): ${existingNames}
-
-Respond ONLY with a JSON object, no markdown, no explanation:
-{
-  "name": "Recipe Name",
-  "category": "Latte|Matcha|Cold Brew|Refresher|Mocha|Chocolate|Tea Latte|Frozen|Signature Latte",
-  "serve": "Iced|Hot|Frozen",
-  "skill_level": "1/5|2/5|3/5|4/5|5/5",
-  "tags": ["tag1", "tag2", "tag3"],
-  "ingredients": [
-    {"name": "ingredient name", "amount": 200, "unit": "ml|g|shots|pinch|handful|drops|tsp"},
-    ...
-  ],
-  "method": "Step by step method in 2-4 sentences.",
-  "tasting_notes": "Flavor arc and sensory description for the café team."
-}`;
-
-  try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 1000,
-        messages: [{ role: 'user', content: prompt }]
-      })
-    });
-
-    const data = await response.json();
-    const text = data.content.map(c => c.text || '').join('');
-    const clean = text.replace(/```json|```/g, '').trim();
-    const recipe = JSON.parse(clean);
-
-    pendingRecipe = recipe;
-    showAiResult(recipe, product);
-
-  } catch(err) {
-    console.error(err);
-    localStorage.removeItem('oatly_api_key');
-    const retry = confirm('Error generating recipe.\n\nThis is usually an invalid API key.\n\nClick OK to enter your key again, or Cancel to dismiss.');
-    if (retry) generateRecipe();
-    return;
-  }
+  btnText.innerHTML = '⏳ Generating… <span style="opacity:.6;font-size:13px;">25s</span>';
+  const newRecipes = await waitForRecipe(btn, btnText, '✨ Generate Recipe');
 
   btn.disabled = false;
   btnText.textContent = '✨ Generate Recipe';
+
+  if (!newRecipes) {
+    alert('Generation is taking longer than expected. Wait 30s and refresh the Database tab — the recipe will appear there.');
+    return;
+  }
+
+  // Show the new recipe
+  RECIPES = newRecipes;
+  updateBadge();
+  populateFilters();
+  renderDatabase();
+  renderSelectorGrid();
+  renderFichaSelect();
+
+  const newest = newRecipes[newRecipes.length - 1];
+  showAiResult(newest, newest.oatly_product || product);
 }
 
 function showAiResult(recipe, product) {
@@ -1355,73 +1372,24 @@ function showAiResult(recipe, product) {
     <span class="tag tag-product">${product}</span>
     ${(recipe.tags||[]).map(t => `<span class="tag tag-ingredient">${t}</span>`).join('')}
   `;
-  document.getElementById('ai-result-ingredients').innerHTML = recipe.ingredients.map(i =>
+  document.getElementById('ai-result-ingredients').innerHTML = (recipe.ingredients||[]).map(i =>
     `<li class="ing-item"><span class="ing-name">${i.name}</span><span class="ing-amount">${i.amount} ${i.unit}</span></li>`
   ).join('');
-  document.getElementById('ai-result-method').textContent = recipe.method;
-  document.getElementById('ai-result-notes').textContent = recipe.tasting_notes;
+  document.getElementById('ai-result-method').textContent = recipe.method || '';
+  document.getElementById('ai-result-notes').textContent = recipe.notes || '';
   document.getElementById('ai-result').classList.add('visible');
-  pendingRecipe._oatly_product = product;
 }
 
 function approveRecipe() {
-  if (!pendingRecipe) return;
-  const product = document.getElementById('gen-product').value;
-  const newRecipe = {
-    id: 'AI' + Date.now(),
-    name: pendingRecipe.name,
-    source: 'AI Generated',
-    category: pendingRecipe.category,
-    oatly_product: product,
-    serve: pendingRecipe.serve,
-    skill_level: pendingRecipe.skill_level,
-    status: 'approved',
-    tags: pendingRecipe.tags || [],
-    ingredients: pendingRecipe.ingredients,
-    method: pendingRecipe.method,
-    notes: pendingRecipe.tasting_notes || ''
-  };
-
-  RECIPES.push(newRecipe);
-  saveRecipes();
-  updateBadge();
-  populateFilters();
-  renderDatabase();
-  renderSelectorGrid();
-  renderFichaSelect();
-
+  // Recipe is already in the DB (saved by GitHub Actions)
   document.getElementById('ai-result').classList.remove('visible');
-  pendingRecipe = null;
-
-  // Go to database
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.nav-tab')[0].classList.add('active');
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.getElementById('section-database').classList.add('active');
-
-  setTimeout(() => {
-    document.getElementById('search-input').value = newRecipe.name.split(' ')[0];
-    renderDatabase();
-  }, 100);
 }
 
-function getApiKey() {
-  let key = localStorage.getItem('oatly_api_key');
-  if (!key) {
-    key = prompt('Anthropic API key (starts with sk-ant-):\n\nGet one free at console.anthropic.com → API Keys');
-    if (key) localStorage.setItem('oatly_api_key', key.trim());
-  }
-  return key;
-}
-
-function resetApiKey() {
-  localStorage.removeItem('oatly_api_key');
-  const key = prompt('Enter new Anthropic API key (starts with sk-ant-):');
-  if (key) {
-    localStorage.setItem('oatly_api_key', key.trim());
-    alert('✅ API key saved.');
-  }
-}
+function resetApiKey() {} // no-op — no longer needed
 
 // ── SHOPPING LIST ────────────────────────────────────────────────────────
 function renderSelectorGrid() {
@@ -1641,78 +1609,70 @@ async function generateBatch() {
     return;
   }
 
-  const count = document.getElementById('batch-count').value;
-  const focus = document.getElementById('batch-focus').value;
+  const count   = document.getElementById('batch-count').value;
+  const focus   = document.getElementById('batch-focus').value;
   const product = document.getElementById('batch-product').value;
-  const base = document.getElementById('batch-base').value;
+  const base    = document.getElementById('batch-base').value;
 
-  const btn = document.getElementById('batch-btn');
+  const btn     = document.getElementById('batch-btn');
   const btnText = document.getElementById('batch-btn-text');
-  btn.disabled = true;
-  btnText.innerHTML = `Generating ${count} ideas <span class="loading-dots"><span></span><span></span><span></span></span>`;
+  btn.disabled  = true;
+  btnText.innerHTML = `Sending to AI <span class="loading-dots"><span></span><span></span><span></span></span>`;
 
-  const apiKey = getApiKey();
-  if (!apiKey) {
+  const ok = await triggerWorkflow({
+    mode: 'batch', tags: batchTags, product, focus, base, count: parseInt(count)
+  });
+
+  if (!ok) {
+    alert('Could not trigger generation. Check connection.');
     btn.disabled = false;
     btnText.textContent = '🧪 Generate Ideas';
     return;
   }
 
-  const existingNames = RECIPES.map(r => r.name).join(', ');
+  const before = RECIPES.length;
+  btnText.innerHTML = '⏳ Generating… <span style="opacity:.6;font-size:13px;">30s</span>';
 
-  const prompt = `You are a creative specialty coffee drink developer for Oatly, working with cafés in Barcelona and Madrid (Last Mile distribution).
-
-Available syrups / ingredients: ${batchTags.join(', ')}
-Oatly base: ${product}
-Coffee / tea base constraint: ${base}
-Drink focus: ${focus}
-Number of concepts to generate: ${count}
-
-Existing recipes to avoid duplicating: ${existingNames}
-
-Generate ${count} creative drink concepts. Each should use a smart combination of 2-4 of the available ingredients. Think about flavor harmony, visual appeal, and café viability. Include some unexpected/bold combinations and some safe crowd-pleasers.
-
-Respond ONLY with a JSON array, no markdown, no preamble:
-[
-  {
-    "name": "Creative Drink Name",
-    "combination": ["Syrup 1", "Syrup 2"],
-    "oatly_product": "specific Oatly Barista product",
-    "style": "Iced Latte | Matcha | Cold Brew | Refresher | Signature | Mocha | Tea Latte | Frozen",
-    "serve": "Iced | Hot | Frozen",
-    "description": "2-sentence evocative description of the flavor profile and why this combination works.",
-    "concept_tags": ["tag1", "tag2", "tag3"],
-    "complexity": "Easy | Medium | Advanced"
-  }
-]`;
-
-  try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 2000,
-        messages: [{ role: 'user', content: prompt }]
-      })
-    });
-
-    const data = await response.json();
-    const text = data.content.map(c => c.text || '').join('');
-    const clean = text.replace(/```json|```/g, '').trim();
-    const ideas = JSON.parse(clean);
-    renderBatchResults(ideas);
-
-  } catch(err) {
-    console.error(err);
-    localStorage.removeItem('oatly_api_key');
-    const retry = confirm('Error generating ideas.\n\nThis is usually an invalid API key.\n\nClick OK to enter your key again, or Cancel to dismiss.');
-    if (retry) generateBatch();
-    return;
+  // Poll for new batch concepts
+  let elapsed = 0;
+  let newData = null;
+  while (elapsed < 50) {
+    await new Promise(r => setTimeout(r, 3000));
+    elapsed += 3;
+    const countdown = Math.max(0, 30 - elapsed);
+    btnText.innerHTML = `⏳ Generating… <span style="opacity:.6;font-size:13px;">${countdown}s</span>`;
+    try {
+      const r = await fetch(`https://raw.githubusercontent.com/${GH_REPO}/main/recipes.json?t=${Date.now()}`);
+      const data = await r.json();
+      if (data.recipes.length > before) { newData = data; break; }
+    } catch(e) {}
   }
 
   btn.disabled = false;
   btnText.textContent = '🧪 Generate Ideas';
+
+  if (!newData) {
+    alert('Taking longer than expected. Wait 30s and check the Database tab.');
+    return;
+  }
+
+  // Extract batch concepts added (status = 'concept')
+  const concepts = newData.recipes.filter(r => r.source === 'Batch Ideas' && !RECIPES.find(e => e.id === r.id));
+  RECIPES = newData.recipes;
+  updateBadge(); populateFilters(); renderDatabase(); renderSelectorGrid(); renderFichaSelect();
+
+  if (concepts.length > 0) {
+    renderBatchResults(concepts.map(c => ({
+      name: c.name,
+      combination: c.notes.match(/Key combo: ([^|]+)/)?.[1]?.split(', ') || [],
+      oatly_product: c.oatly_product,
+      style: c.category,
+      serve: c.serve,
+      description: c.method,
+      concept_tags: c.tags,
+      complexity: c.notes.match(/Complexity: (.+)/)?.[1] || 'Medium'
+    })));
+  }
 }
 
 function renderBatchResults(ideas) {
