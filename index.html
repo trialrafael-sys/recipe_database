@@ -2002,6 +2002,8 @@ function developIdea(idea) {
   document.getElementById('gen-notes').value = `Based on concept: "${idea.name}". ${idea.description}`;
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 // ── ADD RECIPE ────────────────────────────────────────────────────────────
 let addGroups = []; // [{name, ingredients:[{name,amount,unit}]}]
 let addSteps  = [];
@@ -2126,7 +2128,7 @@ async function saveManualRecipe() {
   const btn = document.getElementById('add-save-btn');
   const btnText = document.getElementById('add-save-text');
   btn.disabled = true;
-  btnText.textContent = '⏳ Saving…';
+  btnText.textContent = 'Saving…';
 
   // Flatten all ingredients across groups
   const ingredients = [];
@@ -2163,7 +2165,7 @@ async function saveManualRecipe() {
 
   // Save directly to GitHub (no workflow needed)
   const token = getGHToken();
-  if (!token) { btn.disabled = false; btnText.textContent = '💾 Save to Database'; return; }
+  if (!token) { btn.disabled = false; btnText.textContent = 'Save to Database'; return; }
 
   try {
     // Get current recipes.json
@@ -2186,7 +2188,7 @@ async function saveManualRecipe() {
     RECIPES = db.recipes;
     updateBadge(); populateFilters(); renderDatabase(); renderSelectorGrid(); renderFichaSelect();
 
-    btnText.textContent = '✅ Saved!';
+    btnText.textContent = '✓ Saved!';
     setTimeout(() => {
       // Go to database and find the recipe
       document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
@@ -2196,7 +2198,7 @@ async function saveManualRecipe() {
       document.getElementById('search-input').value = name.split(' ')[0];
       renderDatabase();
       btn.disabled = false;
-      btnText.textContent = '💾 Save to Database';
+      btnText.textContent = 'Save to Database';
       resetAddForm();
     }, 1500);
 
@@ -2206,7 +2208,7 @@ async function saveManualRecipe() {
     err.textContent = 'Error saving. Check your GitHub token.';
     err.style.display = 'block';
     btn.disabled = false;
-    btnText.textContent = '💾 Save to Database';
+    btnText.textContent = 'Save to Database';
   }
 }
 </script>
