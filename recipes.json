@@ -4243,6 +4243,52 @@
       ],
       "method": "Custard: whisk pumpkin puree, sugar, salt and cornstarch smooth. Whisk in Oatly Barista. Heat stirring constantly until thick and bubbling. Cool. Load custard into whipped cream syphon with gas canister. Build drink: ice + Oatly Barista + double espresso. Top with aerated custard from syphon.",
       "notes": "Pumpkin puree gives golden colour. Kala namak adds egg-like aroma. Requires whipped cream syphon."
+    },
+    {
+      "id": "AI20260622104435",
+      "name": "Elderflower Blanc",
+      "source": "AI Generated",
+      "category": "Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": [
+        "floral",
+        "summer",
+        "light",
+        "refreshing",
+        "elegant"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 180,
+          "unit": "ml"
+        },
+        {
+          "name": "elderflower syrup",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "espresso (double shot)",
+          "amount": 2,
+          "unit": "shots"
+        },
+        {
+          "name": "fresh lemon juice",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "ice",
+          "amount": 200,
+          "unit": "g"
+        }
+      ],
+      "method": "Pull a double espresso and allow to cool for 30 seconds. In a tall glass, combine elderflower syrup and fresh lemon juice over a full glass of ice. Pour Oatly Barista Edition over the ice, then slowly pour the espresso over the back of a spoon to create a gentle layered effect before serving. Optionally garnish with a thin lemon wheel or a few dried elderflowers.",
+      "notes": "Opens with a delicate, high-floral elderflower note that lifts immediately on the nose. The lemon juice adds a whisper of citrus brightness that sharpens the sweetness without tipping sour. The creamy, neutral body of Oatly Barista threads through the mid-palate, softening the espresso's bittersweet finish into something clean and almost white-wine-like. Light, aromatic, and effortlessly summery."
     }
   ]
 }
