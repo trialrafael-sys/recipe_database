@@ -784,6 +784,124 @@
   }
   .batch-card-actions { display: flex; gap: 8px; }
 
+  /* ── ADD RECIPE ── */
+  .ing-group {
+    background: var(--cream);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    border: 1.5px solid var(--border);
+  }
+  .ing-group-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .ing-group-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-mid);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+  .ing-group-name {
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    outline: none;
+    flex: 1;
+  }
+  .ing-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .ing-row-name {
+    flex: 3;
+    padding: 8px 10px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    outline: none;
+    list-style: none;
+  }
+  .ing-row-name:focus { border-color: var(--green); }
+  .ing-row-amount {
+    width: 72px;
+    padding: 8px 10px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'DM Mono', monospace;
+    background: var(--white);
+    outline: none;
+    text-align: right;
+  }
+  .ing-row-amount:focus { border-color: var(--green); }
+  .ing-row-unit {
+    width: 80px;
+    padding: 8px 8px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    outline: none;
+  }
+  .ing-row-unit:focus { border-color: var(--green); }
+  .ing-remove {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+    line-height: 1;
+    transition: color .15s;
+  }
+  .ing-remove:hover { color: var(--red); }
+  .step-row {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+  .step-num {
+    width: 26px;
+    height: 26px;
+    background: var(--bark);
+    color: var(--cream);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 8px;
+  }
+  .step-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    outline: none;
+    resize: vertical;
+    min-height: 40px;
+  }
+  .step-input:focus { border-color: var(--green); }
+
   /* ── PRINT ── */
   @media print {
     .topbar, .nav-tabs, .ficha-preview ~ *, #section-ficha .page-header,
@@ -820,6 +938,7 @@
     <div class="nav-tab active" onclick="showSection('database', this)">📚 Database</div>
     <div class="nav-tab" onclick="showSection('generator', this)">🤖 AI Generator</div>
     <div class="nav-tab" onclick="showSection('batch', this)">🧪 Batch Ideas</div>
+    <div class="nav-tab" onclick="showSection('add', this)">✏️ Add Recipe</div>
     <div class="nav-tab" onclick="showSection('shopping', this)">🛒 Shopping List</div>
     <div class="nav-tab" onclick="showSection('ficha', this)">📄 Ficha Técnica</div>
   </div>
@@ -925,6 +1044,97 @@
             <button class="btn btn-primary" onclick="approveRecipe()">+ Save to Database</button>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- ADD RECIPE -->
+    <div class="section" id="section-add">
+      <div class="page-header">
+        <div class="page-title">✏️ Add Recipe</div>
+      </div>
+      <div class="ai-panel">
+
+        <!-- Basic info -->
+        <div class="form-row">
+          <div class="form-group" style="flex:2">
+            <label class="form-label">Recipe Name *</label>
+            <input class="form-input" id="add-name" placeholder="e.g. Elderflower Yuzu Matcha">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Source</label>
+            <input class="form-input" id="add-source" placeholder="e.g. My Coffee Awards 2026" value="Original Recipe">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Category</label>
+            <select class="form-select" id="add-category">
+              <option>Latte</option><option>Matcha</option><option>Cold Brew</option>
+              <option>Refresher</option><option>Chocolate</option><option>Tea Latte</option>
+              <option>Smoothie</option><option>Mocktail</option><option>Frozen</option>
+              <option>Tonic</option><option>Signature Latte</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Oatly Product</label>
+            <select class="form-select" id="add-product">
+              <option>Oatly Barista Edition</option>
+              <option>Oatly Barista Lighter Taste</option>
+              <option>Oatly Barista Organic</option>
+              <option>Oatly Barista Edition Caramel</option>
+              <option>Oatly Barista Edition Coconut</option>
+              <option>Oatly Barista Edition Popcorn</option>
+              <option>Oatly Cold Foam</option>
+              <option>Oatly Whippable Creamy Oat</option>
+              <option>Oatly Organic Creamy Oat</option>
+              <option>Oatly No Sugars Oat Drink</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Serve</label>
+            <select class="form-select" id="add-serve">
+              <option>Iced</option><option>Hot</option><option>Frozen</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Skill Level</label>
+            <select class="form-select" id="add-skill">
+              <option>1/5</option><option>2/5</option><option selected>3/5</option>
+              <option>4/5</option><option>5/5</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Ingredients builder -->
+        <div style="margin:20px 0 10px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text-light);">INGREDIENTS</div>
+        <div id="add-groups">
+          <!-- groups rendered here -->
+        </div>
+        <button class="btn btn-secondary" onclick="addIngGroup()" style="margin-top:10px;font-size:13px;">+ Add group</button>
+
+        <!-- Method -->
+        <div style="margin:20px 0 8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text-light);">METHOD</div>
+        <div id="add-steps-wrap">
+          <!-- steps rendered here -->
+        </div>
+        <button class="btn btn-secondary" onclick="addStep()" style="margin-top:8px;font-size:13px;">+ Add step</button>
+
+        <!-- Notes -->
+        <div style="margin:20px 0 8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text-light);">NOTES (optional)</div>
+        <textarea class="form-textarea" id="add-notes" placeholder="Barista tips, substitutions, origin of the recipe…" style="min-height:70px;"></textarea>
+
+        <!-- Tags -->
+        <div style="margin:16px 0 8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text-light);">TAGS (comma separated)</div>
+        <input class="form-input" id="add-tags" placeholder="e.g. floral, citrus, summer, signature">
+
+        <div style="display:flex;gap:12px;margin-top:24px;">
+          <button class="generate-btn" onclick="saveManualRecipe()" id="add-save-btn" style="max-width:300px;">
+            <span id="add-save-text">💾 Save to Database</span>
+          </button>
+          <button class="btn btn-secondary" onclick="resetAddForm()">↺ Reset</button>
+        </div>
+        <div id="add-error" style="color:var(--red);font-size:13px;margin-top:10px;display:none;"></div>
       </div>
     </div>
 
@@ -1128,6 +1338,7 @@ async function initApp() {
   renderDatabase();
   renderSelectorGrid();
   renderFichaSelect();
+  initAddForm();
 }
 
 function saveRecipes() {
@@ -1791,6 +2002,212 @@ function developIdea(idea) {
   document.getElementById('gen-notes').value = `Based on concept: "${idea.name}". ${idea.description}`;
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
+// ── ADD RECIPE ────────────────────────────────────────────────────────────
+let addGroups = []; // [{name, ingredients:[{name,amount,unit}]}]
+let addSteps  = [];
+
+function initAddForm() {
+  addGroups = [{ name: 'For the drink', ingredients: [{ name:'', amount:'', unit:'ml' }] }];
+  addSteps  = [''];
+  renderAddGroups();
+  renderAddSteps();
+}
+
+// Build ingredient name datalist from all existing recipes
+function getIngredientDatalist() {
+  const names = new Set();
+  RECIPES.forEach(r => (r.ingredients||[]).forEach(i => { if (i.name) names.add(i.name); }));
+  return `<datalist id="ing-names">${[...names].sort().map(n => `<option value="${n}">`).join('')}</datalist>`;
+}
+
+function addIngGroup() {
+  addGroups.push({ name: 'For the syrup', ingredients: [{ name:'', amount:'', unit:'ml' }] });
+  renderAddGroups();
+}
+
+function removeIngGroup(gi) {
+  addGroups.splice(gi, 1);
+  renderAddGroups();
+}
+
+function addIngRow(gi) {
+  addGroups[gi].ingredients.push({ name:'', amount:'', unit:'ml' });
+  renderAddGroups();
+}
+
+function removeIngRow(gi, ii) {
+  addGroups[gi].ingredients.splice(ii, 1);
+  if (addGroups[gi].ingredients.length === 0) addGroups[gi].ingredients.push({ name:'', amount:'', unit:'ml' });
+  renderAddGroups();
+}
+
+function syncIngGroup(gi, field, value) {
+  addGroups[gi][field] = value;
+}
+
+function syncIngRow(gi, ii, field, value) {
+  addGroups[gi].ingredients[ii][field] = value;
+}
+
+function renderAddGroups() {
+  const wrap = document.getElementById('add-groups');
+  wrap.innerHTML = getIngredientDatalist() + addGroups.map((g, gi) => `
+    <div class="ing-group">
+      <div class="ing-group-header">
+        <span class="ing-group-label">Group</span>
+        <input class="ing-group-name" value="${g.name}" placeholder="Group name (e.g. For the drink)"
+          oninput="syncIngGroup(${gi},'name',this.value)">
+        ${addGroups.length > 1 ? `<button class="ing-remove" onclick="removeIngGroup(${gi})">✕</button>` : ''}
+      </div>
+      ${g.ingredients.map((ing, ii) => `
+        <div class="ing-row">
+          <input class="ing-row-name" list="ing-names" value="${ing.name}"
+            placeholder="Ingredient name…"
+            oninput="syncIngRow(${gi},${ii},'name',this.value)">
+          <input class="ing-row-amount" type="number" value="${ing.amount}" placeholder="0"
+            oninput="syncIngRow(${gi},${ii},'amount',this.value)">
+          <select class="ing-row-unit" onchange="syncIngRow(${gi},${ii},'unit',this.value)">
+            ${['ml','g','cl','tsp','tbsp','shot','pinch','handful','drops','unit'].map(u =>
+              `<option ${ing.unit===u?'selected':''}>${u}</option>`
+            ).join('')}
+          </select>
+          <button class="ing-remove" onclick="removeIngRow(${gi},${ii})">✕</button>
+        </div>
+      `).join('')}
+      <button class="btn btn-secondary" style="font-size:12px;margin-top:4px;" onclick="addIngRow(${gi})">+ ingredient</button>
+    </div>
+  `).join('');
+}
+
+function addStep() {
+  addSteps.push('');
+  renderAddSteps();
+}
+
+function removeStep(i) {
+  addSteps.splice(i, 1);
+  if (addSteps.length === 0) addSteps.push('');
+  renderAddSteps();
+}
+
+function syncStep(i, value) {
+  addSteps[i] = value;
+}
+
+function renderAddSteps() {
+  document.getElementById('add-steps-wrap').innerHTML = addSteps.map((s, i) => `
+    <div class="step-row">
+      <div class="step-num">${i+1}</div>
+      <textarea class="step-input" placeholder="Step ${i+1}…" oninput="syncStep(${i},this.value)">${s}</textarea>
+      <button class="ing-remove" onclick="removeStep(${i})">✕</button>
+    </div>
+  `).join('');
+}
+
+function resetAddForm() {
+  document.getElementById('add-name').value = '';
+  document.getElementById('add-source').value = 'Original Recipe';
+  document.getElementById('add-notes').value = '';
+  document.getElementById('add-tags').value = '';
+  document.getElementById('add-error').style.display = 'none';
+  initAddForm();
+}
+
+async function saveManualRecipe() {
+  const name = document.getElementById('add-name').value.trim();
+  if (!name) {
+    const err = document.getElementById('add-error');
+    err.textContent = 'Recipe name is required.';
+    err.style.display = 'block';
+    return;
+  }
+  document.getElementById('add-error').style.display = 'none';
+
+  const btn = document.getElementById('add-save-btn');
+  const btnText = document.getElementById('add-save-text');
+  btn.disabled = true;
+  btnText.textContent = '⏳ Saving…';
+
+  // Flatten all ingredients across groups
+  const ingredients = [];
+  addGroups.forEach(g => {
+    g.ingredients.forEach(ing => {
+      if (ing.name.trim()) {
+        ingredients.push({
+          name: ing.name.trim(),
+          amount: parseFloat(ing.amount) || 1,
+          unit: ing.unit,
+          group: g.name || undefined
+        });
+      }
+    });
+  });
+
+  const method = addSteps.filter(s => s.trim()).join(' ');
+  const tags = document.getElementById('add-tags').value.split(',').map(t => t.trim()).filter(Boolean);
+
+  const newRecipe = {
+    id: 'MAN' + Date.now(),
+    name,
+    source: document.getElementById('add-source').value.trim() || 'Original Recipe',
+    category: document.getElementById('add-category').value,
+    oatly_product: document.getElementById('add-product').value,
+    serve: document.getElementById('add-serve').value,
+    skill_level: document.getElementById('add-skill').value,
+    status: 'approved',
+    tags,
+    ingredients,
+    method,
+    notes: document.getElementById('add-notes').value.trim()
+  };
+
+  // Save directly to GitHub (no workflow needed)
+  const token = getGHToken();
+  if (!token) { btn.disabled = false; btnText.textContent = '💾 Save to Database'; return; }
+
+  try {
+    // Get current recipes.json
+    const res = await fetch(`${GH_API}/repos/${GH_REPO}/contents/recipes.json`, {
+      headers: { 'Authorization': `token ${token}` }
+    });
+    const meta = await res.json();
+    const db = JSON.parse(atob(meta.content.replace(/\n/g,'')));
+    db.recipes.push(newRecipe);
+    db.last_updated = new Date().toISOString().split('T')[0];
+
+    const newContent = btoa(unescape(encodeURIComponent(JSON.stringify(db, null, 2))));
+    await fetch(`${GH_API}/repos/${GH_REPO}/contents/recipes.json`, {
+      method: 'PUT',
+      headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: `Add recipe: ${name}`, content: newContent, sha: meta.sha })
+    });
+
+    // Update local state
+    RECIPES = db.recipes;
+    updateBadge(); populateFilters(); renderDatabase(); renderSelectorGrid(); renderFichaSelect();
+
+    btnText.textContent = '✅ Saved!';
+    setTimeout(() => {
+      // Go to database and find the recipe
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.nav-tab')[0].classList.add('active');
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById('section-database').classList.add('active');
+      document.getElementById('search-input').value = name.split(' ')[0];
+      renderDatabase();
+      btn.disabled = false;
+      btnText.textContent = '💾 Save to Database';
+      resetAddForm();
+    }, 1500);
+
+  } catch(e) {
+    console.error(e);
+    const err = document.getElementById('add-error');
+    err.textContent = 'Error saving. Check your GitHub token.';
+    err.style.display = 'block';
+    btn.disabled = false;
+    btnText.textContent = '💾 Save to Database';
+  }
 }
 </script>
 </body>
