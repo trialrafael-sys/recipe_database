@@ -1634,15 +1634,15 @@ async function generateBatch() {
   }
 
   const before = RECIPES.length;
-  btnText.innerHTML = '⏳ Generating… <span style="opacity:.6;font-size:13px;">30s</span>';
+  btnText.innerHTML = '⏳ Generating… <span style="opacity:.6;font-size:13px;">90s</span>';
 
   // Poll for new batch concepts
   let elapsed = 0;
   let newData = null;
-  while (elapsed < 50) {
-    await new Promise(r => setTimeout(r, 3000));
-    elapsed += 3;
-    const countdown = Math.max(0, 30 - elapsed);
+  while (elapsed < 120) {
+    await new Promise(r => setTimeout(r, 4000));
+    elapsed += 4;
+    const countdown = Math.max(0, 90 - elapsed);
     btnText.innerHTML = `⏳ Generating… <span style="opacity:.6;font-size:13px;">${countdown}s</span>`;
     try {
       const r = await fetch(`https://raw.githubusercontent.com/${GH_REPO}/main/recipes.json?t=${Date.now()}`);
