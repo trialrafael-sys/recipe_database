@@ -1,0 +1,182 @@
+name: Generate Recipe
+
+on:
+  workflow_dispatch:
+    inputs:
+      payload:
+        description: 'Recipe request JSON'
+        required: true
+        type: string
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate recipe with Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PAYLOAD: ${{ inputs.payload }}
+        run: |
+          pip install anthropic --quiet
+
+          python3 << 'PYEOF'
+          import os, json, anthropic, datetime, re
+
+          payload = json.loads(os.environ['PAYLOAD'])
+          mode     = payload.get('mode', 'single')  # 'single' or 'batch'
+          product  = payload.get('product', 'Oatly Barista Edition')
+          style    = payload.get('style', 'Iced Latte')
+          ingredients = payload.get('ingredients', '')
+          vibe     = payload.get('vibe', '')
+          notes    = payload.get('notes', '')
+          # batch fields
+          tags_list = payload.get('tags', [])
+          count    = payload.get('count', 6)
+          focus    = payload.get('focus', 'mix of styles')
+          base     = payload.get('base', 'any base')
+
+          # Load existing recipes
+          with open('recipes.json') as f:
+              db = json.load(f)
+
+          existing_names = ', '.join(r['name'] for r in db['recipes'])
+
+          client = anthropic.Anthropic(api_key=os.environ['ANTHROPIC_API_KEY'])
+
+          if mode == 'single':
+              prompt = f"""You are a specialty coffee drink developer working with Oatly plant-based milks for cafés in Barcelona and Madrid.
+
+Create a creative, original, professional drink recipe. Be specific with quantities and techniques.
+
+PARAMETERS:
+- Oatly product: {product}
+- Drink style: {style}
+- Available syrups / key ingredients: {ingredients or 'classic café pantry'}
+- Vibe / season: {vibe or 'everyday café'}
+- Extra notes: {notes or 'none'}
+
+EXISTING RECIPES (avoid duplicating): {existing_names}
+
+Respond ONLY with a JSON object, no markdown, no explanation:
+{{
+  "name": "Recipe Name",
+  "category": "Latte|Matcha|Cold Brew|Refresher|Mocha|Chocolate|Tea Latte|Frozen|Signature Latte",
+  "serve": "Iced|Hot|Frozen",
+  "skill_level": "1/5|2/5|3/5|4/5|5/5",
+  "tags": ["tag1", "tag2", "tag3"],
+  "ingredients": [
+    {{"name": "ingredient name", "amount": 200, "unit": "ml|g|shots|pinch|handful|drops|tsp"}}
+  ],
+  "method": "Step by step method in 2-4 sentences.",
+  "tasting_notes": "Flavor arc and sensory description for the café team."
+}}"""
+
+              msg = client.messages.create(
+                  model='claude-sonnet-4-6',
+                  max_tokens=1000,
+                  messages=[{'role': 'user', 'content': prompt}]
+              )
+              text = msg.content[0].text.strip()
+              text = re.sub(r'```json|```', '', text).strip()
+              recipe_data = json.loads(text)
+
+              new_recipe = {
+                  'id': 'AI' + datetime.datetime.now().strftime('%Y%m%d%H%M%S'),
+                  'name': recipe_data['name'],
+                  'source': 'AI Generated',
+                  'category': recipe_data.get('category', 'Latte'),
+                  'oatly_product': product,
+                  'serve': recipe_data.get('serve', 'Iced'),
+                  'skill_level': recipe_data.get('skill_level', '2/5'),
+                  'status': 'approved',
+                  'tags': recipe_data.get('tags', []),
+                  'ingredients': recipe_data.get('ingredients', []),
+                  'method': recipe_data.get('method', ''),
+                  'notes': recipe_data.get('tasting_notes', '')
+              }
+              db['recipes'].append(new_recipe)
+              db['last_updated'] = datetime.datetime.now().strftime('%Y-%m-%d')
+              result = {'mode': 'single', 'added': 1, 'name': new_recipe['name']}
+
+          elif mode == 'batch':
+              prompt = f"""You are a creative specialty coffee drink developer for Oatly, working with cafés in Barcelona and Madrid.
+
+Available syrups / ingredients: {', '.join(tags_list)}
+Oatly base: {product}
+Coffee / tea base constraint: {base}
+Drink focus: {focus}
+Number of concepts to generate: {count}
+
+Existing recipes to avoid duplicating: {existing_names}
+
+Generate {count} creative drink concepts. Each should use 2-4 of the available ingredients.
+
+Respond ONLY with a JSON array, no markdown:
+[
+  {{
+    "name": "Creative Drink Name",
+    "combination": ["Syrup 1", "Syrup 2"],
+    "oatly_product": "specific Oatly Barista product",
+    "style": "Iced Latte|Matcha|Cold Brew|Refresher|Signature|Mocha|Tea Latte|Frozen",
+    "serve": "Iced|Hot|Frozen",
+    "description": "2-sentence evocative description of flavor profile and why this works.",
+    "concept_tags": ["tag1", "tag2", "tag3"],
+    "complexity": "Easy|Medium|Advanced"
+  }}
+]"""
+
+              msg = client.messages.create(
+                  model='claude-sonnet-4-6',
+                  max_tokens=2000,
+                  messages=[{'role': 'user', 'content': prompt}]
+              )
+              text = msg.content[0].text.strip()
+              text = re.sub(r'```json|```', '', text).strip()
+              ideas = json.loads(text)
+
+              # Save batch ideas as pending recipes
+              added = []
+              for idea in ideas:
+                  r = {
+                      'id': 'BATCH' + datetime.datetime.now().strftime('%Y%m%d%H%M%S') + str(len(added)),
+                      'name': idea['name'],
+                      'source': 'Batch Ideas',
+                      'category': idea.get('style', 'Latte'),
+                      'oatly_product': idea.get('oatly_product', product),
+                      'serve': idea.get('serve', 'Iced'),
+                      'skill_level': '',
+                      'status': 'concept',
+                      'tags': idea.get('concept_tags', []),
+                      'ingredients': [],
+                      'method': idea.get('description', ''),
+                      'notes': f"Key combo: {', '.join(idea.get('combination', []))} | Complexity: {idea.get('complexity','')}"
+                  }
+                  db['recipes'].append(r)
+                  added.append(r['name'])
+
+              db['last_updated'] = datetime.datetime.now().strftime('%Y-%m-%d')
+              result = {'mode': 'batch', 'added': len(added), 'names': added}
+
+          with open('recipes.json', 'w') as f:
+              json.dump(db, f, indent=2, ensure_ascii=False)
+
+          # Write result for next step
+          with open('_result.json', 'w') as f:
+              json.dump(result, f)
+
+          print(json.dumps(result))
+          PYEOF
+
+      - name: Commit result
+        run: |
+          git config user.name "Oatly Drinks Lab"
+          git config user.email "bot@oatly-drinks-lab"
+          git add recipes.json
+          git diff --staged --quiet || git commit -m "🤖 AI generated recipe — $(date '+%Y-%m-%d %H:%M')"
+          git push
