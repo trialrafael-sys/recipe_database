@@ -4517,6 +4517,58 @@
       "ingredients": [],
       "method": "A shaken espresso drink where a double shot is pulled over dragon fruit and elderflower syrups, then vigorously shaken with Oatly Barista Edition to create a thick, rosy-hued foam — finished with a melon syrup drizzle that slowly bleeds through the drink like sunset through stained glass. The espresso's bitterness anchors the floral sweetness into something unexpectedly sophisticated.",
       "notes": "Key combo: dragon fruit, elderflower, melon | Complexity: Advanced"
+    },
+    {
+      "id": "AI20260622105713",
+      "name": "Escama Rosa",
+      "source": "AI Generated",
+      "category": "Signature Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "3/5",
+      "status": "approved",
+      "tags": [
+        "gradient",
+        "three-layer",
+        "show-stopping",
+        "fruity",
+        "espresso",
+        "visual"
+      ],
+      "ingredients": [
+        {
+          "name": "melon syrup",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 150,
+          "unit": "ml"
+        },
+        {
+          "name": "lychee syrup",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "espresso (double shot)",
+          "amount": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "dragon fruit syrup",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "ice",
+          "amount": 1,
+          "unit": "handful"
+        }
+      ],
+      "method": "Pour melon syrup directly into the base of a 350ml clear glass, then pack tightly with ice. In a small pitcher, combine cold Oatly Barista Edition with lychee syrup and stir gently to integrate, then slowly pour over the back of a spoon onto the ice to preserve the layer above the melon. Pull a fresh double espresso, allow it to cool for 30 seconds, then slowly pour over the back of the spoon on top of the Oatly layer so it floats and bleeds downward naturally. Finish by drizzling dragon fruit syrup across the espresso surface using a squeeze bottle in a slow, deliberate motion to create vivid pink streaks cascading through the glass — serve immediately without a straw so the guest sees the full gradient before stirring.",
+      "notes": "The first sip hits with honeyed cantaloupe sweetness anchoring the base, which then lifts into the delicate floral perfume of lychee woven through the creamy Oatly mid-layer. The espresso brings roasted depth and a gentle bitterness that cuts through the fruit softness, while dragon fruit adds a subtle tartness and visual drama on top. As the drink is stirred, the three layers bleed into a blush-toned, lightly sweet espresso with a long, tropical finish — bright, elegant, and unmistakably Mediterranean in spirit."
     }
   ]
 }
