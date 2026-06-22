@@ -1303,14 +1303,18 @@ async function triggerWorkflow(payload) {
 async function waitForRecipe(btnEl, btnTextEl, resetText, pollSeconds = 90) {
   const before = RECIPES.length;
   let elapsed = 0;
+  const token = getGHToken();
   while (elapsed < 180) {
     await new Promise(r => setTimeout(r, 5000));
     elapsed += 5;
     const countdown = Math.max(0, pollSeconds - elapsed);
     btnTextEl.innerHTML = `⏳ Generating… <span style="opacity:.6;font-size:13px;">${countdown > 0 ? countdown + 's' : 'almost…'}</span>`;
     try {
-      const r = await fetch(`https://raw.githubusercontent.com/${GH_REPO}/main/recipes.json?t=${Date.now()}`);
-      const data = await r.json();
+      // Use GitHub API (no cache) instead of raw.githubusercontent.com
+      const headers = token ? { 'Authorization': `token ${token}` } : {};
+      const r = await fetch(`${GH_API}/repos/${GH_REPO}/contents/recipes.json?t=${Date.now()}`, { headers });
+      const meta = await r.json();
+      const data = JSON.parse(atob(meta.content.replace(/\n/g,'')));
       if (data.recipes.length > before) return data.recipes;
     } catch(e) {}
   }
@@ -1632,6 +1636,7 @@ async function generateBatch() {
 
   const before = RECIPES.length;
   btnText.innerHTML = '⏳ Generating… <span style="opacity:.6;font-size:13px;">90s</span>';
+  const token = getGHToken();
 
   let elapsed = 0;
   let newData = null;
@@ -1641,8 +1646,10 @@ async function generateBatch() {
     const countdown = Math.max(0, 90 - elapsed);
     btnText.innerHTML = `⏳ Generating… <span style="opacity:.6;font-size:13px;">${countdown > 0 ? countdown + 's' : 'almost…'}</span>`;
     try {
-      const r = await fetch(`https://raw.githubusercontent.com/${GH_REPO}/main/recipes.json?t=${Date.now()}`);
-      const data = await r.json();
+      const headers = token ? { 'Authorization': `token ${token}` } : {};
+      const r = await fetch(`${GH_API}/repos/${GH_REPO}/contents/recipes.json?t=${Date.now()}`, { headers });
+      const meta = await r.json();
+      const data = JSON.parse(atob(meta.content.replace(/\n/g,'')));
       if (data.recipes.length > before) { newData = data; break; }
     } catch(e) {}
   }
