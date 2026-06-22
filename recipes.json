@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "2.0",
   "last_updated": "2026-06-22",
   "recipes": [
     {
@@ -102,42 +102,46 @@
       "category": "Frozen",
       "oatly_product": "Oatly Barista Edition",
       "serve": "Frozen",
-      "skill_level": "3/5",
+      "skill_level": "1/5",
       "status": "approved",
       "tags": [
-        "Frozen",
-        "Acai",
-        "Espresso",
-        "Brazilian"
+        "Latin American flavours",
+        "Layers",
+        "Temperature"
       ],
       "ingredients": [
         {
-          "name": "Oatly Barista Edition",
-          "amount": 150,
+          "name": "Oatly Barista Edition (or Coconut Flavour)",
+          "amount": 175,
           "unit": "ml"
         },
         {
-          "name": "Frozen acai",
-          "amount": 40,
+          "name": "Frozen unsweetened acai",
+          "amount": 100,
+          "unit": "g"
+        },
+        {
+          "name": "Frozen blueberries",
+          "amount": 50,
+          "unit": "g"
+        },
+        {
+          "name": "Cacao powder",
+          "amount": 10,
+          "unit": "g"
+        },
+        {
+          "name": "Agave",
+          "amount": 45,
           "unit": "g"
         },
         {
           "name": "Double espresso",
           "amount": 2,
           "unit": "shot"
-        },
-        {
-          "name": "Agave syrup",
-          "amount": 15,
-          "unit": "ml"
-        },
-        {
-          "name": "Ice",
-          "amount": 100,
-          "unit": "g"
         }
       ],
-      "method": "Blend Oatly, acai, agave and ice until smooth. Pour into glass. Top with espresso.",
+      "method": "Blend all acai frozen mixture ingredients until smooth. Add 75g to short glass. Pull double espresso. Gently layer espresso on top.",
       "notes": "",
       "url": "https://www.oatly.com/recipes/look-book-vol-3/acai-frozen-flat"
     },
@@ -193,41 +197,58 @@
       "category": "Cooler",
       "oatly_product": "Oatly Barista Edition",
       "serve": "Iced",
-      "skill_level": "2/5",
+      "skill_level": "3/5",
       "status": "approved",
       "tags": [
-        "Refreshing",
-        "Latin American flavours",
-        "No coffee"
+        "Grapes",
+        "Tea explosion",
+        "Salted",
+        "Layers",
+        "Cold foam"
       ],
       "ingredients": [
         {
           "name": "Oatly Barista Edition",
-          "amount": 130,
-          "unit": "ml"
-        },
-        {
-          "name": "Red grape juice",
           "amount": 100,
           "unit": "ml"
         },
         {
-          "name": "Lime juice",
-          "amount": 15,
-          "unit": "ml"
+          "name": "Seedless red grapes",
+          "amount": 100,
+          "unit": "g"
         },
         {
-          "name": "Agave syrup",
-          "amount": 10,
+          "name": "Red grape juice",
+          "amount": 50,
           "unit": "ml"
         },
         {
           "name": "Ice",
+          "amount": 200,
+          "unit": "g"
+        },
+        {
+          "name": "Seedless green grapes",
+          "amount": 6,
+          "unit": "unit"
+        },
+        {
+          "name": "Green tea concentrate",
+          "amount": 60,
+          "unit": "ml"
+        },
+        {
+          "name": "Oatly Cold Foam (for salted foam)",
+          "amount": 200,
+          "unit": "ml"
+        },
+        {
+          "name": "Salt (for foam)",
           "amount": 1,
-          "unit": "handful"
+          "unit": "pinch"
         }
       ],
-      "method": "Add agave and lime juice to glass. Fill with ice. Pour grape juice. Top with Oatly Barista Edition.",
+      "method": "Foam salted cold foam ingredients. Cut green grapes into chunks, add to bottom of glass. Add green tea concentrate. Blend red grapes, grape juice, Oatly and ice; pour into glass. Finish with salted cold foam.",
       "notes": "",
       "url": "https://www.oatly.com/recipes/look-book-vol-3/the-grape-cooler"
     },
@@ -1037,46 +1058,55 @@
       "category": "Smoothie",
       "oatly_product": "Oatly Barista Edition",
       "serve": "Iced",
-      "skill_level": "2/5",
+      "skill_level": "1/5",
       "status": "approved",
       "tags": [
-        "Tropical",
-        "Smoothie",
-        "Texture"
+        "Fibermaxxing",
+        "Herbs and leaves"
       ],
       "ingredients": [
         {
           "name": "Oatly Barista Edition",
-          "amount": 200,
+          "amount": 150,
           "unit": "ml"
         },
         {
-          "name": "Papaya puree",
-          "amount": 80,
+          "name": "Basil seeds",
+          "amount": 5,
           "unit": "g"
         },
         {
-          "name": "Basil seeds (soaked)",
-          "amount": 10,
+          "name": "Ripe papaya flesh",
+          "amount": 55,
           "unit": "g"
+        },
+        {
+          "name": "Thai basil leaves",
+          "amount": 4,
+          "unit": "unit"
         },
         {
           "name": "Lime juice",
-          "amount": 10,
-          "unit": "ml"
+          "amount": 5,
+          "unit": "g"
         },
         {
           "name": "Agave syrup",
-          "amount": 15,
-          "unit": "ml"
+          "amount": 20,
+          "unit": "g"
+        },
+        {
+          "name": "Water",
+          "amount": 50,
+          "unit": "g"
         },
         {
           "name": "Ice",
-          "amount": 100,
-          "unit": "g"
+          "amount": 1,
+          "unit": "handful"
         }
       ],
-      "method": "Soak basil seeds for 10 min. Blend Oatly, papaya, lime and agave until smooth. Pour over ice. Top with basil seeds.",
+      "method": "Blend all papaya puree ingredients. Add basil seeds and set aside 30 min for seeds to swell. Add ice and Oatly Barista Edition and stir. Serve over lots of ice.",
       "notes": ""
     },
     {
@@ -1087,29 +1117,49 @@
       "category": "Latte",
       "oatly_product": "Oatly Barista Edition",
       "serve": "Iced",
-      "skill_level": "2/5",
+      "skill_level": "3/5",
       "status": "approved",
       "tags": [
-        "Tea",
-        "Black sugar",
-        "Boba-style",
-        "Asian inspired"
+        "Global flavour exchange",
+        "Cold foam",
+        "Layers",
+        "Tea explosion"
       ],
       "ingredients": [
         {
           "name": "Oatly Barista Edition",
-          "amount": 180,
+          "amount": 150,
           "unit": "ml"
         },
         {
-          "name": "Black tea (brewed strong)",
-          "amount": 60,
+          "name": "Cold brewed matcha",
+          "amount": 40,
           "unit": "ml"
         },
         {
-          "name": "Black sugar syrup",
-          "amount": 25,
+          "name": "Okinawa black sugar (for syrup)",
+          "amount": 50,
+          "unit": "g"
+        },
+        {
+          "name": "Hot water (for syrup)",
+          "amount": 100,
+          "unit": "g"
+        },
+        {
+          "name": "Oatly Cold Foam (for hojicha foam)",
+          "amount": 50,
           "unit": "ml"
+        },
+        {
+          "name": "Hojicha powder (for foam)",
+          "amount": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "Salt (for foam)",
+          "amount": 1,
+          "unit": "pinch"
         },
         {
           "name": "Ice",
@@ -1117,7 +1167,7 @@
           "unit": "handful"
         }
       ],
-      "method": "Brew black tea strong and cool. Add black sugar to glass with ice. Pour tea. Top with Oatly Barista Edition.",
+      "method": "Black sugar syrup: dissolve sugar in hot water over low heat, boil then cool. Add 25g black sugar syrup to glass. Add ice and Oatly Barista. Top with cold brewed matcha. Foam hojicha cold foam ingredients. Finish with cold foam.",
       "notes": ""
     },
     {
@@ -1131,34 +1181,43 @@
       "skill_level": "3/5",
       "status": "approved",
       "tags": [
-        "Umami",
-        "Chocolate",
-        "Hot",
-        "Koji"
+        "Koji",
+        "Global flavour exchange",
+        "Sweet with savoury"
       ],
       "ingredients": [
         {
           "name": "Oatly Barista Edition",
-          "amount": 220,
+          "amount": 200,
           "unit": "ml"
         },
         {
-          "name": "Dark chocolate (70%)",
+          "name": "Vegan hot chocolate powder or flakes",
           "amount": 30,
           "unit": "g"
         },
         {
-          "name": "Koji caramel",
-          "amount": 20,
+          "name": "Boiling water",
+          "amount": 40,
           "unit": "ml"
         },
         {
-          "name": "Pinch of salt",
-          "amount": 1,
-          "unit": "pinch"
+          "name": "Oatly Barista Edition (for koji caramel)",
+          "amount": 120,
+          "unit": "ml"
+        },
+        {
+          "name": "Granulated sugar (for koji caramel)",
+          "amount": 100,
+          "unit": "g"
+        },
+        {
+          "name": "Koji paste / shio-koji (for koji caramel)",
+          "amount": 50,
+          "unit": "g"
         }
       ],
-      "method": "Melt chocolate in warm Oatly over low heat. Stir in koji caramel. Finish with a pinch of salt. Serve hot.",
+      "method": "Koji caramel: whisk koji paste and Oatly Barista Edition over low heat. Melt sugar separately until deep amber. Reduce heat, add warm koji-barista mix whisking until smooth. Simmer 1-2 min. For drink: drizzle koji caramel in cup. Add chocolate powder, 1 tbsp koji caramel and hot water, stir. Heat Oatly Barista and pour over.",
       "notes": "Koji caramel: fermented koji adds umami-sweet depth. Shiro miso can substitute."
     },
     {
@@ -1172,34 +1231,43 @@
       "skill_level": "3/5",
       "status": "approved",
       "tags": [
-        "Smoky",
-        "Woody",
-        "Espresso",
-        "Creative"
+        "Nostalgia",
+        "Conscious indulgence",
+        "Smoky flavours"
       ],
       "ingredients": [
         {
           "name": "Oatly Barista Edition",
-          "amount": 180,
+          "amount": 150,
           "unit": "ml"
+        },
+        {
+          "name": "Lapsang souchong tea concentrate",
+          "amount": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Cayenne powder",
+          "amount": 0.2,
+          "unit": "g"
+        },
+        {
+          "name": "Vegan marshmallows",
+          "amount": 20,
+          "unit": "g"
+        },
+        {
+          "name": "Smoked salt",
+          "amount": 0.1,
+          "unit": "g"
         },
         {
           "name": "Double espresso",
           "amount": 2,
           "unit": "shot"
-        },
-        {
-          "name": "Smoked sugar syrup",
-          "amount": 20,
-          "unit": "ml"
-        },
-        {
-          "name": "Ice",
-          "amount": 1,
-          "unit": "handful"
         }
       ],
-      "method": "Prepare smoked sugar syrup. Add syrup to glass with ice. Pour Oatly Barista. Top with espresso.",
+      "method": "Heat Oatly Barista Edition and marshmallows on low heat stirring until dissolved (don't boil). Add espresso, cayenne and lapsang tea concentrate to cup. Top with warm marshmallow Oatly. Finish with smoked salt and toasted marshmallow.",
       "notes": ""
     },
     {
@@ -1230,7 +1298,22 @@
           "unit": "ml"
         },
         {
-          "name": "Osmanthus syrup",
+          "name": "Osmanthus flowers (for syrup)",
+          "amount": 5,
+          "unit": "g"
+        },
+        {
+          "name": "Hot water (for syrup)",
+          "amount": 100,
+          "unit": "ml"
+        },
+        {
+          "name": "White sugar (for syrup)",
+          "amount": 100,
+          "unit": "g"
+        },
+        {
+          "name": "Osmanthus syrup (for drink)",
           "amount": 20,
           "unit": "ml"
         },
@@ -1240,7 +1323,7 @@
           "unit": "ml"
         },
         {
-          "name": "Osmanthus syrup (foam)",
+          "name": "Osmanthus syrup (for foam)",
           "amount": 15,
           "unit": "ml"
         },
@@ -1250,7 +1333,7 @@
           "unit": "handful"
         }
       ],
-      "method": "Make osmanthus syrup: steep 5g flowers in 100ml boiling water 5-7 min, strain, add 100g sugar. Foam Oatly Cold Foam with osmanthus syrup. Add ice and 20ml osmanthus syrup to glass. Top with tonic water and cold brew. Finish with cold foam.",
+      "method": "Syrup: steep osmanthus flowers in boiling water 5-7 min. Strain, stir in sugar. Foam Oatly Cold Foam with osmanthus syrup. Add ice and 20ml syrup to glass. Top with tonic water and cold brewed coffee. Finish with cold foam.",
       "notes": "Osmanthus syrup recipe: 5g flowers, 100ml hot water, 100g white sugar."
     },
     {
@@ -1264,30 +1347,45 @@
       "skill_level": "3/5",
       "status": "approved",
       "tags": [
-        "Citrus",
-        "Floral tea",
-        "Chocolate",
-        "Layered"
+        "Global flavour exchange",
+        "Conscious indulgence",
+        "Layers",
+        "Tea explosion"
       ],
       "ingredients": [
         {
           "name": "Oatly Barista Edition",
-          "amount": 150,
+          "amount": 200,
           "unit": "ml"
         },
         {
-          "name": "White tea (brewed, cooled)",
-          "amount": 60,
-          "unit": "ml"
-        },
-        {
-          "name": "Pomelo juice",
+          "name": "Vegan white chocolate chips",
           "amount": 30,
+          "unit": "g"
+        },
+        {
+          "name": "Boiling water",
+          "amount": 50,
           "unit": "ml"
         },
         {
-          "name": "Dark chocolate sauce",
-          "amount": 20,
+          "name": "White tea concentrate",
+          "amount": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Salt",
+          "amount": 1,
+          "unit": "pinch"
+        },
+        {
+          "name": "Oatly Cold Foam (for pomelo foam)",
+          "amount": 50,
+          "unit": "ml"
+        },
+        {
+          "name": "Pomelo juice (for foam)",
+          "amount": 15,
           "unit": "ml"
         },
         {
@@ -1296,7 +1394,7 @@
           "unit": "handful"
         }
       ],
-      "method": "Drizzle chocolate sauce in glass. Add ice. Mix white tea and pomelo juice. Pour Oatly Barista. Pour tea mixture over.",
+      "method": "Foam pomelo cold foam ingredients. Melt white chocolate chips and salt in boiling water. Add Oatly Barista Edition and stir. Fill glass with ice. Pour white chocolate Oatly mix. Top with cold brewed white tea. Finish with pomelo cold foam.",
       "notes": ""
     },
     {
@@ -1307,37 +1405,66 @@
       "category": "Latte",
       "oatly_product": "Oatly Barista Edition",
       "serve": "Iced",
-      "skill_level": "2/5",
+      "skill_level": "3/5",
       "status": "approved",
       "tags": [
         "Latin American flavours",
-        "Mate",
-        "Cola",
-        "Refreshing"
+        "Conscious indulgence",
+        "Herbs and leaves"
       ],
       "ingredients": [
         {
           "name": "Oatly Barista Edition",
-          "amount": 120,
+          "amount": 150,
           "unit": "ml"
         },
         {
-          "name": "Brewed yerba mate",
+          "name": "Filtered water (for syrup)",
+          "amount": 1000,
+          "unit": "ml"
+        },
+        {
+          "name": "Yerba mate tea (for syrup)",
+          "amount": 40,
+          "unit": "g"
+        },
+        {
+          "name": "Limes (for syrup)",
+          "amount": 2,
+          "unit": "unit"
+        },
+        {
+          "name": "Oranges (for syrup)",
+          "amount": 2,
+          "unit": "unit"
+        },
+        {
+          "name": "Broken cinnamon sticks (for syrup)",
+          "amount": 3,
+          "unit": "unit"
+        },
+        {
+          "name": "Whole coriander seeds (for syrup)",
+          "amount": 2,
+          "unit": "tbsp"
+        },
+        {
+          "name": "Dried oregano (for syrup)",
+          "amount": 2,
+          "unit": "tsp"
+        },
+        {
+          "name": "Raw coconut sugar (for syrup)",
+          "amount": 800,
+          "unit": "g"
+        },
+        {
+          "name": "Tamarind puree (for syrup)",
           "amount": 80,
-          "unit": "ml"
-        },
-        {
-          "name": "Cola syrup",
-          "amount": 20,
-          "unit": "ml"
-        },
-        {
-          "name": "Ice",
-          "amount": 1,
-          "unit": "handful"
+          "unit": "g"
         }
       ],
-      "method": "Brew mate and cool. Add cola syrup to glass with ice. Pour Oatly Barista. Top with cold mate.",
+      "method": "Peel lime and orange zest, juice fruit. Brew yerba mate in water 5 min. Add all remaining syrup ingredients (except citrus juice) to pan, boil 1-2 min. Remove from heat, add citrus juices. Strain, store. For drink: add 20g syrup to cup, steam Oatly Barista and pour.",
       "notes": ""
     },
     {
@@ -1348,18 +1475,17 @@
       "category": "Matcha",
       "oatly_product": "Oatly Barista Edition",
       "serve": "Iced",
-      "skill_level": "4/5",
+      "skill_level": "3/5",
       "status": "approved",
       "tags": [
-        "Woody",
-        "Florals",
         "Matcha",
-        "Creative"
+        "Destination drinks",
+        "Herbs and leaves"
       ],
       "ingredients": [
         {
-          "name": "Oatly Barista Edition",
-          "amount": 180,
+          "name": "Oatly Barista Edition (or Coconut Flavour)",
+          "amount": 150,
           "unit": "ml"
         },
         {
@@ -1368,8 +1494,18 @@
           "unit": "ml"
         },
         {
-          "name": "Fig leaf syrup",
-          "amount": 20,
+          "name": "Fig leaves (for syrup)",
+          "amount": 4,
+          "unit": "unit"
+        },
+        {
+          "name": "White sugar (for syrup)",
+          "amount": 150,
+          "unit": "g"
+        },
+        {
+          "name": "Boiling water (for syrup)",
+          "amount": 250,
           "unit": "ml"
         },
         {
@@ -1378,7 +1514,7 @@
           "unit": "handful"
         }
       ],
-      "method": "Make fig leaf syrup by simmering fig leaves with sugar and water. Cold brew matcha. Layer in glass: fig leaf syrup, ice, Oatly, matcha.",
+      "method": "Fig leaf syrup: wash leaves, pour hot sugar syrup over them. Cool then refrigerate 4h minimum. Remove leaves, store chilled. Fill glass with ice. Add 20ml fig leaf syrup. Top with Oatly Barista Edition. Finish with cold brewed matcha.",
       "notes": "Fig leaf has a coconut-woody flavour. Substitute: toasted coconut syrup."
     },
     {
@@ -1389,28 +1525,32 @@
       "category": "Refresher",
       "oatly_product": "Oatly Barista Edition",
       "serve": "Iced",
-      "skill_level": "5/5",
+      "skill_level": "3/5",
       "status": "approved",
       "tags": [
-        "Fermented",
         "Latin American flavours",
-        "Pineapple",
-        "4 days"
+        "Gut health",
+        "Conscious indulgence"
       ],
       "ingredients": [
         {
           "name": "Oatly Barista Edition",
+          "amount": 250,
+          "unit": "ml"
+        },
+        {
+          "name": "Pineapple (skin and core)",
+          "amount": 1,
+          "unit": "unit"
+        },
+        {
+          "name": "Sugar",
           "amount": 100,
-          "unit": "ml"
+          "unit": "g"
         },
         {
-          "name": "Tepache (fermented pineapple)",
-          "amount": 150,
-          "unit": "ml"
-        },
-        {
-          "name": "Cinnamon syrup",
-          "amount": 10,
+          "name": "Hot water",
+          "amount": 100,
           "unit": "ml"
         },
         {
@@ -1419,7 +1559,7 @@
           "unit": "handful"
         }
       ],
-      "method": "Ferment tepache 3-4 days (pineapple rind, piloncillo, cinnamon, cloves, water). Strain and chill. Add ice to glass. Pour tepache. Top with Oatly Barista.",
+      "method": "Place pineapple skin and core in sterilised vessel. Dissolve sugar in water, pour over pineapple. Top up with Oatly Barista Edition until pineapple bits are covered. Cover loosely. Leave 4-5 days in fridge. When at desired fermentation, strain. Serve over lots of ice.",
       "notes": "4-day fermentation. Serve immediately once poured — fizzy."
     },
     {
@@ -1433,31 +1573,50 @@
       "skill_level": "2/5",
       "status": "approved",
       "tags": [
-        "Autumn",
-        "Fruity",
-        "Cold Brew",
-        "Asian inspired"
+        "Persimmon",
+        "Layers",
+        "Global flavour exchange"
       ],
       "ingredients": [
         {
           "name": "Oatly Barista Edition",
-          "amount": 100,
+          "amount": 75,
           "unit": "ml"
         },
         {
-          "name": "Cold brew coffee",
-          "amount": 100,
+          "name": "Cold brewed coffee",
+          "amount": 75,
           "unit": "ml"
         },
         {
-          "name": "Persimmon puree",
-          "amount": 40,
+          "name": "Persimmon flesh (for puree)",
+          "amount": 50,
           "unit": "g"
         },
         {
-          "name": "Agave syrup",
-          "amount": 10,
+          "name": "Water (for puree)",
+          "amount": 50,
           "unit": "ml"
+        },
+        {
+          "name": "Vanilla extract (for puree)",
+          "amount": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "Agave (for puree, optional)",
+          "amount": 5,
+          "unit": "g"
+        },
+        {
+          "name": "Nutmeg powder (for puree)",
+          "amount": 0.2,
+          "unit": "g"
+        },
+        {
+          "name": "Salt (for puree)",
+          "amount": 0.1,
+          "unit": "g"
         },
         {
           "name": "Ice",
@@ -1465,7 +1624,7 @@
           "unit": "handful"
         }
       ],
-      "method": "Add persimmon puree and agave to glass. Fill with ice. Pour cold brew. Top with Oatly Barista.",
+      "method": "Blend all persimmon puree ingredients together. Pour into glass. Top with ice. Add Oatly Barista Edition and stir. Finish with cold brewed coffee.",
       "notes": ""
     },
     {
@@ -1476,13 +1635,12 @@
       "category": "Matcha",
       "oatly_product": "Oatly Barista Edition",
       "serve": "Iced",
-      "skill_level": "4/5",
+      "skill_level": "3/5",
       "status": "approved",
       "tags": [
-        "Texture",
-        "Matcha",
+        "Conscious indulgence",
         "Jelly",
-        "Creative"
+        "Tea explosion"
       ],
       "ingredients": [
         {
@@ -1491,27 +1649,27 @@
           "unit": "ml"
         },
         {
-          "name": "Cold brewed matcha",
-          "amount": 80,
+          "name": "Apple juice",
+          "amount": 90,
           "unit": "ml"
         },
         {
-          "name": "Agar agar",
+          "name": "Matcha powder",
           "amount": 2,
           "unit": "g"
         },
         {
-          "name": "Agave syrup",
+          "name": "Sugar",
           "amount": 10,
-          "unit": "ml"
+          "unit": "g"
         },
         {
-          "name": "Ice",
+          "name": "Agar agar",
           "amount": 1,
-          "unit": "handful"
+          "unit": "g"
         }
       ],
-      "method": "Dissolve agar agar in warm matcha + agave. Pour into tray and set. Cut into cubes. Place matcha jelly in glass. Pour Oatly Barista over.",
+      "method": "Blend Oatly and matcha powder. Put apple juice, sugar and agar agar in pan, bring to boil. Boil 1 min whisking constantly. Remove from heat, add Oatly matcha mix, whisk. Strain into container, set 1-2h. Cut into 6-8 shots.",
       "notes": "Agar ratio: 2g per 200ml liquid."
     },
     {
@@ -1525,15 +1683,15 @@
       "skill_level": "4/5",
       "status": "approved",
       "tags": [
-        "Japanese",
-        "Mochi",
         "Matcha",
-        "Texture"
+        "Chewy textures",
+        "Global flavour exchange",
+        "Tea explosion"
       ],
       "ingredients": [
         {
           "name": "Oatly Barista Edition",
-          "amount": 180,
+          "amount": 150,
           "unit": "ml"
         },
         {
@@ -1542,22 +1700,32 @@
           "unit": "ml"
         },
         {
-          "name": "Mochi pieces",
-          "amount": 3,
-          "unit": "unit"
-        },
-        {
-          "name": "Agave syrup",
-          "amount": 10,
+          "name": "Oatly Barista Edition (for mochi)",
+          "amount": 170,
           "unit": "ml"
         },
         {
-          "name": "Ice",
-          "amount": 1,
-          "unit": "handful"
+          "name": "Glutinous rice flour",
+          "amount": 100,
+          "unit": "g"
+        },
+        {
+          "name": "Sugar (for mochi)",
+          "amount": 40,
+          "unit": "g"
+        },
+        {
+          "name": "Oatly Cold Foam (for matcha foam)",
+          "amount": 200,
+          "unit": "ml"
+        },
+        {
+          "name": "Matcha powder (for foam)",
+          "amount": 5,
+          "unit": "g"
         }
       ],
-      "method": "Cold brew matcha. Add mochi pieces to glass. Fill with ice. Pour Oatly Barista. Float matcha on top.",
+      "method": "Mochi: whisk all mochi ingredients smooth. Heat stirring until sticky dough forms. Chill. Roll pieces in rice flour. Add 40g mochi to glass. Top with ice, Oatly Barista and cold brewed matcha. Foam matcha cold foam ingredients. Finish with aerated cold foam.",
       "notes": ""
     },
     {
@@ -1571,31 +1739,45 @@
       "skill_level": "4/5",
       "status": "approved",
       "tags": [
-        "Asian inspired",
-        "Lychee",
-        "Oolong",
+        "Conscious indulgence",
+        "Textures",
         "Jelly",
-        "Texture"
+        "Tea explosion"
       ],
       "ingredients": [
         {
-          "name": "Oatly Barista Edition",
-          "amount": 150,
+          "name": "Lychee juice or lychee syrup",
+          "amount": 50,
           "unit": "ml"
         },
         {
-          "name": "Oolong tea (brewed, cooled)",
-          "amount": 80,
+          "name": "Oolong tea concentrate",
+          "amount": 50,
           "unit": "ml"
         },
         {
-          "name": "Lychee syrup",
+          "name": "Water",
+          "amount": 100,
+          "unit": "ml"
+        },
+        {
+          "name": "Oatly Barista Edition (for jelly)",
+          "amount": 90,
+          "unit": "ml"
+        },
+        {
+          "name": "Water (for jelly)",
+          "amount": 90,
+          "unit": "ml"
+        },
+        {
+          "name": "Sugar (for jelly)",
           "amount": 20,
-          "unit": "ml"
+          "unit": "g"
         },
         {
-          "name": "Agar agar jelly cubes",
-          "amount": 30,
+          "name": "Agar agar (for jelly)",
+          "amount": 0.9,
           "unit": "g"
         },
         {
@@ -1604,7 +1786,7 @@
           "unit": "handful"
         }
       ],
-      "method": "Set agar agar jelly with oolong tea. Cut into cubes. Add lychee syrup to glass. Add jelly and ice. Pour Oatly Barista. Top with oolong.",
+      "method": "Make Oatly jelly: boil water, sugar and agar agar 1 min whisking. Remove from heat, add Oatly Barista, whisk. Strain into container, refrigerate 1-2h. Add 40g jelly to glass. Top with ice. Add lychee juice/syrup and oolong concentrate.",
       "notes": ""
     },
     {
@@ -1615,43 +1797,62 @@
       "category": "Tea Latte",
       "oatly_product": "Oatly Barista Edition",
       "serve": "Iced",
-      "skill_level": "4/5",
+      "skill_level": "5/5",
       "status": "approved",
       "tags": [
-        "Global flavour exchange",
-        "Japanese",
-        "Hojicha",
-        "Mocktail",
-        "Clarified"
+        "Conscious indulgence",
+        "Woody flavours",
+        "Tea explosion",
+        "Global flavour exchange"
       ],
       "ingredients": [
         {
           "name": "Oatly Barista Edition",
-          "amount": 60,
+          "amount": 150,
           "unit": "ml"
         },
         {
-          "name": "Hojicha concentrate",
-          "amount": 80,
-          "unit": "ml"
+          "name": "Salt",
+          "amount": 1,
+          "unit": "g"
+        },
+        {
+          "name": "Lactic acid powder (or 33g lemon juice)",
+          "amount": 2,
+          "unit": "g"
+        },
+        {
+          "name": "Boiling water",
+          "amount": 50,
+          "unit": "g"
+        },
+        {
+          "name": "Hojicha powder",
+          "amount": 15,
+          "unit": "g"
         },
         {
           "name": "Maple syrup",
-          "amount": 10,
-          "unit": "ml"
+          "amount": 60,
+          "unit": "g"
         },
         {
-          "name": "Orange bitters (non-alc)",
-          "amount": 2,
-          "unit": "drops"
+          "name": "Orange bitters",
+          "amount": 3,
+          "unit": "g"
         },
         {
-          "name": "Ice (large cube)",
+          "name": "Non-alcoholic spiced spirit (or rye whiskey)",
+          "amount": 250,
+          "unit": "g"
+        },
+        {
+          "name": "Orange twist (garnish)",
           "amount": 1,
           "unit": "unit"
         }
       ],
-      "method": "Brew strong hojicha concentrate. Combine hojicha, Oatly, maple syrup and bitters in mixing glass with ice. Stir until cold. Strain into glass over large ice cube. Express orange peel.",
+      "method": "Dissolve salt, acid, hojicha and boiling water with electric whisk. Add maple syrup, bitters, spirit and chilled Oatly Barista Edition (will curdle). Pass through paper coffee filter until clear (pass cloudy liquid twice). Bottle and refrigerate. To serve: pour 125ml over clear ice, garnish with orange twist.",
       "notes": "Clarification optional for visual impact."
     },
     {
@@ -1666,9 +1867,7 @@
       "status": "approved",
       "tags": [
         "Latin American flavours",
-        "Sweet with savoury",
-        "Infusion",
-        "Creative"
+        "Sweet with savoury"
       ],
       "ingredients": [
         {
@@ -1677,12 +1876,12 @@
           "unit": "ml"
         },
         {
-          "name": "Agave syrup",
-          "amount": 20,
+          "name": "Agave (to taste)",
+          "amount": 25,
           "unit": "ml"
         },
         {
-          "name": "Tortilla chips",
+          "name": "Tortilla chips (for infusion)",
           "amount": 20,
           "unit": "g"
         },
@@ -1692,17 +1891,12 @@
           "unit": "shot"
         },
         {
-          "name": "Spicy tortilla chips, crushed (rim)",
+          "name": "Spicy tortilla chips crushed (for rim)",
           "amount": 5,
           "unit": "g"
-        },
-        {
-          "name": "Ice",
-          "amount": 1,
-          "unit": "handful"
         }
       ],
-      "method": "Warm Oatly + tortilla chips + agave over low heat 5 min. Cool and strain. Rim glass with agave and crushed spicy chips. Fill with ice. Add infused Oatly. Finish with espresso.",
+      "method": "Infusion: warm Oatly, agave and tortilla chips over low heat 5 min (don't boil). Cool, strain. Rim half the glass with agave and crushed spicy chips. Fill with ice. Add tortilla-infused Oatly. Finish with double espresso.",
       "notes": "Infuse at low heat — do not boil."
     },
     {
@@ -1716,16 +1910,29 @@
       "skill_level": "2/5",
       "status": "approved",
       "tags": [
-        "Latin American flavours",
-        "Citrus",
-        "Cherry",
-        "Espresso"
+        "Global flavour exchange",
+        "Espresso bar culture"
       ],
       "ingredients": [
         {
-          "name": "Oatly Barista Edition",
-          "amount": 150,
+          "name": "Oatly Whippable Creamy Oat (for lemon top)",
+          "amount": 40,
           "unit": "ml"
+        },
+        {
+          "name": "Lemon zest (for top)",
+          "amount": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "Lemon juice (for top)",
+          "amount": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "Sugar (for top)",
+          "amount": 1,
+          "unit": "tsp"
         },
         {
           "name": "Double espresso",
@@ -1733,22 +1940,12 @@
           "unit": "shot"
         },
         {
-          "name": "Lemon juice",
-          "amount": 15,
-          "unit": "ml"
-        },
-        {
-          "name": "Cherry syrup",
-          "amount": 20,
-          "unit": "ml"
-        },
-        {
-          "name": "Ice",
+          "name": "Cocktail cherry",
           "amount": 1,
-          "unit": "handful"
+          "unit": "unit"
         }
       ],
-      "method": "Add cherry syrup and lemon juice to glass with ice. Pour Oatly Barista. Top with espresso.",
+      "method": "Whip all lemon creamy oat ingredients with electric mini whisk to scoopable texture. Pull double espresso into small cup. Dollop lemon creamy oat on top. Finish with a cocktail cherry.",
       "notes": ""
     },
     {
@@ -3003,20 +3200,19 @@
       "notes": ""
     },
     {
-      "id": "GINGER_NUT",
+      "id": "AW25_GINGER_CHAI",
       "name": "Ginger Nut Chai",
       "source": "Look Book A/W 25",
       "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/ginger-nut-chai",
       "category": "Tea Latte",
       "oatly_product": "Oatly Barista Edition",
       "serve": "Iced",
-      "skill_level": "2/5",
+      "skill_level": "1/5",
       "status": "approved",
       "tags": [
-        "Chai",
-        "Ginger",
-        "Biscuit",
-        "Warming"
+        "Spiced",
+        "Seasonal flavors",
+        "Iced"
       ],
       "ingredients": [
         {
@@ -3025,18 +3221,18 @@
           "unit": "ml"
         },
         {
-          "name": "Chai concentrate",
-          "amount": 60,
+          "name": "Ready-made chai concentrate",
+          "amount": 50,
           "unit": "ml"
         },
         {
-          "name": "Ginger syrup",
-          "amount": 20,
-          "unit": "ml"
-        },
-        {
-          "name": "Biscuit syrup",
+          "name": "Nut syrup (any nut except pistachio)",
           "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Ginger juice",
+          "amount": 30,
           "unit": "ml"
         },
         {
@@ -3045,24 +3241,25 @@
           "unit": "handful"
         }
       ],
-      "method": "Add ginger and biscuit syrups to glass with ice. Pour chai concentrate. Top with Oatly Barista.",
-      "notes": ""
+      "method": "Fill glass with ice. Add nut syrup and ginger juice. Stir. Top with Oatly Barista Edition. Finish with chai concentrate.",
+      "notes": "Any nut syrup works. Except pistachio."
     },
     {
-      "id": "PEAR_CARDA",
+      "id": "AW25_PEAR_CARD",
       "name": "Pear & Cardamom Thai Tea",
       "source": "Look Book A/W 25",
       "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/pear-cardamom-thai-tea",
       "category": "Tea Latte",
       "oatly_product": "Oatly Barista Edition",
       "serve": "Iced",
-      "skill_level": "2/5",
+      "skill_level": "3/5",
       "status": "approved",
       "tags": [
         "Thai tea",
-        "Pear",
-        "Cardamom",
-        "Asian inspired"
+        "Seasonal fruits",
+        "Spiced",
+        "Layers",
+        "Iced"
       ],
       "ingredients": [
         {
@@ -3071,18 +3268,33 @@
           "unit": "ml"
         },
         {
-          "name": "Thai tea concentrate",
-          "amount": 80,
-          "unit": "ml"
-        },
-        {
-          "name": "Pear syrup",
+          "name": "Pear & cardamom syrup",
           "amount": 20,
           "unit": "ml"
         },
         {
-          "name": "Cardamom syrup",
+          "name": "Pear juice (for syrup)",
+          "amount": 150,
+          "unit": "ml"
+        },
+        {
+          "name": "Sugar (for syrup)",
+          "amount": 90,
+          "unit": "g"
+        },
+        {
+          "name": "Toasted cardamom pods (for syrup)",
           "amount": 10,
+          "unit": "g"
+        },
+        {
+          "name": "Pear juice",
+          "amount": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Thai tea concentrate",
+          "amount": 40,
           "unit": "ml"
         },
         {
@@ -3091,30 +3303,30 @@
           "unit": "handful"
         }
       ],
-      "method": "Add pear and cardamom syrups to glass with ice. Pour Thai tea. Top with Oatly Barista.",
-      "notes": ""
+      "method": "Toast cardamom pods and lightly crush. Add to pan with pear juice and sugar. Bring to simmer, reduce by half. Cool 1–2h, strain, chill. Fill glass with ice. Add syrup and pear juice. Stir. Top with Oatly Barista Edition. Finish with thai tea concentrate.",
+      "notes": "In medieval times, cardamom was thought to help protect against the cold."
     },
     {
-      "id": "MULLED_CRA",
+      "id": "AW25_MULLED_CRAN",
       "name": "Mulled Cranberry Matcha Latte",
       "source": "Look Book A/W 25",
       "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/mulled-cranberry-matcha-latte",
       "category": "Matcha",
-      "oatly_product": "Oatly Barista Edition",
+      "oatly_product": "Oatly Barista Lighter Taste",
       "serve": "Iced",
       "skill_level": "3/5",
       "status": "approved",
       "tags": [
-        "Festive",
-        "Cranberry",
+        "Spiced",
         "Matcha",
-        "Winter",
-        "Mulled"
+        "Layers",
+        "Iced",
+        "Seasonal fruits"
       ],
       "ingredients": [
         {
-          "name": "Oatly Barista Edition",
-          "amount": 180,
+          "name": "Oatly Barista Lighter Taste",
+          "amount": 150,
           "unit": "ml"
         },
         {
@@ -3124,8 +3336,38 @@
         },
         {
           "name": "Mulled cranberry syrup",
-          "amount": 25,
+          "amount": 20,
           "unit": "ml"
+        },
+        {
+          "name": "Cranberry juice (for syrup)",
+          "amount": 250,
+          "unit": "ml"
+        },
+        {
+          "name": "Cinnamon stick (for syrup)",
+          "amount": 1,
+          "unit": "unit"
+        },
+        {
+          "name": "Pink peppercorns (for syrup)",
+          "amount": 10,
+          "unit": "unit"
+        },
+        {
+          "name": "Star anise (for syrup)",
+          "amount": 2,
+          "unit": "unit"
+        },
+        {
+          "name": "Dried orange peel (for syrup)",
+          "amount": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "Sugar (for syrup)",
+          "amount": 100,
+          "unit": "g"
         },
         {
           "name": "Ice",
@@ -3133,113 +3375,26 @@
           "unit": "handful"
         }
       ],
-      "method": "Make mulled cranberry syrup (cranberry juice + mulling spices + sugar). Add syrup to glass with ice. Pour Oatly Barista. Float matcha.",
-      "notes": ""
+      "method": "Simmer all syrup ingredients 5 min until reduced by half. Cool, strain, chill. Fill glass with ice. Add cranberry syrup and Oatly Barista Lighter Taste. Finish with cold brewed matcha.",
+      "notes": "Shortcut: use Oatly Matcha Oat Drink instead of Barista + cold brewed matcha."
     },
     {
-      "id": "GOCHUJANG_",
+      "id": "AW25_GOCHUJ_HOT",
       "name": "Gochujang Hot Chocolate",
       "source": "Look Book A/W 25",
       "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/gochujang-hot-chocolate",
       "category": "Chocolate",
       "oatly_product": "Oatly Barista Edition",
       "serve": "Hot",
-      "skill_level": "2/5",
-      "status": "approved",
-      "tags": [
-        "Spicy",
-        "Chocolate",
-        "Gochujang",
-        "Hot",
-        "Korean inspired"
-      ],
-      "ingredients": [
-        {
-          "name": "Oatly Barista Edition",
-          "amount": 220,
-          "unit": "ml"
-        },
-        {
-          "name": "Dark chocolate (70%)",
-          "amount": 30,
-          "unit": "g"
-        },
-        {
-          "name": "Gochujang",
-          "amount": 5,
-          "unit": "g"
-        },
-        {
-          "name": "Agave syrup",
-          "amount": 10,
-          "unit": "ml"
-        },
-        {
-          "name": "Salt",
-          "amount": 1,
-          "unit": "pinch"
-        }
-      ],
-      "method": "Melt chocolate in warm Oatly. Stir in gochujang and agave. Finish with salt. Serve hot.",
-      "notes": "Start with 3g gochujang — adjust to taste."
-    },
-    {
-      "id": "YE_OLDE_OA",
-      "name": "Ye Olde Oatly",
-      "source": "Look Book A/W 25",
-      "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/ye-olde-oatly",
-      "category": "Latte",
-      "oatly_product": "Oatly Organic Creamy Oat",
-      "serve": "Hot",
-      "skill_level": "3/5",
-      "status": "approved",
-      "tags": [
-        "British inspired",
-        "Stout-style",
-        "Coffee",
-        "Salted vanilla",
-        "Beer-style"
-      ],
-      "ingredients": [
-        {
-          "name": "Oatly Organic Creamy Oat",
-          "amount": 150,
-          "unit": "ml"
-        },
-        {
-          "name": "Filter coffee (hot)",
-          "amount": 100,
-          "unit": "ml"
-        },
-        {
-          "name": "Salted vanilla syrup",
-          "amount": 20,
-          "unit": "ml"
-        },
-        {
-          "name": "Oatly Cold Foam",
-          "amount": 60,
-          "unit": "ml"
-        }
-      ],
-      "method": "Brew strong filter coffee. Add salted vanilla syrup to glass. Pour hot coffee. Layer Oatly Organic. Finish with cold foam on top like a stout head.",
-      "notes": "Inspired by a traditional British stout."
-    },
-    {
-      "id": "CINNAMON_R",
-      "name": "Cinnamon Roll Smoothie",
-      "source": "Look Book A/W 25",
-      "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/cinnamon-roll-smoothie",
-      "category": "Smoothie",
-      "oatly_product": "Oatly Barista Edition",
-      "serve": "Iced",
       "skill_level": "1/5",
       "status": "approved",
       "tags": [
-        "Cinnamon",
-        "Smoothie",
-        "Breakfast",
-        "Easy"
+        "Korean ingredients",
+        "Fermented",
+        "Fusion",
+        "Conscious indulgence",
+        "Chocolate",
+        "Spicy"
       ],
       "ingredients": [
         {
@@ -3248,31 +3403,177 @@
           "unit": "ml"
         },
         {
-          "name": "Frozen banana",
+          "name": "Gochujang",
+          "amount": 7.5,
+          "unit": "g"
+        },
+        {
+          "name": "Vegan hot chocolate powder or flakes",
+          "amount": 30,
+          "unit": "g"
+        },
+        {
+          "name": "Hot water",
+          "amount": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Gochugaru / chili flakes (garnish)",
+          "amount": 1,
+          "unit": "pinch"
+        }
+      ],
+      "method": "Stir chocolate powder and gochujang into hot water until smooth. Steam/heat Oatly Barista Edition. Pour over chocolate mix. Finish with gochugaru.",
+      "notes": "5–10g gochujang depending on heat preference."
+    },
+    {
+      "id": "AW25_YE_OLDE",
+      "name": "Ye Olde Oatly",
+      "source": "Look Book A/W 25",
+      "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/ye-olde-oatly",
+      "category": "Mocktail",
+      "oatly_product": "Oatly Organic Creamy Oat",
+      "serve": "Hot",
+      "skill_level": "3/5",
+      "status": "approved",
+      "tags": [
+        "Stout",
+        "Cream top",
+        "Layers",
+        "Temperature layering",
+        "Sweet evolution",
+        "Salted"
+      ],
+      "ingredients": [
+        {
+          "name": "Stout syrup",
+          "amount": 20,
+          "unit": "g"
+        },
+        {
+          "name": "Stout beer (regular or alcohol-free) for syrup",
+          "amount": 200,
+          "unit": "ml"
+        },
+        {
+          "name": "Light brown sugar (for syrup)",
+          "amount": 100,
+          "unit": "g"
+        },
+        {
+          "name": "Hot brewed filter coffee",
+          "amount": 200,
+          "unit": "ml"
+        },
+        {
+          "name": "Oatly Organic Creamy Oat (for top)",
+          "amount": 50,
+          "unit": "ml"
+        },
+        {
+          "name": "Vanilla extract with bits (for top)",
+          "amount": 1,
+          "unit": "g"
+        },
+        {
+          "name": "Maple syrup (for top)",
+          "amount": 5,
+          "unit": "g"
+        },
+        {
+          "name": "Salt (for top)",
+          "amount": 0.2,
+          "unit": "g"
+        }
+      ],
+      "method": "Simmer stout and sugar until reduced by half (~10 min). Cool, store chilled. Froth Oatly Organic Creamy Oat with vanilla, maple and salt until thickened. Add stout syrup and hot filter coffee to cup. Stir. Finish with salted vanilla top.",
+      "notes": "Inspired by a British stout. The salted vanilla top mimics the creamy head."
+    },
+    {
+      "id": "AW25_CINN_SMTH",
+      "name": "Cinnamon Roll Smoothie",
+      "source": "Look Book A/W 25",
+      "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/cinnamon-roll-smoothie",
+      "category": "Smoothie",
+      "oatly_product": "Oatly No Sugars Oat Drink",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": [
+        "Spiced",
+        "Iced",
+        "Desserts",
+        "Protein",
+        "Health",
+        "Layers"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly No Sugars Oat Drink",
+          "amount": 150,
+          "unit": "ml"
+        },
+        {
+          "name": "Banana",
           "amount": 1,
           "unit": "unit"
         },
         {
-          "name": "Cinnamon syrup",
-          "amount": 20,
-          "unit": "ml"
+          "name": "Apple puree",
+          "amount": 50,
+          "unit": "g"
         },
         {
-          "name": "Oat flour",
-          "amount": 15,
+          "name": "Avocado",
+          "amount": 30,
           "unit": "g"
         },
         {
           "name": "Ice",
-          "amount": 100,
+          "amount": 80,
           "unit": "g"
+        },
+        {
+          "name": "Peanut butter powder",
+          "amount": 10,
+          "unit": "g"
+        },
+        {
+          "name": "Vanilla protein powder",
+          "amount": 20,
+          "unit": "g"
+        },
+        {
+          "name": "Maple syrup",
+          "amount": 10,
+          "unit": "g"
+        },
+        {
+          "name": "Dates (for cinnamon drizzle)",
+          "amount": 2,
+          "unit": "unit"
+        },
+        {
+          "name": "Cinnamon (for drizzle)",
+          "amount": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "Hot water (for drizzle)",
+          "amount": 100,
+          "unit": "ml"
+        },
+        {
+          "name": "Oatly Creamy Oat (optional)",
+          "amount": 10,
+          "unit": "ml"
         }
       ],
-      "method": "Blend all ingredients until smooth. Serve immediately.",
-      "notes": ""
+      "method": "Soak dates and cinnamon in boiling water 10 min, blend to smooth paste for drizzle. Blend all smoothie ingredients 20-30 sec until smooth. Optional: drizzle Oatly Creamy Oat around glass edge. Build in layers: ⅓ smoothie, ½ cinnamon drizzle, repeat.",
+      "notes": "It's a Swedish thing. Hur som helst, Swedish or not, om du gillar kanelbullar du kommer love this one."
     },
     {
-      "id": "SMOKED_ROS",
+      "id": "AW25_SMKD_CHOC",
       "name": "Smoked Rosemary Hot Choc",
       "source": "Look Book A/W 25",
       "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/smoked-rosemary-hot-choc",
@@ -3282,99 +3583,10 @@
       "skill_level": "3/5",
       "status": "approved",
       "tags": [
-        "Smoky",
-        "Rosemary",
-        "Hot",
-        "Chocolate",
-        "Herbs"
-      ],
-      "ingredients": [
-        {
-          "name": "Oatly Barista Edition",
-          "amount": 220,
-          "unit": "ml"
-        },
-        {
-          "name": "Dark chocolate (70%)",
-          "amount": 30,
-          "unit": "g"
-        },
-        {
-          "name": "Smoked rosemary syrup",
-          "amount": 20,
-          "unit": "ml"
-        },
-        {
-          "name": "Salt",
-          "amount": 1,
-          "unit": "pinch"
-        }
-      ],
-      "method": "Smoke rosemary sprig and steep in syrup. Melt chocolate in warm Oatly. Stir in smoked rosemary syrup and salt. Serve hot.",
-      "notes": ""
-    },
-    {
-      "id": "DOUBLE_TEA",
-      "name": "Double Tea",
-      "source": "Look Book A/W 25",
-      "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/double-tea",
-      "category": "Tea Latte",
-      "oatly_product": "Oatly Barista Edition",
-      "serve": "Iced",
-      "skill_level": "2/5",
-      "status": "approved",
-      "tags": [
-        "Tea",
-        "Layered",
-        "Creative",
-        "Everyday"
-      ],
-      "ingredients": [
-        {
-          "name": "Oatly Barista Edition",
-          "amount": 150,
-          "unit": "ml"
-        },
-        {
-          "name": "Black tea (brewed)",
-          "amount": 60,
-          "unit": "ml"
-        },
-        {
-          "name": "Green tea (brewed)",
-          "amount": 60,
-          "unit": "ml"
-        },
-        {
-          "name": "Honey",
-          "amount": 15,
-          "unit": "ml"
-        },
-        {
-          "name": "Ice",
-          "amount": 1,
-          "unit": "handful"
-        }
-      ],
-      "method": "Brew both teas strong and cool. Add honey to glass with ice. Layer black tea. Pour Oatly Barista. Float green tea on top.",
-      "notes": ""
-    },
-    {
-      "id": "APPLE_PIE_",
-      "name": "Apple Pie Chai",
-      "source": "Look Book A/W 25",
-      "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/apple-pie-chai",
-      "category": "Tea Latte",
-      "oatly_product": "Oatly Barista Edition",
-      "serve": "Iced",
-      "skill_level": "2/5",
-      "status": "approved",
-      "tags": [
-        "Chai",
-        "Apple",
-        "Warming",
-        "Festive",
-        "Dessert-style"
+        "Smoked ingredients",
+        "Salted",
+        "Sweet evolution",
+        "Chocolate"
       ],
       "ingredients": [
         {
@@ -3383,93 +3595,192 @@
           "unit": "ml"
         },
         {
-          "name": "Chai concentrate",
-          "amount": 60,
+          "name": "Vegan dark chocolate (chopped)",
+          "amount": 30,
+          "unit": "g"
+        },
+        {
+          "name": "Fresh rosemary sprig",
+          "amount": 1,
+          "unit": "unit"
+        },
+        {
+          "name": "Smoked salt",
+          "amount": 1,
+          "unit": "pinch"
+        }
+      ],
+      "method": "Burn rosemary sprig until charred and smoking. Add to pan with Oatly Barista Edition, dark chocolate and smoked salt. Heat but don't boil — stir to melt chocolate. Remove rosemary. Pour and serve.",
+      "notes": "Garnish with extra smoked salt and rosemary leaves. Needs a blow torch."
+    },
+    {
+      "id": "AW25_DOUBLE_TEA",
+      "name": "Double Tea",
+      "source": "Look Book A/W 25",
+      "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/double-tea",
+      "category": "Tea Latte",
+      "oatly_product": "Oatly Barista Lighter Taste",
+      "serve": "Hot",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": [
+        "Tea exploration",
+        "Japanese ingredients",
+        "Chinese ingredients",
+        "Matcha"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Lighter Taste",
+          "amount": 150,
           "unit": "ml"
         },
         {
-          "name": "Apple pie syrup",
-          "amount": 25,
+          "name": "Jasmine tea concentrate",
+          "amount": 50,
+          "unit": "ml"
+        },
+        {
+          "name": "Cold brewed matcha",
+          "amount": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Agave syrup (optional)",
+          "amount": 10,
+          "unit": "g"
+        },
+        {
+          "name": "Oatly Whippable Creamy Oat (optional)",
+          "amount": 50,
+          "unit": "ml"
+        }
+      ],
+      "method": "Add jasmine concentrate, matcha and agave to glass and stir. Steam Oatly Barista Lighter Taste and pour into glass. Top with Oatly Whipped Creamy Oat if using.",
+      "notes": "Shortcut: use Oatly Matcha Oat Drink instead of Barista + cold brewed matcha."
+    },
+    {
+      "id": "AW25_APPLE_CHAI",
+      "name": "Apple Pie Chai",
+      "source": "Look Book A/W 25",
+      "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/apple-pie-chai",
+      "category": "Tea Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Hot",
+      "skill_level": "1/5",
+      "status": "approved",
+      "tags": [
+        "Seasonal fruits",
+        "Spiced",
+        "Nostalgic",
+        "Desserts"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 250,
+          "unit": "ml"
+        },
+        {
+          "name": "Apple butter/puree",
+          "amount": 20,
+          "unit": "g"
+        },
+        {
+          "name": "Fresh apple juice",
+          "amount": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Ready-made chai concentrate",
+          "amount": 40,
+          "unit": "ml"
+        }
+      ],
+      "method": "Steam/heat all together. Enjoy.",
+      "notes": "Skill level 1/5 — the easiest recipe in the book."
+    },
+    {
+      "id": "AW25_MALTED",
+      "name": "Malted Spiced Choco",
+      "source": "Look Book A/W 25",
+      "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/malted-spiced-choco",
+      "category": "Chocolate",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "1/5",
+      "status": "approved",
+      "tags": [
+        "Chocolate",
+        "Iced",
+        "Sweet evolution",
+        "Spiced"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 200,
+          "unit": "ml"
+        },
+        {
+          "name": "Malt extract",
+          "amount": 10,
+          "unit": "g"
+        },
+        {
+          "name": "Vegan hot chocolate powder or flakes",
+          "amount": 30,
+          "unit": "g"
+        },
+        {
+          "name": "Hot water",
+          "amount": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Ready-made chai concentrate",
+          "amount": 30,
           "unit": "ml"
         },
         {
           "name": "Ice",
           "amount": 1,
           "unit": "handful"
-        }
-      ],
-      "method": "Add apple pie syrup to glass with ice. Pour chai concentrate. Top with Oatly Barista.",
-      "notes": ""
-    },
-    {
-      "id": "MALTED_SPI",
-      "name": "Malted Spiced Choco",
-      "source": "Look Book A/W 25",
-      "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/malted-spiced-choco",
-      "category": "Chocolate",
-      "oatly_product": "Oatly Barista Edition",
-      "serve": "Hot",
-      "skill_level": "2/5",
-      "status": "approved",
-      "tags": [
-        "Chocolate",
-        "Malt",
-        "Spiced",
-        "Hot",
-        "Warming"
-      ],
-      "ingredients": [
-        {
-          "name": "Oatly Barista Edition",
-          "amount": 220,
-          "unit": "ml"
         },
         {
-          "name": "Dark chocolate (70%)",
-          "amount": 25,
-          "unit": "g"
-        },
-        {
-          "name": "Malt powder",
-          "amount": 10,
-          "unit": "g"
-        },
-        {
-          "name": "Mixed spice",
+          "name": "Orange zest (garnish)",
           "amount": 1,
-          "unit": "g"
-        },
-        {
-          "name": "Agave syrup",
-          "amount": 10,
-          "unit": "ml"
+          "unit": "unit"
         }
       ],
-      "method": "Heat Oatly gently. Dissolve malt powder and chocolate. Add spice and agave. Stir well. Serve hot.",
+      "method": "Add malt extract, chocolate powder and hot water to glass. Stir until incorporated. Add ice. Pour Oatly Barista Edition and chai concentrate. Finish with orange zest.",
       "notes": ""
     },
     {
-      "id": "YUZU_WHITE",
+      "id": "AW25_YUZU_WHT",
       "name": "Yuzu White Choc Mocha",
       "source": "Look Book A/W 25",
       "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/yuzu-white-choc-mocha",
       "category": "Chocolate",
       "oatly_product": "Oatly Barista Edition",
       "serve": "Iced",
-      "skill_level": "2/5",
+      "skill_level": "1/5",
       "status": "approved",
       "tags": [
-        "Yuzu",
-        "White chocolate",
-        "Mocha",
-        "Citrus",
-        "Japanese inspired"
+        "Alternative citrus",
+        "Japanese ingredients",
+        "Iced"
       ],
       "ingredients": [
         {
-          "name": "Oatly Barista Edition",
-          "amount": 200,
-          "unit": "ml"
+          "name": "Vegan white chocolate chips",
+          "amount": 30,
+          "unit": "g"
+        },
+        {
+          "name": "Yuzu juice",
+          "amount": 1,
+          "unit": "tsp"
         },
         {
           "name": "Double espresso",
@@ -3477,13 +3788,8 @@
           "unit": "shot"
         },
         {
-          "name": "White chocolate sauce",
-          "amount": 25,
-          "unit": "ml"
-        },
-        {
-          "name": "Yuzu juice",
-          "amount": 15,
+          "name": "Oatly Barista Edition",
+          "amount": 200,
           "unit": "ml"
         },
         {
@@ -3492,58 +3798,68 @@
           "unit": "handful"
         }
       ],
-      "method": "Add white chocolate sauce and yuzu to glass with ice. Pour Oatly Barista. Top with espresso.",
-      "notes": ""
+      "method": "Pull double espresso over white chocolate chips. Add yuzu juice and stir to melt chocolate. Pour into ice-filled glass. Finish with Oatly Barista Edition.",
+      "notes": "Can use 10-20ml white chocolate syrup instead of chips."
     },
     {
-      "id": "STICKY_TOF",
+      "id": "AW25_STKY_IRSH",
       "name": "Sticky Toffee Irish Coffee",
       "source": "Look Book A/W 25",
       "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/sticky-toffee-irish-coffee",
       "category": "Mocktail",
-      "oatly_product": "Oatly Barista Edition",
+      "oatly_product": "Oatly Whippable Creamy Oat",
       "serve": "Hot",
       "skill_level": "3/5",
       "status": "approved",
       "tags": [
-        "Festive",
-        "Toffee",
-        "Irish coffee style",
-        "Hot",
-        "Dessert-style"
+        "Desserts",
+        "Non-alcoholic",
+        "Temperature layering",
+        "Smoked ingredients",
+        "Cream top"
       ],
       "ingredients": [
         {
-          "name": "Oatly Barista Edition",
-          "amount": 100,
+          "name": "Oatly Whippable Creamy Oat",
+          "amount": 50,
           "unit": "ml"
         },
         {
-          "name": "Hot filter coffee",
-          "amount": 120,
-          "unit": "ml"
+          "name": "Date syrup",
+          "amount": 20,
+          "unit": "g"
         },
         {
-          "name": "Sticky toffee syrup",
-          "amount": 25,
-          "unit": "ml"
-        },
-        {
-          "name": "Oatly Cold Foam",
-          "amount": 60,
-          "unit": "ml"
-        },
-        {
-          "name": "Caramel sauce",
+          "name": "Finely sliced ginger",
           "amount": 10,
+          "unit": "g"
+        },
+        {
+          "name": "Whole spices (2 cloves, ½ cinnamon stick, 3 black cardamom pods)",
+          "amount": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "Lapsang souchong tea",
+          "amount": 2,
+          "unit": "g"
+        },
+        {
+          "name": "Medium-coarse ground coffee",
+          "amount": 20,
+          "unit": "g"
+        },
+        {
+          "name": "Boiling water",
+          "amount": 250,
           "unit": "ml"
         }
       ],
-      "method": "Add sticky toffee syrup to glass. Pour hot coffee. Add Oatly Barista. Top with cold foam. Drizzle caramel.",
-      "notes": ""
+      "method": "Combine all ingredients except Oatly Whippable in a cafetière. Steep 5 min. Plunge and pour into warm glass. Lightly whip Oatly Whippable Creamy Oat and layer on top.",
+      "notes": "Optional: add 25ml Irish whiskey to make it boozy."
     },
     {
-      "id": "CARROT_CAK",
+      "id": "AW25_CARROT_MAT",
       "name": "Carrot Cake Matcha Latte",
       "source": "Look Book A/W 25",
       "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/carrot-cake-matcha-latte",
@@ -3553,17 +3869,33 @@
       "skill_level": "3/5",
       "status": "approved",
       "tags": [
+        "Desserts",
+        "Layers",
         "Matcha",
-        "Carrot cake",
-        "Festive",
-        "Spiced",
-        "Layered"
+        "Cream top",
+        "Vegetables in drinks",
+        "Iced"
       ],
       "ingredients": [
         {
           "name": "Oatly Barista Edition",
-          "amount": 180,
+          "amount": 160,
           "unit": "ml"
+        },
+        {
+          "name": "Carrot juice",
+          "amount": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Mixed spice",
+          "amount": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "Dark brown sugar",
+          "amount": 10,
+          "unit": "g"
         },
         {
           "name": "Cold brewed matcha",
@@ -3571,13 +3903,23 @@
           "unit": "ml"
         },
         {
-          "name": "Carrot cake syrup",
-          "amount": 25,
+          "name": "Oatly Whippable Creamy Oat (for frosting)",
+          "amount": 50,
           "unit": "ml"
         },
         {
-          "name": "Cinnamon",
-          "amount": 0.5,
+          "name": "Lemon juice (for frosting)",
+          "amount": 4,
+          "unit": "ml"
+        },
+        {
+          "name": "Agave syrup (for frosting)",
+          "amount": 7,
+          "unit": "g"
+        },
+        {
+          "name": "Salt (for frosting)",
+          "amount": 0.4,
           "unit": "g"
         },
         {
@@ -3586,35 +3928,54 @@
           "unit": "handful"
         }
       ],
-      "method": "Make carrot cake syrup (carrot juice + warm spices + sugar). Add syrup and cinnamon to glass. Ice. Pour Oatly. Float matcha.",
-      "notes": ""
+      "method": "Mix Oatly Barista, carrot juice, mixed spice and brown sugar. Whip Oatly Whippable with lemon, agave and salt for 'creamy cheesy' frosting top. Fill glass with ice. Add liquid carrot cake. Top with matcha. Finish with frosting. Sprinkle chopped nuts.",
+      "notes": "The frosting tastes like cream cheese frosting — not actual cheese."
     },
     {
-      "id": "CHIA_PUDDI",
+      "id": "AW25_CHIA_MAT",
       "name": "Chia Pudding Matcha Latte",
       "source": "Look Book A/W 25",
       "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/chia-pudding-matcha-latte",
       "category": "Matcha",
-      "oatly_product": "Oatly Barista Edition",
+      "oatly_product": "Oatly Barista Lighter Taste",
       "serve": "Iced",
       "skill_level": "2/5",
       "status": "approved",
       "tags": [
-        "Chia",
+        "Gut health",
         "Matcha",
-        "Healthy",
-        "Texture",
-        "Breakfast"
+        "Layers",
+        "Iced"
       ],
       "ingredients": [
         {
-          "name": "Oatly Barista Edition",
-          "amount": 180,
+          "name": "Oatly Barista Lighter Taste",
+          "amount": 130,
           "unit": "ml"
         },
         {
-          "name": "Cold brewed matcha",
+          "name": "Chia pudding",
           "amount": 40,
+          "unit": "g"
+        },
+        {
+          "name": "Frozen berries (for chia pudding)",
+          "amount": 40,
+          "unit": "g"
+        },
+        {
+          "name": "Ginger juice (for chia pudding)",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Water (for chia pudding)",
+          "amount": 60,
+          "unit": "ml"
+        },
+        {
+          "name": "Maple syrup (for chia pudding)",
+          "amount": 10,
           "unit": "ml"
         },
         {
@@ -3623,8 +3984,8 @@
           "unit": "g"
         },
         {
-          "name": "Agave syrup",
-          "amount": 10,
+          "name": "Cold brewed matcha",
+          "amount": 40,
           "unit": "ml"
         },
         {
@@ -3633,145 +3994,179 @@
           "unit": "handful"
         }
       ],
-      "method": "Soak chia seeds in Oatly overnight. Add matcha and agave to glass with chia. Fill with ice. Float cold brewed matcha.",
-      "notes": "Prepare chia overnight."
+      "method": "Blend berries, ginger juice, water and maple syrup. Stir in chia seeds. Leave overnight. Fill glass with ice. Add chia pudding. Pour Oatly Barista Lighter Taste. Top with cold brewed matcha.",
+      "notes": "Prepare chia pudding the night before. Shortcut: use Oatly Matcha Oat Drink."
     },
     {
-      "id": "SWEET_TAHI",
+      "id": "AW25_SWEET_TAH",
       "name": "Sweet Tahini Hojicha Latte",
       "source": "Look Book A/W 25",
       "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/sweet-tahini-hojicha-latte",
       "category": "Tea Latte",
       "oatly_product": "Oatly Barista Edition",
-      "serve": "Iced",
-      "skill_level": "2/5",
+      "serve": "Hot",
+      "skill_level": "3/5",
       "status": "approved",
       "tags": [
-        "Hojicha",
-        "Tahini",
-        "Sesame",
-        "Middle Eastern inspired",
-        "Tea Latte"
+        "Middle Eastern flavors",
+        "Condensed milk",
+        "Layers",
+        "Hojicha"
       ],
       "ingredients": [
         {
-          "name": "Oatly Barista Edition",
-          "amount": 180,
+          "name": "Condensed Oatly",
+          "amount": 20,
+          "unit": "g"
+        },
+        {
+          "name": "Oatly Creamy Oat (for condensed)",
+          "amount": 250,
           "unit": "ml"
         },
         {
-          "name": "Hojicha concentrate",
-          "amount": 40,
+          "name": "White sugar (for condensed)",
+          "amount": 75,
+          "unit": "g"
+        },
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 150,
           "unit": "ml"
         },
         {
           "name": "Tahini",
-          "amount": 15,
+          "amount": 10,
           "unit": "g"
         },
         {
-          "name": "Agave syrup",
-          "amount": 15,
+          "name": "Cold brewed hojicha",
+          "amount": 40,
           "unit": "ml"
-        },
-        {
-          "name": "Ice",
-          "amount": 1,
-          "unit": "handful"
         }
       ],
-      "method": "Blend tahini with agave until smooth. Add to glass with ice. Pour Oatly Barista. Top with hojicha concentrate.",
-      "notes": ""
+      "method": "Make condensed Oatly: simmer Oatly Creamy Oat + sugar stirring until caramelized and thick (10-20 min). Add condensed Oatly to glass. Brew hojicha with tahini. Add hojicha-tahini mix. Top with steamed Oatly Barista Edition.",
+      "notes": "Hojicha is a roasted Japanese green tea — round, soft and nutty."
     },
     {
-      "id": "PUMPKIN_2_",
+      "id": "AW25_PUMPKIN20",
       "name": "Pumpkin 2.0",
       "source": "Look Book A/W 25",
       "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/pumpkin-2-0",
-      "category": "Latte",
-      "oatly_product": "Oatly Barista Edition",
+      "category": "Cold Brew",
+      "oatly_product": "Oatly Barista Organic",
+      "serve": "Iced",
+      "skill_level": "4/5",
+      "status": "approved",
+      "tags": [
+        "Spiced",
+        "Clarified",
+        "Vegetables in drinks",
+        "Sweet evolution"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Organic",
+          "amount": 300,
+          "unit": "ml"
+        },
+        {
+          "name": "Masala chai or pumpkin pie spice mix",
+          "amount": 20,
+          "unit": "g"
+        },
+        {
+          "name": "Medium ground coffee",
+          "amount": 60,
+          "unit": "g"
+        },
+        {
+          "name": "Maple syrup",
+          "amount": 100,
+          "unit": "g"
+        },
+        {
+          "name": "Salt",
+          "amount": 1,
+          "unit": "g"
+        },
+        {
+          "name": "Pumpkin puree",
+          "amount": 100,
+          "unit": "g"
+        },
+        {
+          "name": "Boiling water",
+          "amount": 300,
+          "unit": "ml"
+        },
+        {
+          "name": "Fresh lemon juice",
+          "amount": 60,
+          "unit": "ml"
+        },
+        {
+          "name": "Fresh orange juice",
+          "amount": 100,
+          "unit": "ml"
+        },
+        {
+          "name": "Pumpkin seed oil (garnish)",
+          "amount": 1,
+          "unit": "unit"
+        }
+      ],
+      "method": "Combine spices, coffee, maple syrup, salt and pumpkin puree. Add boiling water, stir. Add orange and lemon juice. Add Oatly Barista Organic (will curdle). Pass through paper coffee filter twice until clear. Stir clarified liquid with lots of ice. Strain into frozen glass. Finish with pumpkin seed oil drops.",
+      "notes": "Clarification technique: pass twice through paper coffee filter to get crystal clear liquid."
+    },
+    {
+      "id": "AW25_BLK_SES",
+      "name": "Black Sesame Hojicha Einspänner",
+      "source": "Look Book A/W 25",
+      "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/black-sesame-hojicha-einspaenner",
+      "category": "Tea Latte",
+      "oatly_product": "Oatly Barista Lighter Taste",
       "serve": "Iced",
       "skill_level": "2/5",
       "status": "approved",
       "tags": [
-        "Pumpkin",
-        "Autumn",
-        "Creative",
-        "Pumpkin seed oil",
-        "Unexpected"
-      ],
-      "ingredients": [
-        {
-          "name": "Oatly Barista Edition",
-          "amount": 180,
-          "unit": "ml"
-        },
-        {
-          "name": "Double espresso",
-          "amount": 2,
-          "unit": "shot"
-        },
-        {
-          "name": "Pumpkin spice syrup",
-          "amount": 20,
-          "unit": "ml"
-        },
-        {
-          "name": "Pumpkin seed oil",
-          "amount": 3,
-          "unit": "ml"
-        },
-        {
-          "name": "Ice",
-          "amount": 1,
-          "unit": "handful"
-        }
-      ],
-      "method": "Add pumpkin spice syrup to glass with ice. Pour Oatly Barista. Top with espresso. Finish with a few drops of pumpkin seed oil.",
-      "notes": "The oil adds unexpected depth and visual drama."
-    },
-    {
-      "id": "BLACK_SESA",
-      "name": "Black Sesame Hojicha Einspänner",
-      "source": "Look Book A/W 25",
-      "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/black-sesame-hojicha-einspaenner",
-      "category": "Mocktail",
-      "oatly_product": "Oatly Barista Edition",
-      "serve": "Iced",
-      "skill_level": "3/5",
-      "status": "approved",
-      "tags": [
-        "Japanese inspired",
         "Black sesame",
         "Hojicha",
-        "Einspänner",
-        "Cold foam"
+        "Layers",
+        "Japanese ingredients",
+        "Cream top",
+        "Iced"
       ],
       "ingredients": [
         {
-          "name": "Oatly Barista Edition",
-          "amount": 80,
+          "name": "Oatly Barista Lighter Taste",
+          "amount": 150,
           "unit": "ml"
         },
         {
-          "name": "Hojicha concentrate",
-          "amount": 80,
+          "name": "Cold brewed hojicha",
+          "amount": 40,
           "unit": "ml"
         },
         {
-          "name": "Black sesame paste",
-          "amount": 15,
+          "name": "Black sesame creamy top",
+          "amount": 40,
           "unit": "g"
         },
         {
-          "name": "Agave syrup",
-          "amount": 10,
+          "name": "Oatly Whippable Creamy Oat (for top)",
+          "amount": 50,
           "unit": "ml"
         },
         {
-          "name": "Oatly Cold Foam",
-          "amount": 70,
-          "unit": "ml"
+          "name": "Black sesame paste (for top)",
+          "amount": 8,
+          "unit": "g"
+        },
+        {
+          "name": "Agave syrup (for top)",
+          "amount": 10,
+          "unit": "g"
         },
         {
           "name": "Ice",
@@ -3779,30 +4174,30 @@
           "unit": "handful"
         }
       ],
-      "method": "Mix hojicha, black sesame paste and agave. Add ice to glass. Pour mixture. Top generously with Oatly Cold Foam. Served in a tall glass like an einspänner.",
+      "method": "Whip all creamy top ingredients together to scoopable thickness. Fill glass with ice. Add Oatly Barista Lighter Taste. Top with hojicha. Finish with black sesame creamy top.",
       "notes": "Black sesame paste gives deep nutty-bitter flavour."
     },
     {
-      "id": "SALTED_EGG",
+      "id": "AW25_SALT_EGG",
       "name": "Salted 'Egg' Custard Latte",
       "source": "Look Book A/W 25",
       "url": "https://www.oatly.com/recipes/look-book-autumn-winter-2025/salted-egg-custard-latte",
       "category": "Latte",
       "oatly_product": "Oatly Barista Edition",
       "serve": "Iced",
-      "skill_level": "4/5",
+      "skill_level": "5/5",
       "status": "approved",
       "tags": [
-        "Asian inspired",
-        "Custard",
-        "Egg-free",
-        "Salted",
-        "Creative"
+        "Chinese cuisine",
+        "Desserts",
+        "Iced",
+        "Savoury",
+        "Layers"
       ],
       "ingredients": [
         {
           "name": "Oatly Barista Edition",
-          "amount": 180,
+          "amount": 200,
           "unit": "ml"
         },
         {
@@ -3811,18 +4206,33 @@
           "unit": "shot"
         },
         {
-          "name": "Vegan custard syrup",
-          "amount": 25,
+          "name": "Oatly Barista Edition (for custard)",
+          "amount": 250,
           "unit": "ml"
         },
         {
-          "name": "Salt",
-          "amount": 1,
-          "unit": "pinch"
+          "name": "Pumpkin puree (for custard)",
+          "amount": 40,
+          "unit": "g"
         },
         {
-          "name": "Turmeric",
-          "amount": 0.2,
+          "name": "Sugar (for custard)",
+          "amount": 40,
+          "unit": "g"
+        },
+        {
+          "name": "Smoked salt (for custard)",
+          "amount": 2.5,
+          "unit": "g"
+        },
+        {
+          "name": "Kala namak — black salt (optional)",
+          "amount": 0.5,
+          "unit": "g"
+        },
+        {
+          "name": "Cornstarch (for custard)",
+          "amount": 7,
           "unit": "g"
         },
         {
@@ -3831,8 +4241,8 @@
           "unit": "handful"
         }
       ],
-      "method": "Make vegan custard syrup with Oatly, turmeric, cornstarch and sugar. Cool. Add custard syrup to glass with ice. Pour Oatly Barista. Top with espresso. Finish with pinch of salt.",
-      "notes": "Turmeric gives the golden custard colour without eggs."
+      "method": "Custard: whisk pumpkin puree, sugar, salt and cornstarch smooth. Whisk in Oatly Barista. Heat stirring constantly until thick and bubbling. Cool. Load custard into whipped cream syphon with gas canister. Build drink: ice + Oatly Barista + double espresso. Top with aerated custard from syphon.",
+      "notes": "Pumpkin puree gives golden colour. Kala namak adds egg-like aroma. Requires whipped cream syphon."
     }
   ]
 }
