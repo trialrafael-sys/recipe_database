@@ -997,6 +997,16 @@
               <option value="Oatly Barista Edition Coconut">Barista Coconut</option>
             </select>
           </div>
+          <div class="form-group">
+            <label class="form-label">Coffee / tea base</label>
+            <select class="form-select" id="batch-base">
+              <option value="any base — mix espresso, cold brew, matcha, tea and no-coffee options freely">Everything</option>
+              <option value="espresso — all drinks must use a double espresso shot">Espresso</option>
+              <option value="cold brew coffee — all drinks must use cold brew, no hot espresso">Cold Brew</option>
+              <option value="matcha — all drinks must be matcha-based, no espresso or coffee">Matcha</option>
+              <option value="no coffee and no espresso — tea-based, refreshers, or no caffeine">No coffee</option>
+            </select>
+          </div>
         </div>
 
         <button class="generate-btn" id="batch-btn" onclick="generateBatch()">
@@ -1622,6 +1632,7 @@ async function generateBatch() {
   const count = document.getElementById('batch-count').value;
   const focus = document.getElementById('batch-focus').value;
   const product = document.getElementById('batch-product').value;
+  const base = document.getElementById('batch-base').value;
 
   const btn = document.getElementById('batch-btn');
   const btnText = document.getElementById('batch-btn-text');
@@ -1641,6 +1652,7 @@ async function generateBatch() {
 
 Available syrups / ingredients: ${batchTags.join(', ')}
 Oatly base: ${product}
+Coffee / tea base constraint: ${base}
 Drink focus: ${focus}
 Number of concepts to generate: ${count}
 
