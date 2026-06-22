@@ -854,7 +854,7 @@
       </div>
       <div class="ai-panel">
         <div class="ai-panel-title">🤖 Generate a new recipe</div>
-        <div class="ai-panel-sub">Choose an Oatly product, add available syrups / ingredients, and get a creative recipe. <button onclick="resetApiKey()" style="background:none;border:none;color:var(--text-light);font-size:12px;cursor:pointer;text-decoration:underline;padding:0;font-family:inherit;">🔑 Change API key</button></div>
+        <div class="ai-panel-sub">Choose an Oatly product, add available syrups / ingredients, and get a creative recipe. <button onclick="resetApiKey()" style="background:none;border:none;color:var(--text-light);font-size:12px;cursor:pointer;text-decoration:underline;padding:0;font-family:inherit;">🔑 Reset GitHub token</button></div>
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">Oatly Product</label>
@@ -953,7 +953,7 @@
       </div>
       <div class="ai-panel">
         <div class="ai-panel-title">Add your available syrups & ingredients</div>
-        <div class="ai-panel-sub">Enter everything you have available — the AI will generate multiple drink concepts using smart combinations. <button onclick="resetApiKey()" style="background:none;border:none;color:var(--text-light);font-size:12px;cursor:pointer;text-decoration:underline;padding:0;font-family:inherit;">🔑 Change API key</button></div>
+        <div class="ai-panel-sub">Enter everything you have available — the AI will generate multiple drink concepts using smart combinations. <button onclick="resetApiKey()" style="background:none;border:none;color:var(--text-light);font-size:12px;cursor:pointer;text-decoration:underline;padding:0;font-family:inherit;">🔑 Reset GitHub token</button></div>
 
         <div class="batch-tags-input" id="batch-tags-wrap">
           <div class="batch-tags-list" id="batch-tags-list"></div>
@@ -1389,7 +1389,10 @@ function approveRecipe() {
   document.getElementById('section-database').classList.add('active');
 }
 
-function resetApiKey() {} // no-op — no longer needed
+function resetApiKey() {
+  localStorage.removeItem('oatly_gh_token');
+  alert('Token limpo. Na próxima geração será pedido o novo token.');
+}
 
 // ── SHOPPING LIST ────────────────────────────────────────────────────────
 function renderSelectorGrid() {
