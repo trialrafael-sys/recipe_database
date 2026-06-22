@@ -675,6 +675,115 @@
   .empty-icon { font-size: 48px; margin-bottom: 12px; }
   .empty-text { font-size: 15px; }
 
+  /* ── BATCH IDEAS ── */
+  .batch-tags-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    padding: 10px 12px;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+    min-height: 52px;
+    margin-bottom: 12px;
+    cursor: text;
+    transition: border-color 0.2s;
+  }
+  .batch-tags-input:focus-within { border-color: var(--green); }
+  .batch-tags-list { display: contents; }
+  .batch-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bark);
+    color: var(--cream);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .batch-tag-remove {
+    cursor: pointer;
+    opacity: 0.6;
+    font-size: 12px;
+    line-height: 1;
+    transition: opacity 0.15s;
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+  }
+  .batch-tag-remove:hover { opacity: 1; }
+  .batch-tag-input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: transparent;
+    flex: 1;
+    min-width: 160px;
+  }
+  .batch-presets {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  .batch-preset-label { font-size: 12px; color: var(--text-light); }
+  .preset-btn {
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1.5px solid var(--border);
+    background: var(--cream);
+    color: var(--text-mid);
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+  }
+  .preset-btn:hover { border-color: var(--green); color: var(--green); background: var(--green-pale); }
+
+  .batch-idea-card {
+    background: var(--white);
+    border-radius: 14px;
+    border: 1.5px solid var(--border);
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.15s;
+  }
+  .batch-idea-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+  .batch-card-top {
+    padding: 16px 18px 12px;
+    border-bottom: 1px solid var(--oat);
+  }
+  .batch-card-num {
+    font-size: 10px;
+    font-family: 'DM Mono', monospace;
+    color: var(--text-light);
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+  .batch-card-name { font-size: 16px; font-weight: 700; color: var(--bark); margin-bottom: 8px; }
+  .batch-card-body { padding: 12px 18px 16px; }
+  .batch-card-combo {
+    font-size: 12px;
+    color: var(--text-mid);
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .batch-card-combo strong { color: var(--bark); }
+  .batch-card-desc {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+  .batch-card-actions { display: flex; gap: 8px; }
+
   /* ── PRINT ── */
   @media print {
     .topbar, .nav-tabs, .ficha-preview ~ *, #section-ficha .page-header,
@@ -710,6 +819,7 @@
   <div class="nav-tabs">
     <div class="nav-tab active" onclick="showSection('database', this)">📚 Database</div>
     <div class="nav-tab" onclick="showSection('generator', this)">🤖 AI Generator</div>
+    <div class="nav-tab" onclick="showSection('batch', this)">🧪 Batch Ideas</div>
     <div class="nav-tab" onclick="showSection('shopping', this)">🛒 Shopping List</div>
     <div class="nav-tab" onclick="showSection('ficha', this)">📄 Ficha Técnica</div>
   </div>
@@ -833,6 +943,73 @@
         </div>
         <button class="btn btn-primary" onclick="buildShoppingList()" style="margin-bottom:16px;">Generate Shopping List</button>
         <div class="shopping-result" id="shopping-result"></div>
+      </div>
+    </div>
+
+    <!-- BATCH IDEAS -->
+    <div class="section" id="section-batch">
+      <div class="page-header">
+        <div class="page-title">🧪 Batch Ideas Generator</div>
+      </div>
+      <div class="ai-panel">
+        <div class="ai-panel-title">Add your available syrups & ingredients</div>
+        <div class="ai-panel-sub">Enter everything you have available — the AI will generate multiple drink concepts using smart combinations.</div>
+
+        <div class="batch-tags-input" id="batch-tags-wrap">
+          <div class="batch-tags-list" id="batch-tags-list"></div>
+          <input class="batch-tag-input" id="batch-tag-input" placeholder="Type an ingredient and press Enter…" />
+        </div>
+
+        <div class="batch-presets">
+          <span class="batch-preset-label">Quick add:</span>
+          <button class="preset-btn" onclick="addPresetSyrups()">🧴 Toril Syrups (current list)</button>
+          <button class="preset-btn" onclick="clearBatchTags()">✕ Clear all</button>
+        </div>
+
+        <div class="form-row" style="margin-top:14px;">
+          <div class="form-group">
+            <label class="form-label">Number of ideas</label>
+            <select class="form-select" id="batch-count">
+              <option value="4">4 concepts</option>
+              <option value="6" selected>6 concepts</option>
+              <option value="8">8 concepts</option>
+              <option value="10">10 concepts</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Focus</label>
+            <select class="form-select" id="batch-focus">
+              <option value="mix of styles">Mix of styles</option>
+              <option value="all iced lattes">Iced Lattes only</option>
+              <option value="matcha-based">Matcha-based</option>
+              <option value="no coffee">No coffee / Refreshers</option>
+              <option value="signature / creative">Signature / Creative</option>
+              <option value="seasonal summer">Summer menu</option>
+              <option value="festive / winter">Festive / Winter</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Oatly base</label>
+            <select class="form-select" id="batch-product">
+              <option value="any Oatly Barista product">Any Barista product</option>
+              <option value="Oatly Barista Edition">Barista Edition (classic)</option>
+              <option value="Oatly Barista Edition Caramel">Barista Caramel</option>
+              <option value="Oatly Barista Edition Coconut">Barista Coconut</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="generate-btn" id="batch-btn" onclick="generateBatch()">
+          <span id="batch-btn-text">🧪 Generate Ideas</span>
+        </button>
+      </div>
+
+      <div id="batch-results" style="display:none;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+          <div style="font-size:16px;font-weight:600;color:var(--bark);" id="batch-results-title"></div>
+          <button class="btn btn-secondary" onclick="generateBatch()">↺ Regenerate</button>
+        </div>
+        <div class="recipes-grid" id="batch-cards"></div>
       </div>
     </div>
 
@@ -1380,6 +1557,205 @@ function downloadFicha() {
   a.href = 'data:text/html;charset=utf-8,' + encodeURIComponent(html);
   a.download = r.name.replace(/\s+/g, '_') + '_ficha.html';
   a.click();
+}
+
+// ── BATCH IDEAS ───────────────────────────────────────────────────────────
+let batchTags = [];
+
+const PRESET_SYRUPS = [
+  'Dragon Fruit', 'Osmanthus', 'Elderflower (Flor de Sauco)', 'Yuzu', 'Plum',
+  'Pandan', 'Cherry Blossom', 'Cherry Plum', 'Melon', 'Green Mint',
+  'Lychee', 'Flan Patissier', 'Cannelé', 'Éclair'
+];
+
+function addPresetSyrups() {
+  PRESET_SYRUPS.forEach(s => { if (!batchTags.includes(s)) batchTags.push(s); });
+  renderBatchTags();
+}
+
+function clearBatchTags() {
+  batchTags = [];
+  renderBatchTags();
+}
+
+function renderBatchTags() {
+  const list = document.getElementById('batch-tags-list');
+  list.innerHTML = batchTags.map((t, i) => `
+    <span class="batch-tag">
+      ${t}
+      <button class="batch-tag-remove" onclick="removeBatchTag(${i})">✕</button>
+    </span>
+  `).join('');
+}
+
+function removeBatchTag(i) {
+  batchTags.splice(i, 1);
+  renderBatchTags();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('batch-tag-input');
+  if (input) {
+    input.addEventListener('keydown', e => {
+      if ((e.key === 'Enter' || e.key === ',') && input.value.trim()) {
+        e.preventDefault();
+        const val = input.value.trim().replace(/,$/, '');
+        if (val && !batchTags.includes(val)) batchTags.push(val);
+        input.value = '';
+        renderBatchTags();
+      } else if (e.key === 'Backspace' && !input.value && batchTags.length) {
+        batchTags.pop();
+        renderBatchTags();
+      }
+    });
+    // clicking the container focuses input
+    document.getElementById('batch-tags-wrap').addEventListener('click', () => input.focus());
+  }
+});
+
+async function generateBatch() {
+  if (batchTags.length === 0) {
+    alert('Add at least one syrup or ingredient first.');
+    return;
+  }
+
+  const count = document.getElementById('batch-count').value;
+  const focus = document.getElementById('batch-focus').value;
+  const product = document.getElementById('batch-product').value;
+
+  const btn = document.getElementById('batch-btn');
+  const btnText = document.getElementById('batch-btn-text');
+  btn.disabled = true;
+  btnText.innerHTML = `Generating ${count} ideas <span class="loading-dots"><span></span><span></span><span></span></span>`;
+
+  const apiKey = getApiKey();
+  if (!apiKey) {
+    btn.disabled = false;
+    btnText.textContent = '🧪 Generate Ideas';
+    return;
+  }
+
+  const existingNames = RECIPES.map(r => r.name).join(', ');
+
+  const prompt = `You are a creative specialty coffee drink developer for Oatly, working with cafés in Barcelona and Madrid (Last Mile distribution).
+
+Available syrups / ingredients: ${batchTags.join(', ')}
+Oatly base: ${product}
+Drink focus: ${focus}
+Number of concepts to generate: ${count}
+
+Existing recipes to avoid duplicating: ${existingNames}
+
+Generate ${count} creative drink concepts. Each should use a smart combination of 2-4 of the available ingredients. Think about flavor harmony, visual appeal, and café viability. Include some unexpected/bold combinations and some safe crowd-pleasers.
+
+Respond ONLY with a JSON array, no markdown, no preamble:
+[
+  {
+    "name": "Creative Drink Name",
+    "combination": ["Syrup 1", "Syrup 2"],
+    "oatly_product": "specific Oatly Barista product",
+    "style": "Iced Latte | Matcha | Cold Brew | Refresher | Signature | Mocha | Tea Latte | Frozen",
+    "serve": "Iced | Hot | Frozen",
+    "description": "2-sentence evocative description of the flavor profile and why this combination works.",
+    "concept_tags": ["tag1", "tag2", "tag3"],
+    "complexity": "Easy | Medium | Advanced"
+  }
+]`;
+
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 2000,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+
+    const data = await response.json();
+    const text = data.content.map(c => c.text || '').join('');
+    const clean = text.replace(/```json|```/g, '').trim();
+    const ideas = JSON.parse(clean);
+    renderBatchResults(ideas);
+
+  } catch(err) {
+    alert('Error generating ideas. Try again.');
+    console.error(err);
+  }
+
+  btn.disabled = false;
+  btnText.textContent = '🧪 Generate Ideas';
+}
+
+function renderBatchResults(ideas) {
+  document.getElementById('batch-results').style.display = 'block';
+  document.getElementById('batch-results-title').textContent =
+    `${ideas.length} drink concepts · ${batchTags.length} ingredients`;
+
+  const complexityColor = { Easy: 'var(--green)', Medium: 'var(--amber)', Advanced: 'var(--red)' };
+
+  document.getElementById('batch-cards').innerHTML = ideas.map((idea, i) => `
+    <div class="batch-idea-card">
+      <div class="batch-card-top">
+        <div class="batch-card-num">CONCEPT ${String(i+1).padStart(2,'0')} · ${idea.style} · ${idea.serve}</div>
+        <div class="batch-card-name">${idea.name}</div>
+        <div class="card-meta">
+          <span class="tag tag-product">${idea.oatly_product}</span>
+          <span class="tag" style="background:var(--cream);color:${complexityColor[idea.complexity]||'var(--text-mid)'};border:1px solid ${complexityColor[idea.complexity]||'var(--border)'}">
+            ${idea.complexity}
+          </span>
+          ${(idea.concept_tags||[]).map(t => `<span class="tag tag-ingredient">${t}</span>`).join('')}
+        </div>
+      </div>
+      <div class="batch-card-body">
+        <div class="batch-card-combo">
+          <strong>Key combo:</strong> ${idea.combination.join(' + ')}
+        </div>
+        <div class="batch-card-desc">${idea.description}</div>
+        <div class="batch-card-actions">
+          <button class="btn btn-primary" style="font-size:12px;padding:8px 14px;" onclick='developIdea(${JSON.stringify(idea).replace(/'/g,"&#39;")})'>
+            → Develop in AI Generator
+          </button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  document.getElementById('batch-results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function developIdea(idea) {
+  // Switch to generator tab and pre-fill
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.nav-tab')[1].classList.add('active');
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById('section-generator').classList.add('active');
+
+  // Pre-fill generator fields
+  const productSel = document.getElementById('gen-product');
+  // Try to match product
+  for (let opt of productSel.options) {
+    if (opt.value.toLowerCase().includes(idea.oatly_product.toLowerCase().split(' ').pop())) {
+      productSel.value = opt.value;
+      break;
+    }
+  }
+
+  // Match style
+  const styleSel = document.getElementById('gen-style');
+  for (let opt of styleSel.options) {
+    if (opt.value.toLowerCase().includes(idea.style.toLowerCase().split(' ')[0])) {
+      styleSel.value = opt.value;
+      break;
+    }
+  }
+
+  document.getElementById('gen-ingredients').value = idea.combination.join(', ');
+  document.getElementById('gen-vibe').value = (idea.concept_tags || []).join(', ');
+  document.getElementById('gen-notes').value = `Based on concept: "${idea.name}". ${idea.description}`;
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 </script>
 </body>
