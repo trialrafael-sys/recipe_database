@@ -4397,6 +4397,126 @@
       "ingredients": [],
       "method": "A built iced espresso drink where melon syrup sits at the base, lychee is stirred through the Oatly Barista pour, and dragon fruit is drizzled over the top for a sunset-gradient effect in the glass. Three fruits that each play a distinct role — sweetness, perfume, and drama — unified by the espresso's roasted depth.",
       "notes": "Key combo: dragon fruit, lychee, melon | Complexity: Advanced"
+    },
+    {
+      "id": "BATCH202606221055210",
+      "name": "Seda de Yuzu",
+      "source": "Batch Ideas",
+      "category": "Tea Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Hot",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "floral",
+        "citrus-forward",
+        "aromatic",
+        "white tea",
+        "no-coffee"
+      ],
+      "ingredients": [],
+      "method": "A fragrant, floral hot latte built on white tea, where yuzu's bright citrus tension is softened by elderflower's honeyed bloom and pandan's warm vanilla-coconut undertow. The Oatly Barista Edition rounds the whole cup into something silky and almost luminous — a drink that feels like spring light through linen curtains.",
+      "notes": "Key combo: yuzu, elderflower, pandan | Complexity: Easy"
+    },
+    {
+      "id": "BATCH202606221055211",
+      "name": "Faro de Dragón",
+      "source": "Batch Ideas",
+      "category": "Cold Brew",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "bold color",
+        "citrus-floral",
+        "cold brew",
+        "layered",
+        "photogenic"
+      ],
+      "ingredients": [],
+      "method": "Cold brew concentrate meets a vivid trio of dragon fruit's subtle berry sweetness, yuzu's electric citrus pop, and osmanthus's apricot-floral depth — all lifted through a slow pour of Oatly Barista Edition over ice. The result is a jewel-toned, layered cold brew that glows like a lighthouse at dusk.",
+      "notes": "Key combo: dragon fruit, yuzu, osmanthus | Complexity: Medium"
+    },
+    {
+      "id": "BATCH202606221055212",
+      "name": "Bruma de Melón",
+      "source": "Batch Ideas",
+      "category": "Frozen",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Frozen",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "frozen",
+        "summery",
+        "melon-forward",
+        "no-coffee",
+        "dessert vibes"
+      ],
+      "ingredients": [],
+      "method": "A blended frozen drink where ripe melon sweetness and elderflower's soft floral musk meet pandan's grassy, coconut-kissed backbone — all churned with Oatly Barista Edition into a pale green-gold slush. Light, cooling, and almost dessert-like, it captures the feeling of a Barcelona summer before noon.",
+      "notes": "Key combo: melon, elderflower, pandan | Complexity: Easy"
+    },
+    {
+      "id": "BATCH202606221055213",
+      "name": "Espejo de Jade",
+      "source": "Batch Ideas",
+      "category": "Matcha",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "matcha",
+        "cold foam",
+        "layered",
+        "photogenic",
+        "floral-citrus"
+      ],
+      "ingredients": [],
+      "method": "Ceremonial matcha is shaken with pandan syrup and a hit of yuzu, then poured over ice and crowned with an Oatly Barista cold foam stained faintly pink with dragon fruit — the foam sits like a reflection on still water. The drink delivers earthiness, citrus brightness, and a faintly exotic sweetness in perfect tension.",
+      "notes": "Key combo: pandan, yuzu, dragon fruit | Complexity: Advanced"
+    },
+    {
+      "id": "BATCH202606221055214",
+      "name": "El Destilado",
+      "source": "Batch Ideas",
+      "category": "Refresher",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "sparkling",
+        "refresher",
+        "no-espresso",
+        "hojicha",
+        "terrace-ready"
+      ],
+      "ingredients": [],
+      "method": "A no-coffee sparkling refresher built on cold brew hojicha, where osmanthus syrup lays down a peachy floral base, yuzu cuts through with sharp brightness, and melon adds a ripe, round sweetness — topped with sparkling water and a long pour of Oatly Barista Edition that blooms through the glass. Clean, complex, and dangerously easy to drink on a Madrid terrace.",
+      "notes": "Key combo: osmanthus, yuzu, melon | Complexity: Medium"
+    },
+    {
+      "id": "BATCH202606221055215",
+      "name": "Corazón de Escama",
+      "source": "Batch Ideas",
+      "category": "Signature",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "shaken espresso",
+        "espresso",
+        "floral-fruit",
+        "dramatic",
+        "signature"
+      ],
+      "ingredients": [],
+      "method": "A shaken espresso drink where a double shot is pulled over dragon fruit and elderflower syrups, then vigorously shaken with Oatly Barista Edition to create a thick, rosy-hued foam — finished with a melon syrup drizzle that slowly bleeds through the drink like sunset through stained glass. The espresso's bitterness anchors the floral sweetness into something unexpectedly sophisticated.",
+      "notes": "Key combo: dragon fruit, elderflower, melon | Complexity: Advanced"
     }
   ]
 }
