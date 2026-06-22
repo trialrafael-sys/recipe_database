@@ -854,7 +854,7 @@
       </div>
       <div class="ai-panel">
         <div class="ai-panel-title">🤖 Generate a new recipe</div>
-        <div class="ai-panel-sub">Choose an Oatly product, add available syrups / ingredients, and get a creative recipe.</div>
+        <div class="ai-panel-sub">Choose an Oatly product, add available syrups / ingredients, and get a creative recipe. <button onclick="resetApiKey()" style="background:none;border:none;color:var(--text-light);font-size:12px;cursor:pointer;text-decoration:underline;padding:0;font-family:inherit;">🔑 Change API key</button></div>
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">Oatly Product</label>
@@ -953,7 +953,7 @@
       </div>
       <div class="ai-panel">
         <div class="ai-panel-title">Add your available syrups & ingredients</div>
-        <div class="ai-panel-sub">Enter everything you have available — the AI will generate multiple drink concepts using smart combinations.</div>
+        <div class="ai-panel-sub">Enter everything you have available — the AI will generate multiple drink concepts using smart combinations. <button onclick="resetApiKey()" style="background:none;border:none;color:var(--text-light);font-size:12px;cursor:pointer;text-decoration:underline;padding:0;font-family:inherit;">🔑 Change API key</button></div>
 
         <div class="batch-tags-input" id="batch-tags-wrap">
           <div class="batch-tags-list" id="batch-tags-list"></div>
@@ -1335,8 +1335,11 @@ Respond ONLY with a JSON object, no markdown, no explanation:
     showAiResult(recipe, product);
 
   } catch(err) {
-    alert('Error generating recipe. Check your API key or try again.');
     console.error(err);
+    localStorage.removeItem('oatly_api_key');
+    const retry = confirm('Error generating recipe.\n\nThis is usually an invalid API key.\n\nClick OK to enter your key again, or Cancel to dismiss.');
+    if (retry) generateRecipe();
+    return;
   }
 
   btn.disabled = false;
@@ -1405,10 +1408,19 @@ function approveRecipe() {
 function getApiKey() {
   let key = localStorage.getItem('oatly_api_key');
   if (!key) {
-    key = prompt('Enter your Anthropic API key to use the AI generator:\n(Stored locally only, never sent anywhere except Anthropic)');
+    key = prompt('Anthropic API key (starts with sk-ant-):\n\nGet one free at console.anthropic.com → API Keys');
     if (key) localStorage.setItem('oatly_api_key', key.trim());
   }
   return key;
+}
+
+function resetApiKey() {
+  localStorage.removeItem('oatly_api_key');
+  const key = prompt('Enter new Anthropic API key (starts with sk-ant-):');
+  if (key) {
+    localStorage.setItem('oatly_api_key', key.trim());
+    alert('✅ API key saved.');
+  }
 }
 
 // ── SHOPPING LIST ────────────────────────────────────────────────────────
@@ -1692,8 +1704,11 @@ Respond ONLY with a JSON array, no markdown, no preamble:
     renderBatchResults(ideas);
 
   } catch(err) {
-    alert('Error generating ideas. Try again.');
     console.error(err);
+    localStorage.removeItem('oatly_api_key');
+    const retry = confirm('Error generating ideas.\n\nThis is usually an invalid API key.\n\nClick OK to enter your key again, or Cancel to dismiss.');
+    if (retry) generateBatch();
+    return;
   }
 
   btn.disabled = false;
