@@ -1,0 +1,443 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-06-22",
+  "recipes": [
+    {
+      "id": "LB001",
+      "name": "Tortilla Agave Latte",
+      "source": "Look Book Vol.3",
+      "category": "Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": ["agave", "espresso", "iced"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 200, "unit": "ml"},
+        {"name": "Double espresso", "amount": 2, "unit": "shots"},
+        {"name": "Agave syrup", "amount": 20, "unit": "ml"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Pull espresso. Add agave to glass with ice. Pour Oatly Barista. Top with espresso.",
+      "notes": ""
+    },
+    {
+      "id": "LB002",
+      "name": "Matcha Jelly Oat Shot",
+      "source": "Look Book Vol.3",
+      "category": "Matcha",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "3/5",
+      "status": "approved",
+      "tags": ["matcha", "jelly", "agar agar"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 100, "unit": "ml"},
+        {"name": "Matcha powder (cold brew)", "amount": 2.5, "unit": "g"},
+        {"name": "Agave syrup", "amount": 7.5, "unit": "g"},
+        {"name": "Salt", "amount": 0.1, "unit": "g"},
+        {"name": "Cold water (matcha)", "amount": 30, "unit": "ml"},
+        {"name": "Agar agar", "amount": 2, "unit": "g"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Cold brew matcha with water, agave, salt. Set jelly with agar agar. Cut into cubes. Pour Oatly Barista over jelly and ice.",
+      "notes": "Agar agar ratio: 2g per 200ml liquid"
+    },
+    {
+      "id": "LB003",
+      "name": "Acai Frozen Flat",
+      "source": "Look Book Vol.3",
+      "category": "Frozen",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Frozen",
+      "skill_level": "3/5",
+      "status": "approved",
+      "tags": ["acai", "frozen", "espresso"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 150, "unit": "ml"},
+        {"name": "Acai puree", "amount": 40, "unit": "g"},
+        {"name": "Double espresso", "amount": 2, "unit": "shots"},
+        {"name": "Agave syrup", "amount": 15, "unit": "ml"},
+        {"name": "Ice", "amount": 100, "unit": "g"}
+      ],
+      "method": "Blend all ingredients except espresso until smooth. Pour into glass. Top with espresso.",
+      "notes": ""
+    },
+    {
+      "id": "LB004",
+      "name": "Lemon Espresso Cherry",
+      "source": "Look Book Vol.3",
+      "category": "Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": ["lemon", "cherry", "espresso", "citrus"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 180, "unit": "ml"},
+        {"name": "Double espresso", "amount": 2, "unit": "shots"},
+        {"name": "Lemon juice", "amount": 15, "unit": "ml"},
+        {"name": "Cherry syrup", "amount": 20, "unit": "ml"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Add cherry syrup and lemon juice to glass. Add ice. Pour Oatly Barista. Top with espresso.",
+      "notes": ""
+    },
+    {
+      "id": "LB005",
+      "name": "The Grape Cooler",
+      "source": "Look Book Vol.3",
+      "category": "Cooler",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": ["grape", "cooler", "no coffee"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 150, "unit": "ml"},
+        {"name": "Grape juice", "amount": 80, "unit": "ml"},
+        {"name": "Lemon juice", "amount": 10, "unit": "ml"},
+        {"name": "Agave syrup", "amount": 10, "unit": "ml"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Mix grape juice, lemon and agave. Add ice. Pour Oatly Barista gently over the top.",
+      "notes": "Serve layered for visual impact"
+    },
+    {
+      "id": "LB006",
+      "name": "Teas and Black Sugar",
+      "source": "Look Book Vol.3",
+      "category": "Tea Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": ["black sugar", "tea", "boba-style"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 180, "unit": "ml"},
+        {"name": "Black tea (brewed strong)", "amount": 60, "unit": "ml"},
+        {"name": "Black sugar syrup", "amount": 25, "unit": "ml"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Brew black tea strong and cool. Add black sugar to glass with ice. Pour tea. Top with Oatly Barista.",
+      "notes": ""
+    },
+    {
+      "id": "FB001",
+      "name": "Iced Sweet & Salty Popcorn Latte",
+      "source": "Flavoured Barista",
+      "category": "Latte",
+      "oatly_product": "Oatly Barista Edition Popcorn",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": ["popcorn", "caramel", "salty", "sweet"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition Popcorn", "amount": 200, "unit": "ml"},
+        {"name": "Salt", "amount": 1, "unit": "pinch"},
+        {"name": "Double espresso", "amount": 2, "unit": "shots"},
+        {"name": "Vegan caramel sauce", "amount": 20, "unit": "ml"},
+        {"name": "Ice", "amount": 1, "unit": "handful"},
+        {"name": "Popcorn (garnish)", "amount": 20, "unit": "g"}
+      ],
+      "method": "Drizzle caramel in glass. Add ice. Pour Oatly Popcorn. Top with espresso. Pinch of salt. Garnish with popcorn.",
+      "notes": ""
+    },
+    {
+      "id": "FB002",
+      "name": "Popcorn Peppermint Mocha",
+      "source": "Flavoured Barista",
+      "category": "Mocha",
+      "oatly_product": "Oatly Barista Edition Popcorn",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": ["popcorn", "peppermint", "chocolate", "mocha"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition Popcorn", "amount": 200, "unit": "ml"},
+        {"name": "Peppermint syrup", "amount": 10, "unit": "ml"},
+        {"name": "Chocolate sauce", "amount": 20, "unit": "ml"},
+        {"name": "Double espresso", "amount": 2, "unit": "shots"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Add chocolate sauce and peppermint syrup to glass. Ice. Pour Oatly Popcorn. Top with espresso.",
+      "notes": ""
+    },
+    {
+      "id": "FB003",
+      "name": "Banana Popcorn Matcha Latte",
+      "source": "Flavoured Barista",
+      "category": "Matcha",
+      "oatly_product": "Oatly Barista Edition Popcorn",
+      "serve": "Iced",
+      "skill_level": "3/5",
+      "status": "approved",
+      "tags": ["popcorn", "banana", "matcha"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition Popcorn", "amount": 200, "unit": "ml"},
+        {"name": "Banana puree", "amount": 30, "unit": "g"},
+        {"name": "Matcha powder (cold brew)", "amount": 2.5, "unit": "g"},
+        {"name": "Agave syrup", "amount": 7.5, "unit": "g"},
+        {"name": "Salt", "amount": 0.1, "unit": "g"},
+        {"name": "Cold water (matcha)", "amount": 30, "unit": "ml"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Cold brew matcha. Add banana puree to glass. Ice. Pour Oatly Popcorn. Pour matcha over top.",
+      "notes": ""
+    },
+    {
+      "id": "FB004",
+      "name": "Caramel Miso Latte",
+      "source": "Flavoured Barista",
+      "category": "Latte",
+      "oatly_product": "Oatly Barista Edition Caramel",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": ["caramel", "miso", "umami", "espresso"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition Caramel", "amount": 200, "unit": "ml"},
+        {"name": "Miso paste", "amount": 2, "unit": "g"},
+        {"name": "Double espresso", "amount": 2, "unit": "shots"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Dissolve miso in espresso while hot. Add ice to glass. Pour Oatly Caramel. Top with miso espresso.",
+      "notes": "White or shiro miso works best — subtle and sweet"
+    },
+    {
+      "id": "FB005",
+      "name": "Caramel Apple Matcha Latte",
+      "source": "Flavoured Barista",
+      "category": "Matcha",
+      "oatly_product": "Oatly Barista Edition Caramel",
+      "serve": "Iced",
+      "skill_level": "3/5",
+      "status": "approved",
+      "tags": ["caramel", "apple", "matcha"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition Caramel", "amount": 250, "unit": "ml"},
+        {"name": "Apple juice (or apple pie syrup)", "amount": 40, "unit": "ml"},
+        {"name": "Matcha powder (cold brew)", "amount": 2.5, "unit": "g"},
+        {"name": "Agave syrup", "amount": 7.5, "unit": "g"},
+        {"name": "Salt", "amount": 0.1, "unit": "g"},
+        {"name": "Cold water (matcha)", "amount": 30, "unit": "ml"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Cold brew matcha. Add apple juice to glass with ice. Pour Oatly Caramel. Float matcha on top.",
+      "notes": ""
+    },
+    {
+      "id": "EV001",
+      "name": "Strawberry & Rose Matcha",
+      "source": "Event Drinks 2026",
+      "category": "Matcha",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": ["strawberry", "rose", "matcha", "floral"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 150, "unit": "ml"},
+        {"name": "Matcha powder (cold brew)", "amount": 2.5, "unit": "g"},
+        {"name": "Agave syrup", "amount": 7.5, "unit": "g"},
+        {"name": "Salt", "amount": 0.1, "unit": "g"},
+        {"name": "Cold water (matcha)", "amount": 30, "unit": "ml"},
+        {"name": "Strawberry puree", "amount": 20, "unit": "g"},
+        {"name": "Rose syrup", "amount": 10, "unit": "g"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Add strawberry puree and rose syrup to glass. Ice. Pour Oatly Barista. Float cold brew matcha on top.",
+      "notes": "Serve layered — don't mix until drinking"
+    },
+    {
+      "id": "EV002",
+      "name": "Mango Refresher",
+      "source": "Event Drinks 2026",
+      "category": "Refresher",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": ["mango", "tropical", "cardamom", "refresher"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 200, "unit": "ml"},
+        {"name": "Mango pulp", "amount": 50, "unit": "g"},
+        {"name": "Cardamom syrup", "amount": 15, "unit": "ml"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Add mango pulp and cardamom syrup to glass. Ice. Pour Oatly Barista over gently.",
+      "notes": "Can also use mint syrup instead of cardamom"
+    },
+    {
+      "id": "EV003",
+      "name": "Iced Gochujang Chocolate",
+      "source": "Event Drinks 2026",
+      "category": "Chocolate",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": ["gochujang", "chocolate", "spicy", "umami"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 200, "unit": "ml"},
+        {"name": "Vegan chocolate sauce", "amount": 40, "unit": "g"},
+        {"name": "Hot water", "amount": 30, "unit": "ml"},
+        {"name": "Gochujang", "amount": 5, "unit": "g"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Dissolve chocolate and gochujang in hot water. Cool slightly. Add ice. Pour Oatly Barista. Top with chocolate-gochujang base.",
+      "notes": "Start with 3g gochujang and adjust to taste"
+    },
+    {
+      "id": "EV004",
+      "name": "Black Sugar Hojicha",
+      "source": "Event Drinks 2026",
+      "category": "Tea Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": ["hojicha", "black sugar", "tea", "japanese"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 200, "unit": "ml"},
+        {"name": "Hojicha powder (cold brew)", "amount": 2.5, "unit": "g"},
+        {"name": "Agave syrup", "amount": 7.5, "unit": "g"},
+        {"name": "Salt", "amount": 0.1, "unit": "g"},
+        {"name": "Cold water", "amount": 30, "unit": "ml"},
+        {"name": "Black sugar syrup", "amount": 20, "unit": "ml"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Cold brew hojicha. Add black sugar syrup to glass. Ice. Pour Oatly Barista. Float hojicha on top.",
+      "notes": ""
+    },
+    {
+      "id": "EV005",
+      "name": "French Toast Cold Brew",
+      "source": "Event Drinks 2026",
+      "category": "Cold Brew",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "3/5",
+      "status": "approved",
+      "tags": ["cold brew", "french toast", "vanilla", "cinnamon"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 150, "unit": "ml"},
+        {"name": "Cold brew coffee", "amount": 100, "unit": "ml"},
+        {"name": "French vanilla syrup", "amount": 20, "unit": "ml"},
+        {"name": "Cinnamon syrup", "amount": 10, "unit": "ml"},
+        {"name": "Vanilla Cold Foam (Oatly)", "amount": 50, "unit": "ml"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Add vanilla and cinnamon syrups to glass. Ice. Pour cold brew. Add Oatly Barista. Top with vanilla cold foam.",
+      "notes": "Vanilla cold foam: blend Oatly Barista with vanilla syrup until foamy"
+    },
+    {
+      "id": "SM001",
+      "name": "Strawberry Matcha Classic",
+      "source": "Strawberry Matcha",
+      "category": "Matcha",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": ["strawberry", "matcha", "classic"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 180, "unit": "ml"},
+        {"name": "Matcha powder (cold brew)", "amount": 2.5, "unit": "g"},
+        {"name": "Agave syrup", "amount": 7.5, "unit": "g"},
+        {"name": "Salt", "amount": 0.1, "unit": "g"},
+        {"name": "Cold water", "amount": 30, "unit": "ml"},
+        {"name": "Strawberry puree", "amount": 30, "unit": "g"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Layer strawberry puree at bottom. Add ice. Pour Oatly Barista. Float cold brew matcha on top.",
+      "notes": ""
+    },
+    {
+      "id": "SM002",
+      "name": "Strawberry Matcha Cold Foam",
+      "source": "Strawberry Matcha",
+      "category": "Matcha",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "3/5",
+      "status": "approved",
+      "tags": ["strawberry", "matcha", "cold foam"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 150, "unit": "ml"},
+        {"name": "Matcha powder (cold brew)", "amount": 2.5, "unit": "g"},
+        {"name": "Agave syrup", "amount": 7.5, "unit": "g"},
+        {"name": "Salt", "amount": 0.1, "unit": "g"},
+        {"name": "Cold water", "amount": 30, "unit": "ml"},
+        {"name": "Strawberry puree", "amount": 25, "unit": "g"},
+        {"name": "Oatly Cold Foam", "amount": 50, "unit": "ml"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Layer strawberry. Ice. Pour matcha + Oatly Barista. Top with cold foam.",
+      "notes": ""
+    },
+    {
+      "id": "CR001",
+      "name": "Pandan Melon Cold Latte",
+      "source": "Creative Development",
+      "category": "Signature Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "4/5",
+      "status": "approved",
+      "tags": ["pandan", "melon", "sichuan pepper", "floral", "signature"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 180, "unit": "ml"},
+        {"name": "Pandan syrup", "amount": 20, "unit": "ml"},
+        {"name": "Melon syrup (or reduced melon water)", "amount": 20, "unit": "ml"},
+        {"name": "Double espresso (washed Ethiopian)", "amount": 2, "unit": "shots"},
+        {"name": "Sichuan pepper (toasted, ground)", "amount": 0.3, "unit": "g"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Add pandan and melon syrups to glass with ice. Pour Oatly Barista. Top with espresso. Finish with a pinch of toasted ground Sichuan pepper.",
+      "notes": "Flavor arc: coffee base → floral/herbal → fresh sweet melon → citric/electric finish. Use washed Ethiopian roast for best synergy. Sichuan pepper can also be infused into pandan syrup."
+    },
+    {
+      "id": "CR002",
+      "name": "Osmanthus Espresso Latte",
+      "source": "Creative Development",
+      "category": "Signature Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "4/5",
+      "status": "approved",
+      "tags": ["osmanthus", "floral", "yuzu", "espresso", "signature"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 180, "unit": "ml"},
+        {"name": "Osmanthus syrup", "amount": 20, "unit": "ml"},
+        {"name": "Yuzu juice", "amount": 8, "unit": "ml"},
+        {"name": "Double espresso", "amount": 2, "unit": "shots"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Add osmanthus syrup and yuzu to glass with ice. Pour Oatly Barista. Top with espresso.",
+      "notes": "Osmanthus notes: apricot, peach, honey, tea flower. Very delicate — don't overpower with strong roast. Yuzu adds citric/floral lift without dominating."
+    },
+    {
+      "id": "CR003",
+      "name": "Osmanthus Matcha Latte",
+      "source": "Creative Development",
+      "category": "Matcha",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "4/5",
+      "status": "approved",
+      "tags": ["osmanthus", "matcha", "yuzu", "floral", "signature"],
+      "ingredients": [
+        {"name": "Oatly Barista Edition", "amount": 180, "unit": "ml"},
+        {"name": "Osmanthus syrup", "amount": 20, "unit": "ml"},
+        {"name": "Yuzu juice", "amount": 8, "unit": "ml"},
+        {"name": "Matcha powder (cold brew)", "amount": 2.5, "unit": "g"},
+        {"name": "Agave syrup", "amount": 5, "unit": "g"},
+        {"name": "Cold water", "amount": 30, "unit": "ml"},
+        {"name": "Ice", "amount": 1, "unit": "handful"}
+      ],
+      "method": "Cold brew matcha with less agave (osmanthus already sweet). Add osmanthus + yuzu to glass. Ice. Pour Oatly Barista. Float matcha.",
+      "notes": "Cardamom verde works as yuzu alternative. Shiro possible but riskier. Pair: osmanthus + matcha as menu duo with shared thread."
+    }
+  ]
+}
