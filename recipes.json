@@ -4691,6 +4691,150 @@
       ],
       "method": "Pull a double espresso and set aside to cool slightly. In a shaker, combine the dragon fruit purée, osmanthus syrup, and elderflower cordial with a small handful of ice and shake for 8–10 seconds until well integrated and lightly chilled. Fill a 400ml glass with fresh ice, pour the shaken fruit-floral base over the ice, then slowly pour the Oatly Barista Edition down the side of the glass to create a soft layered gradient. Finally, pour the espresso gently over the back of a spoon onto the milk layer to float it on top, garnish with a pinch of dried osmanthus flowers and a dehydrated dragon fruit slice on the rim.",
       "notes": "Opens with a heady wave of elderflower and delicate osmanthus blossom, giving way to the bright, subtly tropical sweetness of dragon fruit. The creamy, neutral canvas of Oatly Barista lets the floral notes sing without overpowering them, while the espresso lands at the end with a clean, rounded bitterness that anchors the whole drink. Visually striking with a magenta-to-white gradient crowned in dark espresso — equal parts garden party and Barcelona terrace energy."
+    },
+    {
+      "id": "BATCH202606222145180",
+      "name": "Flor de Sauco Espresso",
+      "source": "Batch Ideas",
+      "category": "Iced Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "floral",
+        "aromatic",
+        "espresso-forward"
+      ],
+      "ingredients": [],
+      "method": "A delicate espresso latte where elderflower's honey-white blossom softness meets lychee's perfumed tropical sweetness, creating a floral one-two that lifts the coffee rather than masking it. Light, elegant and quietly surprising — the kind of drink that makes first-timers ask what's in it.",
+      "notes": "Key combo: Elderflower, Lychee | Complexity: Easy"
+    },
+    {
+      "id": "BATCH202606222145181",
+      "name": "Ciruelo en Flor",
+      "source": "Batch Ideas",
+      "category": "Tea Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "stone-fruit",
+        "floral",
+        "japanese-inspired"
+      ],
+      "ingredients": [],
+      "method": "A hojicha or roasted oolong tea latte that layers cherry blossom's fleeting floral whisper over plum's deep, jammy stone-fruit body — a drink inspired by Japanese sakura season but grounded in something richer and more autumnal. The oat milk rounds every edge into something genuinely beautiful.",
+      "notes": "Key combo: Cherry Blossom, Plum | Complexity: Easy"
+    },
+    {
+      "id": "BATCH202606222145182",
+      "name": "Dragón Eléctrico",
+      "source": "Batch Ideas",
+      "category": "Refresher",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "vibrant",
+        "citrus",
+        "cold-brew-tonic"
+      ],
+      "ingredients": [],
+      "method": "Dragon fruit syrup's vivid magenta sweetness collides with yuzu's sharp, bright citrus punch in a cold brew tonic format, topped with a float of oat milk for a pastel-meets-electric visual payoff. Tart, tropical and unapologetically bold — built for Barcelona summer terraces.",
+      "notes": "Key combo: Dragon Fruit, Yuzu | Complexity: Easy"
+    },
+    {
+      "id": "BATCH202606222145183",
+      "name": "Pandan Osmanthus Matcha",
+      "source": "Batch Ideas",
+      "category": "Matcha",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "botanical",
+        "umami-sweet",
+        "asian-fusion"
+      ],
+      "ingredients": [],
+      "method": "Pandan's grassy, vanilla-coconut warmth meets osmanthus's apricot-and-honey floral depth beneath a ceremonial matcha base — two botanicals from opposite ends of Asia that somehow harmonise perfectly over oat. The result is layered, green, fragrant and genuinely unlike anything else on a menu.",
+      "notes": "Key combo: Pandan, Osmanthus | Complexity: Medium"
+    },
+    {
+      "id": "BATCH202606222145184",
+      "name": "Luna de Melocotón",
+      "source": "Batch Ideas",
+      "category": "Cold Brew",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "stone-fruit",
+        "summer",
+        "shaken"
+      ],
+      "ingredients": [],
+      "method": "Honeydew melon syrup brings a cool, pale sweetness while cherry plum adds a tart blush of stone fruit — shaken together with cold brew and oat milk into a drink that tastes like late summer dusk. The coffee anchors it just enough to keep it from floating away entirely.",
+      "notes": "Key combo: Melon, Cherry Plum | Complexity: Easy"
+    },
+    {
+      "id": "BATCH202606222145185",
+      "name": "Camino de Seda",
+      "source": "Batch Ideas",
+      "category": "Tea Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Hot",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "warm",
+        "silky",
+        "floral-fruit"
+      ],
+      "ingredients": [],
+      "method": "A warming white tea or jasmine tea latte where osmanthus syrup threads its signature apricot-floral note through a deep plum sweetness — silky, complex and quietly luxurious on a cold Madrid morning. Served hot with a dusting of freeze-dried plum powder, it looks as refined as it tastes.",
+      "notes": "Key combo: Osmanthus, Plum | Complexity: Medium"
+    },
+    {
+      "id": "BATCH202606222145186",
+      "name": "Lichi Verde",
+      "source": "Batch Ideas",
+      "category": "Matcha",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "tropical",
+        "matcha",
+        "visual-impact"
+      ],
+      "ingredients": [],
+      "method": "Lychee's rose-scented tropical sweetness wraps around pandan's earthy green vanilla base, layered beneath a vivid matcha — three shades of green-and-pink in one glass that tastes as pretty as it looks. The oat milk ties it together into something creamy, cooling and impossibly refreshing.",
+      "notes": "Key combo: Lychee, Pandan | Complexity: Easy"
+    },
+    {
+      "id": "BATCH202606222145187",
+      "name": "Brisa de Dragón",
+      "source": "Batch Ideas",
+      "category": "Signature",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "no-coffee",
+        "visual-impact",
+        "floral-fruit"
+      ],
+      "ingredients": [],
+      "method": "Dragon fruit puree gives this oat-milk refresher a vivid fuchsia base and a subtly sweet, almost watermelon-like body, while elderflower lifts it with a clean, white-flower delicacy that makes it feel spa-fresh and sophisticated. No coffee needed — this is a crowd-pleasing caffeine-free option that photographs beautifully and converts sceptics on first sip.",
+      "notes": "Key combo: Dragon Fruit Puree, Elderflower | Complexity: Easy"
     }
   ]
 }
