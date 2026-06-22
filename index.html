@@ -1300,21 +1300,18 @@ async function triggerWorkflow(payload) {
   return res.status === 204;
 }
 
-async function waitForRecipe(btnEl, btnTextEl, resetText, pollSeconds = 60) {
-  // Poll recipes.json until new recipe appears (max ~90s)
+async function waitForRecipe(btnEl, btnTextEl, resetText, pollSeconds = 90) {
   const before = RECIPES.length;
   let elapsed = 0;
-  while (elapsed < 90) {
-    await new Promise(r => setTimeout(r, 4000));
-    elapsed += 4;
+  while (elapsed < 180) {
+    await new Promise(r => setTimeout(r, 5000));
+    elapsed += 5;
     const countdown = Math.max(0, pollSeconds - elapsed);
-    btnTextEl.innerHTML = `⏳ Generating… <span style="opacity:.6;font-size:13px;">${countdown}s</span>`;
+    btnTextEl.innerHTML = `⏳ Generating… <span style="opacity:.6;font-size:13px;">${countdown > 0 ? countdown + 's' : 'almost…'}</span>`;
     try {
       const r = await fetch(`https://raw.githubusercontent.com/${GH_REPO}/main/recipes.json?t=${Date.now()}`);
       const data = await r.json();
-      if (data.recipes.length > before) {
-        return data.recipes;
-      }
+      if (data.recipes.length > before) return data.recipes;
     } catch(e) {}
   }
   return null;
@@ -1636,14 +1633,13 @@ async function generateBatch() {
   const before = RECIPES.length;
   btnText.innerHTML = '⏳ Generating… <span style="opacity:.6;font-size:13px;">90s</span>';
 
-  // Poll for new batch concepts
   let elapsed = 0;
   let newData = null;
-  while (elapsed < 120) {
-    await new Promise(r => setTimeout(r, 4000));
-    elapsed += 4;
+  while (elapsed < 180) {
+    await new Promise(r => setTimeout(r, 5000));
+    elapsed += 5;
     const countdown = Math.max(0, 90 - elapsed);
-    btnText.innerHTML = `⏳ Generating… <span style="opacity:.6;font-size:13px;">${countdown}s</span>`;
+    btnText.innerHTML = `⏳ Generating… <span style="opacity:.6;font-size:13px;">${countdown > 0 ? countdown + 's' : 'almost…'}</span>`;
     try {
       const r = await fetch(`https://raw.githubusercontent.com/${GH_REPO}/main/recipes.json?t=${Date.now()}`);
       const data = await r.json();
@@ -1666,6 +1662,7 @@ async function generateBatch() {
 
   if (concepts.length > 0) {
     renderBatchResults(concepts.map(c => ({
+      id: c.id,
       name: c.name,
       combination: c.notes.match(/Key combo: ([^|]+)/)?.[1]?.split(', ') || [],
       oatly_product: c.oatly_product,
@@ -1686,7 +1683,7 @@ function renderBatchResults(ideas) {
   const complexityColor = { Easy: 'var(--green)', Medium: 'var(--amber)', Advanced: 'var(--red)' };
 
   document.getElementById('batch-cards').innerHTML = ideas.map((idea, i) => `
-    <div class="batch-idea-card">
+    <div class="batch-idea-card" id="batch-card-${i}">
       <div class="batch-card-top">
         <div class="batch-card-num">CONCEPT ${String(i+1).padStart(2,'0')} · ${idea.style} · ${idea.serve}</div>
         <div class="batch-card-name">${idea.name}</div>
@@ -1705,7 +1702,10 @@ function renderBatchResults(ideas) {
         <div class="batch-card-desc">${idea.description}</div>
         <div class="batch-card-actions">
           <button class="btn btn-primary" style="font-size:12px;padding:8px 14px;" onclick='developIdea(${JSON.stringify(idea).replace(/'/g,"&#39;")})'>
-            → Develop in AI Generator
+            → Develop
+          </button>
+          <button class="btn" style="font-size:12px;padding:8px 14px;background:var(--red-pale);color:var(--red);border:1.5px solid #f5c6c2;" onclick='rejectConcept("${idea.id || ''}", ${i})'>
+            ✕ Reject
           </button>
         </div>
       </div>
@@ -1713,6 +1713,44 @@ function renderBatchResults(ideas) {
   `).join('');
 
   document.getElementById('batch-results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+async function rejectConcept(recipeId, cardIndex) {
+  // Remove from UI
+  const card = document.getElementById(`batch-card-${cardIndex}`);
+  if (card) {
+    card.style.opacity = '0.3';
+    card.style.pointerEvents = 'none';
+    card.querySelector('.batch-card-name').innerHTML += ' <span style="color:var(--red);font-size:12px;">✕ rejected</span>';
+  }
+
+  // Remove from RECIPES array and trigger GitHub update
+  if (!recipeId) return;
+  const token = getGHToken();
+  if (!token) return;
+
+  // Get current recipes.json SHA and content
+  try {
+    const res = await fetch(`${GH_API}/repos/${GH_REPO}/contents/recipes.json`, {
+      headers: { 'Authorization': `token ${token}` }
+    });
+    const meta = await res.json();
+    const content = JSON.parse(atob(meta.content.replace(/\n/g,'')));
+    content.recipes = content.recipes.filter(r => r.id !== recipeId);
+    content.last_updated = new Date().toISOString().split('T')[0];
+
+    const newContent = btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2))));
+    await fetch(`${GH_API}/repos/${GH_REPO}/contents/recipes.json`, {
+      method: 'PUT',
+      headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: 'Remove rejected concept', content: newContent, sha: meta.sha })
+    });
+
+    RECIPES = content.recipes;
+    updateBadge();
+  } catch(e) {
+    console.error('Could not remove from GitHub:', e);
+  }
 }
 
 function developIdea(idea) {
