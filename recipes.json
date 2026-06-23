@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "last_updated": "2026-06-22",
+  "last_updated": "2026-06-23",
   "recipes": [
     {
       "id": "LB001",
@@ -5100,6 +5100,213 @@
       ],
       "method": "Add dragon fruit puree and elderflower syrup to glass. Fill with ice. Pour sparkling water. Float Oatly Barista Edition gently on top. Garnish with fresh mint.",
       "notes": "Caffeine-free — the non-coffee option for the menu. Vivid fuchsia base, white oat float, green mint — photographs beautifully. Converts sceptics on first sip."
+    },
+    {
+      "id": "TC009",
+      "name": "Sakura Espresso",
+      "source": "The Coffee",
+      "category": "Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "1/5",
+      "status": "approved",
+      "tags": [
+        "cherry blossom",
+        "yuzu",
+        "espresso",
+        "floral",
+        "citrus",
+        "The Coffee"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 180,
+          "unit": "ml"
+        },
+        {
+          "name": "Double espresso",
+          "amount": 2,
+          "unit": "shot"
+        },
+        {
+          "name": "Cherry blossom syrup",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Yuzu juice",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Ice",
+          "amount": 1,
+          "unit": "handful"
+        },
+        {
+          "name": "Cherry blossom (garnish)",
+          "amount": 1,
+          "unit": "unit"
+        }
+      ],
+      "method": "Add cherry blossom syrup and yuzu juice to glass. Fill with ice. Pour Oatly Barista Edition. Top with double espresso. Garnish with a cherry blossom.",
+      "notes": "The yuzu adds a sharp citric lift that cuts through the espresso and contrasts with the delicate floral sweetness of cherry blossom. Use a washed light roast for best results."
+    },
+    {
+      "id": "TC010",
+      "name": "Pandan Mint Espresso",
+      "source": "The Coffee",
+      "category": "Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "1/5",
+      "status": "approved",
+      "tags": [
+        "pandan",
+        "green mint",
+        "espresso",
+        "herbal",
+        "The Coffee"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 180,
+          "unit": "ml"
+        },
+        {
+          "name": "Double espresso",
+          "amount": 2,
+          "unit": "shot"
+        },
+        {
+          "name": "Pandan syrup",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Green mint syrup",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Ice",
+          "amount": 1,
+          "unit": "handful"
+        },
+        {
+          "name": "Fresh mint sprig (garnish)",
+          "amount": 1,
+          "unit": "unit"
+        }
+      ],
+      "method": "Add pandan and green mint syrups to glass. Fill with ice. Pour Oatly Barista Edition. Top with double espresso. Garnish with fresh mint sprig.",
+      "notes": "Pandan gives a grassy vanilla-coconut base that plays beautifully against the herbal freshness of mint. The espresso anchors both without competing."
+    },
+    {
+      "id": "TC011",
+      "name": "Ciruela Negra Espresso",
+      "source": "The Coffee",
+      "category": "Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "1/5",
+      "status": "approved",
+      "tags": [
+        "plum",
+        "cherry plum",
+        "espresso",
+        "stone fruit",
+        "dark",
+        "The Coffee"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 180,
+          "unit": "ml"
+        },
+        {
+          "name": "Double espresso",
+          "amount": 2,
+          "unit": "shot"
+        },
+        {
+          "name": "Plum syrup",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Cherry plum syrup",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "Ice",
+          "amount": 1,
+          "unit": "handful"
+        },
+        {
+          "name": "Freeze-dried plum powder (garnish)",
+          "amount": 1,
+          "unit": "pinch"
+        }
+      ],
+      "method": "Add plum and cherry plum syrups to glass. Fill with ice. Pour Oatly Barista Edition. Top with double espresso. Dust rim with freeze-dried plum powder.",
+      "notes": "Deep, jammy and complex — the darkest flavour profile in the menu. Works best with a natural-process espresso that already has stone-fruit notes. The double plum combo amplifies the coffee's sweetness without adding sugar-bomb heaviness."
+    },
+    {
+      "id": "TC012",
+      "name": "Melon Osmanthus Espresso",
+      "source": "The Coffee",
+      "category": "Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "1/5",
+      "status": "approved",
+      "tags": [
+        "melon",
+        "osmanthus",
+        "espresso",
+        "floral",
+        "summer",
+        "The Coffee"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 180,
+          "unit": "ml"
+        },
+        {
+          "name": "Double espresso",
+          "amount": 2,
+          "unit": "shot"
+        },
+        {
+          "name": "Melon syrup",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Osmanthus syrup",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "Ice",
+          "amount": 1,
+          "unit": "handful"
+        },
+        {
+          "name": "Osmanthus flowers (garnish)",
+          "amount": 1,
+          "unit": "pinch"
+        }
+      ],
+      "method": "Add melon and osmanthus syrups to glass. Fill with ice. Pour Oatly Barista Edition. Top with double espresso. Garnish with dried osmanthus flowers.",
+      "notes": "Melon's cool pale sweetness meets osmanthus's apricot-honey floral depth — together they create a soft, summery canvas that the espresso cuts through cleanly. One of the most unexpected combinations that just works."
     }
   ]
 }
