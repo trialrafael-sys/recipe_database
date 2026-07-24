@@ -5360,6 +5360,58 @@
       ],
       "method": "Pull a double espresso directly over the cinnamon roll syrup and brown sugar syrup in a shaker, stir briefly to dissolve, then fill the shaker with ice and add the Oatly Barista Edition cold. Seal and shake hard for 8 seconds to create a light, frothy texture, then strain over a fresh glass packed with ice. Finish with a generous pinch of ground cinnamon dusted across the surface for aroma and visual appeal.",
       "notes": "Opens with the warm, buttery sweetness of a freshly baked cinnamon roll, with the espresso cutting through cleanly on the mid-palate. The Oatly Barista brings a creamy, naturally oat-forward body that echoes the pastry dough quality of the syrup. The finish is gently spiced and sweet without being heavy — a summer treat that feels indulgent but drinks light and refreshing."
+    },
+    {
+      "id": "AI20260724113820",
+      "name": "Espiral de Canela",
+      "source": "AI Generated",
+      "category": "Signature Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": [
+        "summer",
+        "cinnamon",
+        "sweet",
+        "iced",
+        "oatly",
+        "cafe favourite"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 200,
+          "unit": "ml"
+        },
+        {
+          "name": "espresso (double shot)",
+          "amount": 2,
+          "unit": "shots"
+        },
+        {
+          "name": "cinnamon roll syrup",
+          "amount": 25,
+          "unit": "ml"
+        },
+        {
+          "name": "brown butter toffee sauce (for swirl)",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "ground cinnamon",
+          "amount": 1,
+          "unit": "pinch"
+        },
+        {
+          "name": "ice",
+          "amount": 200,
+          "unit": "g"
+        }
+      ],
+      "method": "Pull a double espresso and stir in the cinnamon roll syrup while hot, allowing it to fully dissolve. Drizzle the brown butter toffee sauce in a spiral along the inside of a 400ml clear cup, then pack tightly with ice. Pour the chilled Oatly Barista Edition over the ice first, then slowly pour the sweetened espresso over the back of a spoon to create a defined layered effect. Finish with a pinch of ground cinnamon on top and serve immediately with a wide straw.",
+      "notes": "Opens with the warm, buttery sweetness of a freshly baked cinnamon roll, softened by the naturally creamy, oat-forward body of Oatly Barista. The espresso cuts through mid-sip with a roasty depth that balances the sweetness, while the toffee spiral adds caramelised richness as it slowly melts into the drink. Finishes clean and cool, making it indulgent yet refreshing for the summer heat."
     }
   ]
 }
