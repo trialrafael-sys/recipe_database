@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "last_updated": "2026-06-23",
+  "last_updated": "2026-07-24",
   "recipes": [
     {
       "id": "LB001",
@@ -5307,6 +5307,59 @@
       ],
       "method": "Add melon and osmanthus syrups to glass. Fill with ice. Pour Oatly Barista Edition. Top with double espresso. Garnish with dried osmanthus flowers.",
       "notes": "Melon's cool pale sweetness meets osmanthus's apricot-honey floral depth — together they create a soft, summery canvas that the espresso cuts through cleanly. One of the most unexpected combinations that just works."
+    },
+    {
+      "id": "AI20260724113657",
+      "name": "Rollo de Canela",
+      "source": "AI Generated",
+      "category": "Signature Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "2/5",
+      "status": "approved",
+      "tags": [
+        "summer",
+        "cinnamon roll",
+        "iced latte",
+        "oat milk",
+        "indulgent",
+        "Barcelona",
+        "Madrid"
+      ],
+      "ingredients": [
+        {
+          "name": "espresso (double shot)",
+          "amount": 2,
+          "unit": "shots"
+        },
+        {
+          "name": "cinnamon roll syrup",
+          "amount": 25,
+          "unit": "ml"
+        },
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 180,
+          "unit": "ml"
+        },
+        {
+          "name": "brown sugar syrup",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "ground cinnamon",
+          "amount": 1,
+          "unit": "pinch"
+        },
+        {
+          "name": "ice",
+          "amount": 200,
+          "unit": "g"
+        }
+      ],
+      "method": "Pull a double espresso directly over the cinnamon roll syrup and brown sugar syrup in a shaker, stir briefly to dissolve, then fill the shaker with ice and add the Oatly Barista Edition cold. Seal and shake hard for 8 seconds to create a light, frothy texture, then strain over a fresh glass packed with ice. Finish with a generous pinch of ground cinnamon dusted across the surface for aroma and visual appeal.",
+      "notes": "Opens with the warm, buttery sweetness of a freshly baked cinnamon roll, with the espresso cutting through cleanly on the mid-palate. The Oatly Barista brings a creamy, naturally oat-forward body that echoes the pastry dough quality of the syrup. The finish is gently spiced and sweet without being heavy — a summer treat that feels indulgent but drinks light and refreshing."
     }
   ]
 }
