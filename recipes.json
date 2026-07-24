@@ -5412,6 +5412,68 @@
       ],
       "method": "Pull a double espresso and stir in the cinnamon roll syrup while hot, allowing it to fully dissolve. Drizzle the brown butter toffee sauce in a spiral along the inside of a 400ml clear cup, then pack tightly with ice. Pour the chilled Oatly Barista Edition over the ice first, then slowly pour the sweetened espresso over the back of a spoon to create a defined layered effect. Finish with a pinch of ground cinnamon on top and serve immediately with a wide straw.",
       "notes": "Opens with the warm, buttery sweetness of a freshly baked cinnamon roll, softened by the naturally creamy, oat-forward body of Oatly Barista. The espresso cuts through mid-sip with a roasty depth that balances the sweetness, while the toffee spiral adds caramelised richness as it slowly melts into the drink. Finishes clean and cool, making it indulgent yet refreshing for the summer heat."
+    },
+    {
+      "id": "AI20260724115016",
+      "name": "Canela Nube",
+      "source": "AI Generated",
+      "category": "Signature Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "3/5",
+      "status": "approved",
+      "tags": [
+        "summer",
+        "cinnamon",
+        "cold foam",
+        "chocolate",
+        "indulgent",
+        "iced"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 150,
+          "unit": "ml"
+        },
+        {
+          "name": "espresso (double shot)",
+          "amount": 2,
+          "unit": "shots"
+        },
+        {
+          "name": "cinnamon roll syrup",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "chocolate sauce",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "ice",
+          "amount": 200,
+          "unit": "g"
+        },
+        {
+          "name": "Oatly Barista Edition (for cold foam)",
+          "amount": 80,
+          "unit": "ml"
+        },
+        {
+          "name": "cinnamon roll syrup (for cold foam)",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "ground cinnamon (garnish)",
+          "amount": 1,
+          "unit": "pinch"
+        }
+      ],
+      "method": "Pull a double espresso and stir in 20ml cinnamon roll syrup while hot, then allow to cool slightly. Drizzle 15ml chocolate sauce around the inside of a tall glass before filling with ice and pouring in 150ml cold Oatly Barista Edition, then gently pour the espresso blend over the back of a spoon to layer. Whip 80ml Oatly Barista Edition with 10ml cinnamon roll syrup using a cold foam whipper or handheld frother until thick and pourable, then spoon generously over the top of the drink. Finish with a dusting of ground cinnamon and an extra thin drizzle of chocolate sauce over the foam.",
+      "notes": "Opens with warm bakery sweetness from the cinnamon roll syrup melting into the espresso, then the cold Oatly brings a clean, creamy oat base that balances the richness. The chocolate ribbons add bittersweet depth mid-sip, while the cinnamon cold foam delivers a cool, airy finish that slowly folds into the drink as you sip. Nostalgic and indulgent yet refreshingly light — perfect for a hot Barcelona afternoon."
     }
   ]
 }
