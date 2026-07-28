@@ -1,7 +1,20 @@
 import os, json, re, datetime
 import anthropic
 
-payload = json.loads(os.environ['PAYLOAD'])
+OATLY_PRODUCTS_KNOWLEDGE = """
+IMPORTANT — OATLY READY-TO-USE PRODUCTS:
+The following are finished Oatly products that come ready to use. Never give instructions to make them from scratch:
+- Oatly Barista Edition → steamed or poured cold, the main milk base
+- Oatly Barista Lighter Taste → lighter version of Barista, same use
+- Oatly Barista Organic → organic version
+- Oatly Cold Foam → ready-to-use cold foam, just pour from carton and foam with a frother or whisk. Do NOT instruct to make from scratch.
+- Oatly Whippable Creamy Oat → whipped cream alternative, whip directly from carton
+- Oatly Organic Creamy Oat → use as a creamy topper or mix-in
+- Oatly Matcha Oat Drink → ready-made matcha oat drink, can replace Barista + cold brewed matcha
+- Oatly No Sugars Oat Drink → unsweetened oat drink for smoothies
+
+When a recipe calls for cold foam, always use "Oatly Cold Foam" as a ready product (e.g. "50 ml Oatly Cold Foam, frothed") — never give a recipe to make it.
+"""
 mode        = payload.get('mode', 'single')
 product     = payload.get('product', 'Oatly Barista Edition')
 style       = payload.get('style', 'Iced Latte')
@@ -21,6 +34,8 @@ client = anthropic.Anthropic(api_key=os.environ['ANTHROPIC_API_KEY'])
 
 if mode == 'single':
     prompt = f"""You are a specialty coffee drink developer working with Oatly plant-based milks for cafes in Barcelona and Madrid.
+
+{OATLY_PRODUCTS_KNOWLEDGE}
 
 Create a creative, original, professional drink recipe. Be specific with quantities and techniques.
 
@@ -74,6 +89,8 @@ Respond ONLY with a JSON object, no markdown, no explanation:
 
 elif mode == 'batch':
     prompt = f"""You are a creative specialty coffee drink developer for Oatly, working with cafes in Barcelona and Madrid.
+
+{OATLY_PRODUCTS_KNOWLEDGE}
 
 Available syrups / ingredients: {', '.join(tags_list)}
 Oatly base: {product}
@@ -131,3 +148,4 @@ with open('recipes.json', 'w') as f:
     json.dump(db, f, indent=2, ensure_ascii=False)
 
 print("Done.")
+
