@@ -5601,6 +5601,63 @@
       ],
       "method": "In a shaker, whisk together the tahini, white miso paste, pomegranate syrup, and canela syrup until smooth and fully emulsified. Add the freshly pulled double espresso and ice, then shake vigorously for 8–10 seconds to chill and slightly aerate the mixture. Pour over a full glass of fresh ice, then top slowly with cold Oatly Barista Edition, allowing a natural two-tone split to develop. Finish with a spiral drizzle of pomegranate molasses over the foam surface and a single pinch of flaky sea salt.",
       "notes": "Opens with a tart, jewel-bright hit of pomegranate that cuts through the richness of espresso, before a deep, sesame-forward creaminess from the tahini settles in mid-palate. The white miso adds a whisper of savoury depth that rounds out the sweetness without announcing itself, while canela threads warmth through the entire sip. The finish is long, gently smoky, and lightly salted — evoking autumn evenings in the old quarter, figs drying in amber light."
+    },
+    {
+      "id": "AI20260728100819",
+      "name": "Niebla de Sésamo",
+      "source": "AI Generated",
+      "category": "Signature Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Hot",
+      "skill_level": "3/5",
+      "status": "approved",
+      "tags": [
+        "autumn",
+        "umami",
+        "nutty",
+        "warming",
+        "earthy",
+        "Barcelona"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 180,
+          "unit": "ml"
+        },
+        {
+          "name": "Hojicha syrup",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Tahini",
+          "amount": 15,
+          "unit": "g"
+        },
+        {
+          "name": "White miso paste",
+          "amount": 5,
+          "unit": "g"
+        },
+        {
+          "name": "Pomegranate molasses",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Canela (ground Ceylon cinnamon)",
+          "amount": 1,
+          "unit": "pinch"
+        },
+        {
+          "name": "Espresso",
+          "amount": 2,
+          "unit": "shots"
+        }
+      ],
+      "method": "In a small bowl, whisk together tahini, white miso paste, hojicha syrup, and pomegranate molasses until fully emulsified into a smooth paste, then dissolve into freshly pulled double espresso in the serving cup. Steam Oatly Barista Edition to 60–65°C with a tight, glossy microfoam, then pour over the espresso-tahini base using a slow, controlled pour to integrate without breaking the emulsion. Finish with a delicate dusting of ground canela and a 5ml drizzle of pomegranate molasses drawn across the foam surface.",
+      "notes": "Opens with toasted roastiness from the hojicha and espresso, softened immediately by the creamy, nutty body of tahini and the silk of Oatly. Mid-palate, white miso introduces a gentle umami salinity that bridges the sweetness beautifully. The finish is bright and slightly tart from the pomegranate molasses, with canela warming the back of the throat. Autumnal, complex, and quietly luxurious — built for a guest who wants something unlike anything they have had before."
     }
   ]
 }
