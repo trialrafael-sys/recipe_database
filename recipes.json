@@ -5726,6 +5726,76 @@
       ],
       "method": "In a small bowl or shot glass, whisk together miso paste, tahini, and pomegranate syrup until fully emulsified into a smooth paste — this is your flavour base. Pull a double espresso directly over the paste and stir vigorously to dissolve and integrate. Steam Oatly Barista Edition to 62°C using a wet, velvety microfoam texture and pour over the espresso base in a 220ml ceramic cup, then spoon 40ml of cold Oatly Barista cold foam gently on top. Finish with a slow drizzle of pomegranate molasses over the cold foam, a whisper of ground Ceylon cinnamon, and a pinch of flaky sea salt.",
       "notes": "Opens with the bright tartness of pomegranate cutting through the rich, roasted espresso — then the tahini and miso emerge mid-palate as a deep, earthy umami warmth that feels almost autumnal and ancient. The Oatly Barista rounds everything into a creamy, naturally sweet body, while the cold foam creates a temperature and textural contrast that makes each sip layered. The canela and sea salt finish lift the whole cup, leaving a lingering sweetness with subtle mineral depth — complex enough for a curated menu, approachable enough to order twice."
+    },
+    {
+      "id": "AI20260728101130",
+      "name": "Sombra de Nuez",
+      "source": "AI Generated",
+      "category": "Signature Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Hot",
+      "skill_level": "3/5",
+      "status": "approved",
+      "tags": [
+        "autumn",
+        "umami",
+        "nutty",
+        "hojicha",
+        "miso",
+        "tahini",
+        "warm",
+        "barcelona",
+        "madrid"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 180,
+          "unit": "ml"
+        },
+        {
+          "name": "hojicha syrup",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "white miso paste",
+          "amount": 8,
+          "unit": "g"
+        },
+        {
+          "name": "tahini",
+          "amount": 10,
+          "unit": "g"
+        },
+        {
+          "name": "hazelnut syrup",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "espresso",
+          "amount": 2,
+          "unit": "shots"
+        },
+        {
+          "name": "Oatly Barista Edition cold foam",
+          "amount": 60,
+          "unit": "ml"
+        },
+        {
+          "name": "toasted hazelnut dust",
+          "amount": 1,
+          "unit": "pinch"
+        },
+        {
+          "name": "flaky sea salt",
+          "amount": 1,
+          "unit": "pinch"
+        }
+      ],
+      "method": "In the base of a warmed 280ml ceramic cup, whisk together the white miso paste, tahini, hojicha syrup, and hazelnut syrup until a smooth, glossy paste forms with no lumps. Pull two shots of espresso directly over the paste and stir vigorously to emulsify. Steam Oatly Barista Edition to 60–65°C and pour over the espresso base using a slow, centred pour to preserve integration. Top with a generous layer of lightly salted Oatly Barista cold foam — made by blending 60ml cold Oatly Barista with a pinch of flaky salt until thickened — then dust with finely toasted hazelnut powder.",
+      "notes": "Opens with the deep, roasted woodsmoke warmth of hojicha and toasted hazelnut, then settles into a round, almost caramel-like nuttiness from the tahini. The miso weaves a subtle savoury backbone through the sweetness, preventing any cloying finish and adding an umami depth that lingers. The salted cold foam cuts through with a cool, creamy contrast, and the final sip is clean, complex, and quietly lingering — like autumn light through dry leaves."
     }
   ]
 }
