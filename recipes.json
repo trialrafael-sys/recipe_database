@@ -5532,6 +5532,75 @@
       ],
       "method": "In a shaker, combine pomegranate syrup, white miso paste, tahini, and canela syrup with 30ml of warm Oatly Barista Edition and shake vigorously for 10 seconds until the miso and tahini are fully emulsified into a smooth, glossy base. Fill a 350ml glass with ice, pour the emulsified base over the ice, then pull a double espresso directly over the mixture and gently stir once to create a subtle layered effect. Top with the remaining cold Oatly Barista Edition, poured slowly down the inside of the glass. Garnish with a light dusting of ground canela and three fresh pomegranate seeds placed on top.",
       "notes": "Opens with the bright, jewel-like tartness of pomegranate before the espresso takes the lead with a roasty, amber depth. The miso and tahini work quietly in the background, adding a savory sesame creaminess and a gentle umami roundness that lengthens the finish. Canela weaves warmth through every sip, grounding the drink in the season. The Oatly Barista Edition provides a clean, neutral canvas that keeps the flavors sharp and defined without competing. A drink that feels bold but drinks elegantly — complex, layered, and unmistakably autumnal."
+    },
+    {
+      "id": "AI20260728100509",
+      "name": "Noche de Granada",
+      "source": "AI Generated",
+      "category": "Signature Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "3/5",
+      "status": "approved",
+      "tags": [
+        "autumn",
+        "umami",
+        "fruity",
+        "nutty",
+        "Barcelona",
+        "Madrid",
+        "iced",
+        "oatly"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 160,
+          "unit": "ml"
+        },
+        {
+          "name": "espresso (double shot)",
+          "amount": 2,
+          "unit": "shots"
+        },
+        {
+          "name": "pomegranate syrup",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "tahini",
+          "amount": 15,
+          "unit": "g"
+        },
+        {
+          "name": "white miso paste",
+          "amount": 5,
+          "unit": "g"
+        },
+        {
+          "name": "canela syrup",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "ice",
+          "amount": 1,
+          "unit": "handful"
+        },
+        {
+          "name": "pomegranate molasses (for drizzle)",
+          "amount": 5,
+          "unit": "ml"
+        },
+        {
+          "name": "flaky sea salt",
+          "amount": 1,
+          "unit": "pinch"
+        }
+      ],
+      "method": "In a shaker, whisk together the tahini, white miso paste, pomegranate syrup, and canela syrup until smooth and fully emulsified. Add the freshly pulled double espresso and ice, then shake vigorously for 8–10 seconds to chill and slightly aerate the mixture. Pour over a full glass of fresh ice, then top slowly with cold Oatly Barista Edition, allowing a natural two-tone split to develop. Finish with a spiral drizzle of pomegranate molasses over the foam surface and a single pinch of flaky sea salt.",
+      "notes": "Opens with a tart, jewel-bright hit of pomegranate that cuts through the richness of espresso, before a deep, sesame-forward creaminess from the tahini settles in mid-palate. The white miso adds a whisper of savoury depth that rounds out the sweetness without announcing itself, while canela threads warmth through the entire sip. The finish is long, gently smoky, and lightly salted — evoking autumn evenings in the old quarter, figs drying in amber light."
     }
   ]
 }
