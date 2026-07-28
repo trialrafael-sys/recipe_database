@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "last_updated": "2026-07-24",
+  "last_updated": "2026-07-28",
   "recipes": [
     {
       "id": "LB001",
@@ -5474,6 +5474,64 @@
       ],
       "method": "Pull a double espresso and stir in 20ml cinnamon roll syrup while hot, then allow to cool slightly. Drizzle 15ml chocolate sauce around the inside of a tall glass before filling with ice and pouring in 150ml cold Oatly Barista Edition, then gently pour the espresso blend over the back of a spoon to layer. Whip 80ml Oatly Barista Edition with 10ml cinnamon roll syrup using a cold foam whipper or handheld frother until thick and pourable, then spoon generously over the top of the drink. Finish with a dusting of ground cinnamon and an extra thin drizzle of chocolate sauce over the foam.",
       "notes": "Opens with warm bakery sweetness from the cinnamon roll syrup melting into the espresso, then the cold Oatly brings a clean, creamy oat base that balances the richness. The chocolate ribbons add bittersweet depth mid-sip, while the cinnamon cold foam delivers a cool, airy finish that slowly folds into the drink as you sip. Nostalgic and indulgent yet refreshingly light — perfect for a hot Barcelona afternoon."
+    },
+    {
+      "id": "AI20260728100247",
+      "name": "Granada Oscura",
+      "source": "AI Generated",
+      "category": "Signature Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "3/5",
+      "status": "approved",
+      "tags": [
+        "autumn",
+        "umami",
+        "fruity",
+        "nutty",
+        "Barcelona",
+        "Madrid",
+        "plant-based"
+      ],
+      "ingredients": [
+        {
+          "name": "Oatly Barista Edition",
+          "amount": 180,
+          "unit": "ml"
+        },
+        {
+          "name": "espresso (double shot)",
+          "amount": 2,
+          "unit": "shots"
+        },
+        {
+          "name": "pomegranate syrup",
+          "amount": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "white miso paste",
+          "amount": 8,
+          "unit": "g"
+        },
+        {
+          "name": "tahini",
+          "amount": 10,
+          "unit": "g"
+        },
+        {
+          "name": "canela syrup",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "ice",
+          "amount": 1,
+          "unit": "handful"
+        }
+      ],
+      "method": "In a shaker, combine pomegranate syrup, white miso paste, tahini, and canela syrup with 30ml of warm Oatly Barista Edition and shake vigorously for 10 seconds until the miso and tahini are fully emulsified into a smooth, glossy base. Fill a 350ml glass with ice, pour the emulsified base over the ice, then pull a double espresso directly over the mixture and gently stir once to create a subtle layered effect. Top with the remaining cold Oatly Barista Edition, poured slowly down the inside of the glass. Garnish with a light dusting of ground canela and three fresh pomegranate seeds placed on top.",
+      "notes": "Opens with the bright, jewel-like tartness of pomegranate before the espresso takes the lead with a roasty, amber depth. The miso and tahini work quietly in the background, adding a savory sesame creaminess and a gentle umami roundness that lengthens the finish. Canela weaves warmth through every sip, grounding the drink in the season. The Oatly Barista Edition provides a clean, neutral canvas that keeps the flavors sharp and defined without competing. A drink that feels bold but drinks elegantly — complex, layered, and unmistakably autumnal."
     }
   ]
 }
