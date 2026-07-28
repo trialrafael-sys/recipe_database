@@ -5904,6 +5904,69 @@
       "ingredients": [],
       "method": "A hot double espresso stirred with hazelnut and cinnamon syrups, then finished with a pillow of cinnamon-dusted oat cold foam that slowly dissolves into the drink below. Warm, familiar, and deeply comforting, it channels the spirit of a Spanish pastry shop while staying entirely plant-based.",
       "notes": "Key combo: Hazelnut, Cinnamon, Cold Foam | Complexity: Easy"
+    },
+    {
+      "id": "AI20260728101526",
+      "name": "Hazelnut Miso Einspänner",
+      "source": "AI Generated",
+      "category": "Signature Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "3/5",
+      "status": "approved",
+      "tags": [
+        "umami",
+        "savory-sweet",
+        "indulgent",
+        "cold foam",
+        "espresso",
+        "hazelnut",
+        "miso"
+      ],
+      "ingredients": [
+        {
+          "name": "hazelnut syrup",
+          "amount": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "white miso paste",
+          "amount": 5,
+          "unit": "g"
+        },
+        {
+          "name": "hot water (to dissolve miso)",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "double espresso (ristretto pull)",
+          "amount": 2,
+          "unit": "shots"
+        },
+        {
+          "name": "ice",
+          "amount": 150,
+          "unit": "g"
+        },
+        {
+          "name": "Oatly Barista Edition (for cold foam)",
+          "amount": 80,
+          "unit": "ml"
+        },
+        {
+          "name": "hazelnut syrup (for cold foam)",
+          "amount": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "flaky sea salt",
+          "amount": 1,
+          "unit": "pinch"
+        }
+      ],
+      "method": "In the base of a rocks glass, whisk the white miso paste with the hot water until fully dissolved, then stir in 15ml hazelnut syrup to create a unified hazelnut-miso syrup. Fill the glass with ice and pull a double ristretto directly over the syrup, allowing the espresso to slowly integrate without stirring. For the cold foam, combine Oatly Barista Edition with 10ml hazelnut syrup in a cold foam pitcher and texture using a handheld frother or steam wand on cold-foam setting until thick, airy, and pourable. Spoon or pour the foam generously over the espresso surface, finish with a pinch of flaky sea salt, and serve immediately with no straw so the guest encounters the foam first.",
+      "notes": "The first sip hits with a cloud of lightly sweet, saline oat foam before the umami depth of white miso rises up to meet toasted hazelnut warmth. As the foam melts, each layer dissolves into the espresso creating a shifting savory-sweet complexity — nutty and rich up front, with a clean bitter espresso finish that lingers. The salt amplifies everything without dominating, making this drink feel simultaneously familiar and completely unexpected."
     }
   ]
 }
