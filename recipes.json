@@ -5796,6 +5796,114 @@
       ],
       "method": "In the base of a warmed 280ml ceramic cup, whisk together the white miso paste, tahini, hojicha syrup, and hazelnut syrup until a smooth, glossy paste forms with no lumps. Pull two shots of espresso directly over the paste and stir vigorously to emulsify. Steam Oatly Barista Edition to 60–65°C and pour over the espresso base using a slow, centred pour to preserve integration. Top with a generous layer of lightly salted Oatly Barista cold foam — made by blending 60ml cold Oatly Barista with a pinch of flaky salt until thickened — then dust with finely toasted hazelnut powder.",
       "notes": "Opens with the deep, roasted woodsmoke warmth of hojicha and toasted hazelnut, then settles into a round, almost caramel-like nuttiness from the tahini. The miso weaves a subtle savoury backbone through the sweetness, preventing any cloying finish and adding an umami depth that lingers. The salted cold foam cuts through with a cool, creamy contrast, and the final sip is clean, complex, and quietly lingering — like autumn light through dry leaves."
+    },
+    {
+      "id": "BATCH202607281014190",
+      "name": "Hazelnut Miso Einspänner",
+      "source": "Batch Ideas",
+      "category": "Signature",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "umami",
+        "savory-sweet",
+        "indulgent"
+      ],
+      "ingredients": [],
+      "method": "A double espresso poured over hazelnut-miso syrup, crowned with a thick salted oat cold foam that slowly melts into the cup. The umami depth of white miso cuts through hazelnut's sweetness to create a savory-sweet complexity that makes every sip feel like a discovery.",
+      "notes": "Key combo: Hazelnut, Miso, Cold Foam | Complexity: Medium"
+    },
+    {
+      "id": "BATCH202607281014191",
+      "name": "Tahini Cinnamon Cortado",
+      "source": "Batch Ideas",
+      "category": "Signature",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Hot",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "Middle Eastern",
+        "cozy",
+        "nutty"
+      ],
+      "ingredients": [],
+      "method": "A warm, silky cortado where toasted tahini syrup and cinnamon wrap around a double espresso like a Middle Eastern pastry in a glass. The sesame's nuttiness bridges the bitter espresso and warm spice, producing a drink that feels simultaneously ancient and utterly modern.",
+      "notes": "Key combo: Tahini, Cinnamon | Complexity: Easy"
+    },
+    {
+      "id": "BATCH202607281014192",
+      "name": "Granada Hojicha Tónica",
+      "source": "Batch Ideas",
+      "category": "Refresher",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "tart",
+        "smoky",
+        "effervescent"
+      ],
+      "ingredients": [],
+      "method": "A double espresso shaken with hojicha syrup and pomegranate over ice, topped with a splash of tonic and a thin pour of Oatly Barista to create a layered, jewel-toned serve. The roasted, smoky notes of hojicha tame the tartness of pomegranate, while the tonic lifts everything into something bright and electric.",
+      "notes": "Key combo: Hojicha, Pomegranate | Complexity: Medium"
+    },
+    {
+      "id": "BATCH202607281014193",
+      "name": "Niebla de Tahini",
+      "source": "Batch Ideas",
+      "category": "Iced Latte",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "earthy",
+        "umami",
+        "textured"
+      ],
+      "ingredients": [],
+      "method": "Double espresso and hojicha syrup stir through chilled Oatly Barista Edition before being blanketed in a whipped tahini-laced cold foam that drifts across the surface like morning fog. The earthiness of roasted hojicha and the creamy bitterness of sesame create a quietly luxurious, umami-forward latte.",
+      "notes": "Key combo: Tahini, Cold Foam, Hojicha | Complexity: Medium"
+    },
+    {
+      "id": "BATCH202607281014194",
+      "name": "Pomegranate Miso Sour Espresso",
+      "source": "Batch Ideas",
+      "category": "Signature",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Iced",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "umami",
+        "tart",
+        "cocktail-inspired"
+      ],
+      "ingredients": [],
+      "method": "A shaken double espresso with pomegranate molasses and a touch of white miso syrup, served over a large ice cube with a float of Oatly Barista Edition and a dried pomegranate garnish. The salty, fermented edge of miso transforms the pomegranate's acidity into something deeply complex — like a cocktail that decided to stay sober.",
+      "notes": "Key combo: Pomegranate, Miso | Complexity: Advanced"
+    },
+    {
+      "id": "BATCH202607281014195",
+      "name": "Canela Avellana Nube",
+      "source": "Batch Ideas",
+      "category": "Signature",
+      "oatly_product": "Oatly Barista Edition",
+      "serve": "Hot",
+      "skill_level": "",
+      "status": "concept",
+      "tags": [
+        "cozy",
+        "aromatic",
+        "cafe-classic"
+      ],
+      "ingredients": [],
+      "method": "A hot double espresso stirred with hazelnut and cinnamon syrups, then finished with a pillow of cinnamon-dusted oat cold foam that slowly dissolves into the drink below. Warm, familiar, and deeply comforting, it channels the spirit of a Spanish pastry shop while staying entirely plant-based.",
+      "notes": "Key combo: Hazelnut, Cinnamon, Cold Foam | Complexity: Easy"
     }
   ]
 }
